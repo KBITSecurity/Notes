@@ -1,0 +1,22 @@
+      • Badanie e-maila
+            ▪ https://toolbox.googleapps.com/apps/messageheader/analyzeheader
+            ▪ https://mailheader.org/
+            ▪ https://mha.azurewebsites.net/
+      • Wyodrebnienie adresow url
+            ▪ https://www.convertcsv.com/url-extractor.htm
+      • Sprawdzenie zalcznika (hash sha256)
+            ▪ https://talosintelligence.com/talos_file_reputation
+      • Automatyczne badanie zlacznika / malware
+            ▪ https://app.any.run/
+            ▪ https://www.joesecurity.org/#
+      • Narzedzie automatyczne do badania emaili
+            ▪ https://app.phishtool.com/sign-up/community
+               
+2) SPF (Sender Policy Framework)
+      • Po wpisaniu rekordu SPF dostawcy internetu moga sprawdzac:
+            ▪ Czy server poczty jest upowazniony do wysylania wiadomosci do okreslonej domeny.
+            ▪ Jest to rekord DNS TXT
+            ▪ Zawiera liste adresow ip mogacych wysylac wiadomosci w imieniu domeny
+      • Sprawdzenie
+            ▪ https://dmarcian.com/spf-survey/
+            ▪ https://easydmarc.com/tools/domain-scanner
