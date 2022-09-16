@@ -1,0 +1,2 @@
+-> pdfinfo <plik pdf>
+-> python2 peepdf.py <file.pdf> (https://github.com/jesparza/peepdf)
