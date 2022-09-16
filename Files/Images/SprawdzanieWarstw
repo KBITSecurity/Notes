@@ -1,0 +1,10 @@
+Program umozliwia sprawdzanie obrazu warstawa po warstwie.
+
+wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+chmod +x stegsolve.jar
+mkdir bin
+mv stegsolve.jar bin/
+
+
+Program odpalamy:
+java -jar stegsolve.jar
