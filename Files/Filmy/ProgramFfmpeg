@@ -1,0 +1,12 @@
+Filmy to w rzeczywistosci kupa zdjeci mozna je wyodrebnic i analizowac jak zdjecia.
+
+Program:
+https://ffmpeg.org/download.html
+(ale w sumie mozna wpisac w konsole “ffmpeg” i powinno podpowiedziec instalacje)
+
+Komenda wyrzuci wszystkie klatki
+-> ffmpeg -i myvideo.mp4 img%06d.png -hide_banner
+Kolejno numerami w miejscu %06d
+
+Stonka z opisem:
+https://nixintel.info/osint-tools/using-ffmpeg-to-grab-stills-and-audio-for-osint/
