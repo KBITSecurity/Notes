@@ -1,0 +1,13 @@
+1) Polaczenie telnet
+      • Nawiazanie polaczenia
+            ▪ telnet <ip> <port 110>
+      • Komendy
+            ▪ STAT
+            ▪ LIST
+            ▪ USER <username>
+            ▪ PASS <password>
+      • Odczytanie wiadomosci
+            ▪ retr <numer>  (wyswietli numery po wpisaniu LIST)
+            
+            
+            
