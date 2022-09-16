@@ -1,0 +1,4 @@
+Wiadomix jak mamy mozliwosc manipulowania parametrem to mozemy prubowac sqlinjection.
+
+No i jezeli jest to blind to tak mozemy szukac czy dziala:
+1. Sprawdzic czy odpowiedz strony nie ulaegla zmianie (czy cos sie nie zmienilo na stronie po wstrzyknieciu)
