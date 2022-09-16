@@ -1,0 +1,6 @@
+https://github.com/jesparza/peepdf
+
+• Wyciagniecie kodu java z pliku
+            ▪ echo 'extract js > javascript-from-demo_notsuspicious.pdf' > extracted_javascript.txt
+            ▪ python2 peepdf.py -s extracted_javascript.txt <file.pdf>
+            ▪ cat extracted_javascript.txt
