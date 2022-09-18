@@ -1,0 +1,16 @@
+
+[Linux]
+      • whois
+            ▪ whois <url>
+      • nslookup
+            ▪ nslookup --type=TXT <url>
+      • dig
+            ▪ dig <url>
+            ▪ dig <url> TXT
+            ▪ TXT  SOA  MX  CNAME  AAAA  A
+      • host
+            ▪ host cafe.thmredteam.com
+            
+            
+[Windows]
+nslookup -type=txt youtube.com
