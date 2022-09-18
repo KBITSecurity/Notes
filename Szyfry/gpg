@@ -1,0 +1,3 @@
+gpg -c notka.txt.gpg
+
+Po komendzie podajemy haslo
