@@ -1,0 +1,45 @@
+1) Parametry zapytan
+      • Potraktowanie zapytan jako osobne wyszukiwania i wyswietlenie wynikow
+            ▪ fraza1 or fraza2
+            ▪ fraza1 | fraza2
+      • Przeszukiwanie mediow spolecznosciowych
+            ▪ fraza @facebook
+            ▪ fraza @linkedin
+      • Wyszukanie za pomoca ceny
+            ▪ odkurzacz $200
+      • Generowanie przedzialow liczbowych
+            ▪ 4..8
+      • Wykluczenie frazy z wyszukiwania
+            ▪ -fraza_wykluczona
+      • Zastapienie ciagu znakow
+            ▪ co*am
+            
+            
+2) Komendy zapytania
+      • Wyszukiwanie na wybranej stronie
+            ▪ site:<strona>
+      • Wyszukiwanie pliku
+            ▪ filetype:<rozszerzenie>
+      • Wyszukiwanie stron powiazanych z domena
+            ▪ related:<strona>
+      • Ostatnia strona zapisana w pamieci cache googla
+            ▪ cache:<strona>
+      • Wykorzystanie wewnetrznego slownika googla (zapytanie bedzie definicja frazy)
+            ▪ define:<fraza>
+      • Wyszukiwanie plikow
+            ▪ fraza filetype:<file_type>
+            ▪ ksiazka filetype:pdf
+      • Wyszukiwanie w tytule
+            ▪ intitle:<fraza>
+            ▪ allintitle:<fraza1> <fraza2>
+      • Wyszukiwanie w url-u
+            ▪ inurl:<fraza>
+            ▪ allinurl:<fraza1> <fraza2>
+      • Wyszukiwanie tylko w tresci strony
+            ▪ intext:<fraza>
+            ▪ allintext:<fraza1> <fraza2>
+      • Wyszukanie stron ktore prowadza do szukanej strony
+            ▪ inanchor:<strona>
+            ▪ allinanchor:<strona> <fraza1> <fraza2>
+            ▪ inanchor:facebook.com
+  
