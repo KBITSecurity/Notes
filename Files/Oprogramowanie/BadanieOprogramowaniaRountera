@@ -1,0 +1,5 @@
+https://tryhackme.com/room/rfirmware
+
+Ogolnie sciagamy oprogramowanie rountera i bedziemy je badac.
+
+Uzywamy binwalk do wyodrebnienia plikow.
