@@ -1,0 +1,30 @@
+Filtrowanie po asn:
+ASN:[numer] 
+np. ASN:[AS14061]
+
+
+3) Filtry (dupadupadupadupa:dupa1478963dupa)
+      • Wyszukiwanie po miescie
+            ▪ city:"Warszawa"
+      • Wyszukiwanie po krajach
+            ▪ <fraza> country:PL
+      • Wyszukiwanie po wspolrzednych geograficznych
+            ▪ <fraza> geo:42.9694,-74.1225
+      • Wyszukiwanie po nazwach hosto/domen
+            ▪ hostname:<nazwa>
+      • Wyszukanie tylko dla ustawionego ip lub podsieci
+            ▪ net:<ip>
+            ▪ net:216.219.143.0/24
+      • Wyszukiwanie na okreslone systemy operacyjne
+            ▪ os:linux
+            ▪ <fraza> os:<system>
+      • Wyszukiwanie dla okreslonych porto
+            ▪ <fraza> port:21
+      • Wyniki zebrane przed okreslona data
+            ▪ before:01/01/2010
+      • Wyniki zebrane po okreslonej dacie
+            ▪ after:01/01/2022
+      • Wyszukanie adresow podatnych na exploit
+            ▪ vuln: ms17-010  (znajdzie podatne na eternal-blue)
+      • Komputery zinfekowane przez randsomware
+            ▪ has_screenshot:true encrypted attention
