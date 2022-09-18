@@ -1,0 +1,12 @@
+# Przelaczniki
+	--random=agent								| Losowy naglowek User-Agent
+	--level=2											| Poziom zapytan od 1 do 5 
+	--risk=2											| Poziom ryzyka od 1 do 3 aby nie zostac wykrytym
+	
+	-p username									| Jezeli w zapytaniu jest kilka zmiennych to mozemy wybrac ktora ma byc testowana
+	-a 													| Zrzuca wszystko co mozliwe
+
+	--flush-session									| Przy kolejnym zapytaniu program zbiera dane od nowa
+	--tamper=charencode						| Koduje znaki z naglowku http
+	--tamper=equaltolike						| Zamiast “=” umieszcza “like”
+	--list-tampers									| Pokazuje dodatkowe mozliwosci
