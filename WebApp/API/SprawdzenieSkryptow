@@ -10,3 +10,17 @@ https://github.com/GerbenJavado/LinkFinder
 
 Te skrypty wyciagna glownie adresy url, ktore znajduja sie w skryptach.
 W nich mozna np. znalezc endpoint ktorego nie ma w dokumentacji.
+
+
+
+
+
+
+
+Bardzo czesto aplikacje ktore obfuskuja kod tworza mape i jest ona zapisywana w:
+skrypt.js -> skrypt.js.map
+
+No i takie pliki znajduja sie czesto na serverach.
+
+I mozna przywrocic taki kod do pierwotnej postaci w przegladarce:
+(opis(20:12) https://www.youtube.com/watch?v=hXu5T0m7iVo)
