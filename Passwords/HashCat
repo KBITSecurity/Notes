@@ -1,0 +1,11 @@
+      • Wyszukanie typu hashu dla programu
+            ▪ hashcat -h | grep <name_of_hash>
+      • Uruchomienie programu
+            ▪ hashcat -m <hash-type=NUM> -a <attack_mode=num> <file with hash> <dictionary>
+      • Wyswietlenie wynikow
+            ▪ hashcat <!!> --show 
+      • Lamanie sha-512 (z sola)
+            ▪ Zapisujemy hash:sol
+            ▪ Wyszukamy hashcat -h | grep sha | grep 512
+            ▪ Tam jest opcja hash z sola nr. 1710 
+            ▪ hashcat -m 1710 hash solwnik
