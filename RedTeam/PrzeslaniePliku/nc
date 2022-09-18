@@ -1,0 +1,5 @@
+[Nasluch]
+nc -nlvp 9999 > dane
+
+[Wyslanie]
+nc -N <ip> 9999 < <file>
