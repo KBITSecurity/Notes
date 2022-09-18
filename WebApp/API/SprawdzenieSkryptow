@@ -1,0 +1,12 @@
+Sprawdzanie kodu zrodlowego
+(sciagamy wszystkie skrypty javascript ktore w danej domenie sie znajduja)
+
+
+Recznie jest ciezko to sprawdzac, najlepiej uzyc narzedzi automatycznych:
+
+
+https://github.com/nahamsec/JSParser
+https://github.com/GerbenJavado/LinkFinder
+
+Te skrypty wyciagna glownie adresy url, ktore znajduja sie w skryptach.
+W nich mozna np. znalezc endpoint ktorego nie ma w dokumentacji.
