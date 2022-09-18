@@ -1,0 +1,20 @@
+Defaultowe hasla do uslug
+      • Strony z defaultowymi haslami
+            ▪ https://cirt.net/passwords
+            ▪ https://default-password.info/
+            ▪ https://datarecovery.com/rd/default-passwords/
+      • Utworzenie listy hasel (np. z danych osintowych)
+            ▪ git clone https://github.com/therodri2/username_generator.git
+            ▪ python3 username_generator.py -h
+            ▪ Podajemy liste jako (imie nazwisko) np[echo "John Smith" > users.lst]
+            ▪ python3 username_generator.py -w users.lst
+      • Uzycie programow 
+            ▪ crunch
+            ▪ cupp
+ 
+       
+       
+
+Programy do mieszania wordlist
+      • Hash
+            ▪ https://github.com/hashcat/hashcat-utils/releases
