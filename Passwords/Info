@@ -18,3 +18,11 @@ Defaultowe hasla do uslug
 Programy do mieszania wordlist
       • Hash
             ▪ https://github.com/hashcat/hashcat-utils/releases
+
+
+
+4) Strony internetowe do dekrypcji/enkrypcji
+      • Rozpoznaje hash i go dekoduje jesli ma w bazie
+            ▪ https://crackstation.net/ 
+      • MD5
+            ▪ https://md5decrypt.net/   
