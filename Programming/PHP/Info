@@ -1,0 +1,20 @@
+$_GET[“zmienna”]
+$_POST[“zmienna”]
+$_REQUEST[“zmienna”] - Zawiera wszystkie zmienne
+
+ 
+phpinfo() - wyswietli na stronie ustawienia php
+np. sciezka do pliku konfiguracyjnego
+Dowiemy sie jaki najwiekszy plik mozemy uploadowac itp.
+
+ 
+gettype($zmienna) – pokazuje typ zmiennej
+
+ 
+var_dump($zmienna) – wypluwa na ekran rodzaj I wartosc zmiennej
+empty($zmienna) – true or false zaleznie czy zmienna posiada jakas wartosc
+strlen(“Tekst”) - zwraca dlugosc stringa
+is_numeric($zmienna) – true or false czy zmienna jest liczba
+in_array($znak, $string) – true or false sprawdza czy znak jest w ciagu
+strtolower($string) – zamienia znaki na male
+strtoupper($string) – zmienia znak na duzy
