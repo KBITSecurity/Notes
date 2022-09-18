@@ -1,0 +1,15 @@
+Mozna napisac wlasny modul w “c” i go zaladowac.
+
+Od versji 5.0 php (moduly musz byc umieszczane w folderze /usr/lib/php/extension jezeli sie to nie zmenilo)
+
+modul ladujemy funkcja dl
+
+[przykladowy kod]
+$result = dl("test.so");
+
+if(!$result)
+{
+	echo “Cos nie tak”;
+	}
+echo funkcja_z_modulu();
+[/kod]
