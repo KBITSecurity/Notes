@@ -1,0 +1,41 @@
+1) Identyfikacja hasha
+      • Programy hash podajemy w cudzyslowiu
+            ▪ hash-identifier
+            ▪ hashid <hash>
+            ▪ haiti <hash>
+      • Poszukiwanie w internecie
+            ▪ https://www.virustotal.com
+            
+            
+            
+            
+            
+            
+            
+1) Hashe KERBEROS
+      • Format
+            ▪ Hash bierzemy caly od “$krbtgt .... do konca”
+      • Sygnatury hascat
+            ▪ $krb5tgs$23$ (5 TGS_REP entype 23) hashcat -m 13100
+      • Hashcat
+            ▪ hashcat -m 18200 <hash file> <slownik>
+            ▪ hashcat -m 13100 -a 0 <hash file> <slownik>
+      • John
+            ▪ john --wordlist=<slownik> hash.txt
+
+2) NTLM
+      • Format
+            ▪ Ciag 32 znakowy
+      • Hashcat    
+            ▪ hashcat -m 1000 -a 0 <hash file> <slownik>
+      • Hashe windowsowe NTML
+            ▪ Skladaja sie z dwuch czesci NT i ML
+                
+3) NTLMv2
+      • Format
+            ▪ nazwa_login::....:....:...000
+      • Hashcat
+            ▪ hashcat -m 5600 <plik.hash> <slownik>           
+      • John
+            ▪ john <hashes.txt> -w=<slownik> --format=netntlmv2
+      
