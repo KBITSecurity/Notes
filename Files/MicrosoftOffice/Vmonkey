@@ -1,0 +1,7 @@
+  1) vmonkey
+      • Instalacja
+            ▪ https://github.com/decalage2/ViperMonkey
+            ▪ pip2 install -r requirements.txt; python2 setup.py
+      • Sprawdzenie pliku
+            ▪ cd ViperMonkey/vipermonkey
+            ▪ python2 vmonkey.py <file.doc>
