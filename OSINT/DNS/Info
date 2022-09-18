@@ -1,3 +1,9 @@
 [Strony]
 https://viewdns.info/
 (Mozemy sprawdzic czy strona jest hostowana na wspolnym lub dedykowanym adresie IP, co sugeruje budzet firmy)
+
+
+[Info]
+      • AAAA - przechowuje adresy IPv6
+      • PTR - udostepnia nazwe domeny w wyszukiwaniu wstecznym
+      • 253 - max dlugosc nazwy DNS
