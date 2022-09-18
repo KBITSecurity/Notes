@@ -1,0 +1,5 @@
+      • Strony
+            ▪ https://wiki.skullsecurity.org/index.php?title=Passwords
+      • Program do slownikow
+            ▪ git clone https://github.com/BlackArch/wordlistctl.git           
+            ▪ ./wordlistctl.py search male
