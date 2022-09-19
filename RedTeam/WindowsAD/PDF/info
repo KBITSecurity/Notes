@@ -1,0 +1,7 @@
+
+W aplikacji (PDF) mozna ustawic “Run Javascript”
+
+ 
+[script]
+app.launchURL(“[URL]”, false)
+false – bez wyswietlania okna pop-up
