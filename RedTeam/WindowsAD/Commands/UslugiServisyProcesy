@@ -1,0 +1,35 @@
+1) Uslugi / Servisy / Procesy
+      • Wyszukiwanie zaplanowanych zadan
+            ▪ Get-ScheduledTask
+            ▪ Get-ScheduledTask -TaskName <task>
+            ▪ Get-SchuduledTaskInfo
+            ▪ wmic service list
+      • Zbadanie procesu
+            ▪ sc qc netlogon
+            ▪ sc qc SERVICE_NAME (sprawdzenie przez kogo usluga jest uruchomiona)
+      • Lista uslug
+            ▪ net start
+            ▪ wmic service where "<service name>" get Name,PathName
+            ▪ Get-Process -Name <name>
+      • WYszukanie sciezki bez cudzyslowia:
+            ▪ wmic service get name,displayname,pathname,startmode
+      • Lista zaplanownych zadan
+            ▪ schtasks /query /fo LIST /v
+            ▪ schtasks
+      • Komenda wyszukuje innych uslug niz domyslne (czesciej sa podatne)
+            ▪ wmic service get name,displayname,pathname,startmode | findstr /v /i "C:\Windows"
+     
+
+2) DEFENDER / ANTYVIR
+     • Pokeze co wykryl defender
+           ▪ Get-MpThreat
+      • Sprawdzenie czy sa antywirusy
+            ▪ wmic /namespace:\\root\securitycenter2 path antivirusproduct
+            ▪ Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct  
+            ▪ Get-Service WinDefend           
+            ▪ Get-MpComputerStatus | select RealTimeProtectionEnabled    
+    
+    
+    
+    
+    
