@@ -1,0 +1,4 @@
+https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/Invoke-Portscan.ps1
+
+Przeskanowanie 50 najczestrzych portow:
+Invoke-Portscan -Hosts 10.200.90.100 -TopPorts 50
