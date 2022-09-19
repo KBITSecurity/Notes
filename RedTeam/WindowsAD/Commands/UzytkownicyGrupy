@@ -1,0 +1,51 @@
+1) Uzytkownicy / grupy / host podstawowe informacje
+      • Wyswietlenie lokalnych uzytkownikow
+            ▪ Get-LocalUser
+            ▪ net user
+            ▪ net user <user>
+      • Wyswietlenie szczegolow uzytkownika
+            ▪ Get-ADUser <user> -Properties *
+            ▪ Get-ADUser -Filter *
+      • Wyswietlenie szczegolow grupy
+            ▪ Get-ADGroup -Filter "Name -like '*2 admin*'" -Properties *
+      • Pokaze SID uslug
+            ▪ Get-ADUser -Filter * | fl
+      • Sprawdzenie jakie mamy uprawnienia
+            ▪ whoami /priv
+      • Sprawdzenie do jakiego uzytkownika nalezy SID
+            ▪ Get-LocalUser -SID '<sid>'
+      • Wyswietlenie grup lokalnych
+            ▪ Get-LocalGroup
+            ▪ net localgroup
+            ▪ Get-ADGroup
+            ▪ Get-ADGroupMember
+            ▪ Get-ADPrincipalGroupMembership
+      • Sprawdzenie czlonkostwa w grupie
+            ▪ Get-ADGroupMember -Identity Administrators -Server za.tryhackme.com
+      • Sprawdzenie wlasciciela pliku
+            ▪ Get-Acl <file/directory>
+      • Wyodrebnienie wszystkich kont SPN
+            ▪ setspn -T medin -Q */*
+      • Uzytkownicy zalogowani jednoczesnie
+            ▪ qwinsta
+      • Informacje o systemie uzytkownikach
+            ▪ systeminfo
+            ▪ gpresult /r 
+            ▪ winver    
+      • Sprawdzenie czy mamy mozliwosc zapisu do pliku itp
+            ▪ powershell "get-acl -Path 'C:\Program Files (x86)\System Explorer' | format-list"
+                
+2) Logi
+      • Logi
+            ▪ Get-EventLog -List
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
