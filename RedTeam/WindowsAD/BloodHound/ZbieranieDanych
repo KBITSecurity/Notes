@@ -1,0 +1,8 @@
+1) Sharphound
+      • Skrypt do zebrania danych
+            ▪ https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Collectors/SharpHound.ps1
+      • Powershell zebranie danych odpalamy z mozliwoscia skryptow
+            ▪ powershell -ep bypass
+      • Uruchomienie SharpHound
+            ▪ . .\SharpHound.ps1
+            ▪ Invoke-Bloodhound -CollectionMethod All -Domain <domain name> -ZipFileName <output.zip>    
