@@ -1,0 +1,32 @@
+
+# Przelaczniki
+	-sC									| Uruchamia przydatne skrypty na portach, bez agresji
+	-sV									| Wykrywanie wersji oprogramowania
+	-sT									| Skanowanie polegajace na laczeniu sie z kazdym portem SYN ACK i zerwaniu FIN
+	-sU									| S. UDP, jezeli port = close to system powinien wyslac icmp z taka informacja jezeli nie wysle to nie wiadomo
+	-sS									| Skanowanie z wyslaniem ACK RST do zerwania nawiazanego polaczenia
+	-sN									| Skanowanie NULL wszystkie flagi na 0 zgodnie z RFC server powinien odpowiedziec RST
+	-sF									| Skanowanie z tylko ustawiona flaga FIN czyli server powinien odpowiedziec RST
+	-sX									| S. z wyslaniem znieksztalconego pakietu TCP oczekuje RST dla zamknietych portow (omija IPS / IDS)
+
+	-A										| Skanowanie przy uzyciu skryptow
+	-Pn									| Ignoruje ping, traktuje hosty jako aktywne
+	-O										| Wykrywanie systemu operacyjnego
+	-script=vuln						| Skan wszystkimi skryptami
+	
+	-p										| Ustala zakres portow
+	-T0..T5								| Ustala czestotliwosc wysylania pakietow (T0 - co 5 min)
+	--max-rate 5					| max 5 pakietow na sekunde
+		
+	-oN									| Zapis do pliku danych wyjsciowych
+	-oG									| Grupowanie wynikow
+	
+	-v										| Tryb gadatliwy
+	-vv									| Tryb bardzo gadatliwy
+	-reason							| Pokazuje wnioski na podstawie ktorych nmap doszedl do takiego wyniku
+	
+	-f										| Dzieli dane na 8 lub mniej bajtowe fragmenty
+	-ff										| Dzieli dane na 16 bajtowe fragmenty
+	-mtu 8								| Dzieli pakiety na ustalona wartosc zawsze powinna byc wielokrotnosc osemki
+	-data-length 8					| Doklada jakies bajty do pakietu
+	
