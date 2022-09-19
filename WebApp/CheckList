@@ -1,1 +1,9 @@
 1. Naglowki servera
+      • Sprawdzenie typowych plikow (robots.txt, sitemap.xml) 
+      • Przeszukanie adresow url odkrywanie/manipulacja zmienna GET (Gobuster, Feroxbuster) 
+      • Wstrzykniecia (Sqlmap | nosql | Podatnosci_JavaScript) w kazde mozliwe miejsce
+      • Manipulacja danymi (ciastka/jwt)
+      • Sprawdzenie odpowiedzi servera na rozne metody zapytan (GET, POST, PUT...)
+      • Sprawdzenie naglowkow
+      • Sprawdzenie wersji oprogramowania (Podatnosci_PHP)
+      • Sprawdzenie szyfrowania (Nmap)
