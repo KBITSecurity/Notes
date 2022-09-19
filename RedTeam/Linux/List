@@ -1,0 +1,1 @@
+1) Skrypty pythona laduja biblioteki szukajac pod zmiennymi srodowiskowymi “import os” mozna to wykozystac export PATH=<path>:$PATH
