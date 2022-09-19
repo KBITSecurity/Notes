@@ -1,1 +1,2 @@
 1.) Zmiana metody przeslania np. z POST -> na -> GET, co moze sprawic uruchomienie mechanizmu rzadania bez sprawdzania csrf.
+2.) Usuniecie calkowicie parametru z requestu czasem moze byc tak ze usuniecie tokenu wylaczy w ogole mechanizm jego sprawdzania.
