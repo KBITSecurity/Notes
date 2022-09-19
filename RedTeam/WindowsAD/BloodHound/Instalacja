@@ -1,0 +1,24 @@
+2) Neo4j
+      • Instalacja
+            ▪ apt-get install -y neo4j
+      • Uruchomienie
+            ▪ sudo neo4j console
+      • Pierwsze logowanie
+            ▪ haslo: neo4j
+            ▪ login : neo4j   		
+
+3) BLOODHOUND
+      • Wersje bloodhound do pobrania
+            ▪ https://github.com/BloodHoundAD/BloodHound/releases
+            ▪ lub apt-get install bloodhound -y
+      • Uruchomienie
+            ▪ Podajemy login i haslo do bazy neo4j    
+      • Zaladowanie pliku wygenerowanego Sharphound-em
+            ▪ Zakladka po prawej “Upload data”
+
+4) Przydatne rzeczy
+      • Przeniesienie pliku na hosta przy zajetym porcie 22:ssh
+            ▪ Zmieniamy ustawienia uslugi ssh na port 30 (sudo vim /etc/ssh/sshd_config)
+            ▪ service ssh start
+            ▪ scp -P 30 .\<file> kali@<ip>:/tmp
+
