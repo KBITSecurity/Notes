@@ -1,0 +1,27 @@
+1) Polaczenia sieciowe
+      • Nazwa hosta i siec
+            ▪ hostname
+            ▪ netstat
+            ▪ arp -a
+      • Wyswietlenie polaczen sieciowych
+            ▪ Get-NetTCPConnection
+       • Sprawdzenie czy usluga laczy sie na porcie
+            ▪ netstat -noa |findstr "LISTENING" |findstr "<port>"
+      • Sprawdenie DNS (podajemy ktora maszyne 1, 2, 3...) (::1 ::2)
+            ▪ nslookup.exe
+               - ::1
+               - ls -d <name.com>   
+      • Testowanie polaczenia
+            ▪ Test-NetConnection -ComputerName 127.0.0.1 -Port 80
+      • Lista programow nasluchujacych
+            ▪ netstat -ano
+    
+2) FIREWALL
+      • Sprawdzanie Firewall
+            ▪ Get-NetFirewallProfile | Format-Table Name, Enabled     
+            ▪ Get-NetFirewallRule | select DisplayName, Enabled, Description
+      • Wylaczenie Firewall
+            ▪ Set-NetFirewallProfile -Profile Domain, Public, Private -Enabled False   
+    
+    
+    
