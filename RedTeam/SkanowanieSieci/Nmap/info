@@ -1,0 +1,24 @@
+# Dzialanie	
+		nmap <ip>																| Wykonuje domyslne skanowanie
+		nmap <ip> -p10-20													| Skanowanie wybranych portow
+		nmap <ip>/24															| Skanowanie sieci
+	
+	
+# Examples
+		nmap --top-ports 10												| przeskanuje 10 najpopularniejszych portow
+		nmap -p100-150														| przeskanuje porty od 100 do 150
+		nmap -p 443 --script=ssl-enum-ciphers <ip>			| informacje o szyfrowaniu
+		
+
+# More
+		Domyslny skan dla uzytkownika 	(-sT) 	   
+		Domyslny skan dla root					(-sS)
+		Skan z pakietem omija IPS / IDS 	(-sX)
+    
+    
+    
+    
+    
+    
+    [Static version]
+    https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/nmap
