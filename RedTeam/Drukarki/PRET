@@ -1,0 +1,12 @@
+1) Instalacja narzedzi
+      • PRET
+            ▪ git clone https://github.com/RUB-NDS/PRET
+            ▪ pip3 install colorama pysnmP
+        
+2) Lokalizowanie drukarek
+      • Mozna uzyc nmap ale skryp jest szybszy (koncentruje sie na portach drukarek)
+            ▪ python pret.py
+
+3) Strona z trikami do programu
+      • http://hacking-printers.net/wiki/index.php/Printer_Security_Testing_Cheat_Sheet           
+           
