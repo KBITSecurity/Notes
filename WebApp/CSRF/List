@@ -1,0 +1,1 @@
+1.) Zmiana metody przeslania np. z POST -> na -> GET, co moze sprawic uruchomienie mechanizmu rzadania bez sprawdzania csrf.
