@@ -1,6 +1,10 @@
             ▪ https://gtfobins.github.io/
             ▪ https://book.hacktricks.xyz
 
+		https://github.com/rebootuser/LinEnum
+		https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+                        
+                        
 1) Listujemy mozliwosci (sudo -l)
       • Uzyskanie powloki shell lub pruba przeczytania pliku (/etc/shadow)
             ▪ https://gtfobins.github.io
