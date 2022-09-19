@@ -1,0 +1,3 @@
+Najpierw sprawdźmy dynamicznie połączone biblioteki potrzebne do polecenia ls. Aby to zrobić, możesz wpisać:
+ldd /bin/ls
+
