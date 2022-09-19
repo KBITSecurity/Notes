@@ -12,6 +12,7 @@ To mozemy dolozyc znacznik html ("<meta name="referrer" content="never">")
 document.forms[0].submit();
 </script>
 
+***********************************************************************************
 Jezeli jest taka sytuacja ze server sprawdza referrer to mozna tak:
 
 [Header]
