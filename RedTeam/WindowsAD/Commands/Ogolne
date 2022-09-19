@@ -1,0 +1,47 @@
+1) Komendy w cmd
+      • Wylistowanie uzytkownikow
+            ▪ net user /domain
+      • Szczegoly uzytkownika
+            ▪ net user <user> /domain
+      • Wyliczenie grup
+            ▪ net group /domain
+      • Szczegoly grupy
+            ▪ net group <grupa> /domain
+      • Sprawdzenie polityki hasel
+            ▪ net accounts /domain
+            
+            
+            
+            
+            
+            
+            
+            
+Import-Module ActiveDirectory
+
+1) Przyklady komend
+      • Otwarcice kalkulatora :)
+            ▪ powershell -enc YwBhAGwAYwAuAGUAeABlAA==
+    
+2) Kodowanie
+      • Strony do kodowania komend
+            ▪ https://aptmasterclass.com/ps1/enc/
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
