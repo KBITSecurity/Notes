@@ -1,0 +1,16 @@
+Tworzymy plik word (docm) z makrem ktore odpala payload.exe
+Tworzymy plik payload.exe
+Dajemy jakas ikonke
+
+ 
+Nastepnie do archiwum dodajemy payload.exe I word.docm I w opcjach ustawiamy
+→ General → Create SFX archive
+→ Advanced → SFX options...
+-General (podajemy sciezke do rozpakowania)
+(najlepiej: C:\Users\<user>\AppData\Local\Temp
+-Setup (dajemy nazwy dokumentow payload.exe I word.docm) w Run after extraction
+-Modes (Hide all)
+-Text and icon (dodajemy nasza ikonke)
+
+ 
+I Mamy spakowany plik rarowy exe jak go odpalimy to otwiera nam worda I plik I oczywiscie powinnismy dostac polaczenie do meterpretera :) lub innego payloudu
