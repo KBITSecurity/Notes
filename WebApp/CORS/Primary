@@ -1,0 +1,10 @@
+Ogolnie chodzi o dopasowanie zapytania w burpie tak zeby jak wpiszemy do requestu
+
+Origin: null (lub cokolwiek zamiast null)
+
+To dostaniemy zwrotke z dodatkowym naglowkiem
+
+Access-Control-Allow-Origin: null
+
+Przyklad na prinscreenie dla subdomeny siemanko. Wpisalismy orginalny adres strony i okazalo sie ze pojawil sie naglowek mamy pozwolenie :). 
+No i proba dopisania subdomeny siemanko pokazuje ze mozemy cos takiego zrobic.
