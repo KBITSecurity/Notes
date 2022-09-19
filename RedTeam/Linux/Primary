@@ -1,0 +1,69 @@
+            ▪ https://gtfobins.github.io/
+            ▪ https://book.hacktricks.xyz
+
+1) Listujemy mozliwosci (sudo -l)
+      • Uzyskanie powloki shell lub pruba przeczytania pliku (/etc/shadow)
+            ▪ https://gtfobins.github.io
+      • Istnienie zmiennej srodowiskowej LD_PRELOAD (env_keep+=LD_PRELOAD)
+            ▪ Wygenerowanie programu {[2]-C -> [3]-POWLOKA SHELL}
+            ▪ sudo LD_PRELOAD=<program wygenerowany.elf> <program z listy sudo -l>
+      • Istnienie zmiennej srodowiskowej LD_LIBRARY_PATH (env_keep+=LD_LIBRARY_PATH)
+            ▪ ldd <program z listy sudo -l> (pokaze nazwe do uzycia dla biblioteki)
+            ▪ Wygnerowanie biblioteki {[2]-C -> [3]-POWLOKA SHELL}
+            ▪ sudo LD_LIBRARY_PATH=<sciezka do folderu z biblioteka> <program z listy sudo -l>
+
+2) Sprawdzamy wersje i szukamy exploitow
+      • sudo -V
+      
+      
+1) Wyszukiwanie plikow
+      • W terminalu
+            ▪ find / -perm -u=s -type f 2>/dev/null
+            ▪ find / -perm -4000 2>/dev/null
+      • Capabilities
+            ▪ getcap -r / 2>/dev/null
+      • Wyszukanie plikow wykonywalnych (do exploitow)
+            ▪ find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+      
+1) Sprawdzenie zadan
+      • Wylistowanie zadan
+            ▪ cat /etc/crontab
+            
+3) Sprawdzenie sciezki PATH (wyswietlana na gorze w pliku crontab)
+      • Mozliwosc podlozenia skryptu wczesniej niz jest aktualnie
+            ▪ Dotyczy zadan bez zdefiniowanej sciezki bezposredniej
+            ▪ Wymaga prawa zapisu do folderu 
+            
+          
+1) Program pspy64 (pokazuje procesy systemowe bez potrzeby uprawnien root)
+      • Proces uzywajacy komendy chmod 777 /<folder>/<folder>/
+            ▪ ln -s /etc/shadow tajny_plik
+            ▪ Oczekiwanie az proces przejdzie przez plik
+            ▪ vim tajny_plik
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
