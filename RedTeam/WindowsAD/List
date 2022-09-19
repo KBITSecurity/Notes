@@ -5,3 +5,11 @@
 2) Przeszukanie rejestru (np password dla automatycznego logowania)
       • Przeszukanie na slowo password
             ▪ reg query HKLM /f password /t REG_SZ /s
+
+
+3)
+Program uruchamiany na prawach administratora
+      • Sprawdzenie na jakich uprawnieniach uruchomiony program dziala
+            ▪ tasklist /V | findstr <name>
+      • Program z mozliwoscia otwarcia okienka dialogowego z wyborem plikow
+            ▪ file://c:/windows/system32/cmd.exe
