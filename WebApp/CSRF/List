@@ -2,3 +2,5 @@
 2.) Usuniecie calkowicie parametru z requestu czasem moze byc tak ze usuniecie tokenu wylaczy w ogole mechanizm jego sprawdzania.
 3.) Pobranie tokenu od servera i wykozystanie go do zlosliwej akcji. Mozy byc tak ze server utworzy sobie wazny token ale nie 
     powiaze go z sessja uzytkownika. Wtedy poprostu dokladamy token do zlosiwego requestu dla innego uzytkownika.
+4.) Moze byc tak ze server ustawia dodatkowe ciasteczko np. csrfKey wtedy mozemy je wstrzyknac ofierze. Przyklad skryptu na printscreenie.
+    (https://portswigger.net/web-security/csrf/lab-token-tied-to-non-session-cookie)
