@@ -1,0 +1,9 @@
+Description: Program do badania zawartosci plikow typu *.doc itp. 
+
+• wget https://raw.githubusercontent.com/DidierStevens/DidierStevensSuite/master/oledump.py
+      
+      
+      
+      # Dzialanie
+	./oledump.py file.doc 				 	| Wyswietli nam sekcje jakie sa w pliku
+	./oledump.py file.doc -s 8 -d  		| Wyswietli sekcje 8 na ekran
