@@ -1,0 +1,5 @@
+→ search heartblue
+→ use 1
+→ set rhost <ip>
+→ set verbose true
+→ run
