@@ -2,3 +2,6 @@
             ▪ Tutaj administratorzy lubia sobie zapisywac hasla w komentarzach
             
             
+2) Przeszukanie rejestru (np password dla automatycznego logowania)
+      • Przeszukanie na slowo password
+            ▪ reg query HKLM /f password /t REG_SZ /s
