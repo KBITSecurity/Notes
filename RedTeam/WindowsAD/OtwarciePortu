@@ -1,0 +1,2 @@
+1) Regola dodajaca pozwolenie na forwarding portu (otwiera port)
+   ⇒ netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT
