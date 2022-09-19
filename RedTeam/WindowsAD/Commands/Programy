@@ -1,0 +1,25 @@
+1)Programy
+      • Uruchomienie programu
+            ▪ Start-Process "shell-name.exe"
+      • Sprawdzenie zainstalowanych aplikacji
+            ▪ wmic product get name,version
+      • Sprawdzenie czy jest sysmon (z sysinternals) (adminy uzywaja do monitorowania zdarzen)
+            ▪ Get-Process | Where-Object { $_.ProcessName -eq "Sysmon" }
+            ▪ Get-CimInstance win32_service -Filter "Description = 'System Monitor service'"
+            ▪ reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon/Operational
+            ▪ findstr /si '<ProcessCreate onmatch="exclude">' C:\tools\*
+       • Lista zainstalowanych aktualizacji
+            ▪ wmic qfe get Caption,Description,HotFixID,InstalledOn   
+      
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
