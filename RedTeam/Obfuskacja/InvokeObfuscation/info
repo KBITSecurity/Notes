@@ -1,0 +1,26 @@
+1) Invoke-Obfuscation
+      • Instalacja
+            ▪ pobieramy calosc z strony (calego zipa)
+               - https://github.com/danielbohannon/Invoke-Obfuscation
+            ▪ Rozpakowujemy
+            ▪ Odpalamy PS i przechodzimy do katalogu
+            ▪ Get-ExecutionPolicy
+               - Powinno byc “Unrestricted”
+               - Jezeli nie to:
+               - Set-ExecutionPolicy Unrestricted
+            ▪ Import-Module Invoke-Obfuscation.psd1
+            ▪ Invoke-Obfuscation
+
+
+2) Obfuskowanie
+      • Skryptu
+            ▪ set scriptpath <scriezka do pliku ktory chcemy zaciemnic>
+            ▪ token\all\1              (tak wklejamy komende jak wyglada)
+            ▪ copy                       (skopiuje nam dane do schowka)
+          
+          
+          
+          
+          
+          
+          
