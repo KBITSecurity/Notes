@@ -1,7 +1,7 @@
 [List of rivershell]
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
 https://www.revshells.com/
-
+https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1
 
 1) Commands
       • Dostepne payloady
