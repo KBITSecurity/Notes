@@ -1,0 +1,31 @@
+1) IPTABLES
+      • Wyswietlenie listy ustawien
+            ▪ iptables -L
+      • Zapisanie regol (domyslnie resetuja sie)
+            ▪ iptables-save > /etc/iptables/rules.v4
+      • Wczytanie regol
+            ▪ iptables-restore < /etc/iptables/rules.v4 
+    
+2) Iptables posiada 3 glowne sekcje
+      • INPUT
+            ▪ Regoly polaczen przychodzacych
+      • OUTPUT
+            ▪ Regoly polaczen wychodzacych
+      • FORWARD   
+            ▪ Regoly polaczen przekazywanych dalej
+               
+3) Pakiety
+      • NEW
+            ▪ Nowe (pwkiet tworzacy nowe polaczenie
+      • ESTABLISHED
+            ▪ Pakiet nalezacy do istniejacego polaczenia
+      • RELATED   
+            ▪ Pakiet zwiazany z polaczeniem juz ustanowionym, ale nie bedacy jego czesciaj
+      • INVALID   
+            ▪ Pakiet bledny lub nie do zidentyfikowania
+               
+               
+               
+               
+               
+               
