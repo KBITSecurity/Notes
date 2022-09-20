@@ -1,0 +1,14 @@
+Wyszukiwanie subdomen
+      • dnsrecon (brute force)
+            ▪ dnsrecon -t brt -d acmeitsupport.thm
+      • sublist3r
+            ▪ ./sublist3r.py -d acmeitsupport.thm
+      • Fuzz (Zmieniamy naglowek Host poniewaz niektore servery hostuja sobie subdomeny)
+            ▪ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.151.202
+            ▪ Dokladamy do tego flage -fs {size} by ignorowal najczestrze odpowiedzi
+     • Przeglad subdomen i ciekawych informacji
+            ▪ https://dnsdumpster.com/
+        
+2) Wyszukiwanie subdomen
+      • Google
+            ▪ site:*.<strona.com>    
