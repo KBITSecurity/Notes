@@ -1,0 +1,7 @@
+1) Dodawanie / usuwanie
+      • Dodanie Usera
+            ▪ net user <new_user> <password> /add
+            ▪ net user <new_user>$ <password> /add (ukryty)
+      • Wyswietlenie
+            ▪ net user
+       
