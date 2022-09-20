@@ -1,0 +1,35 @@
+Opis:
+Program do atakowania aplikacji sieciowych
+
+Skladnia (bruteforce):
+→ hydra -L <slownik> -P <slownik> <protokol>://<ip>
+→ hydra -l <user> -P <slownik> <protokol>://<ip>
+
+Parametry:
+-V 																		(Wyswietlanie wiecej informacji na ekranie podczas dzialania programu)
+-P 																		(Plik z haslami)[duze P]
+-L 																		(Plik z loginami)[duze L]
+-l																		(login)[male l]
+-p																		(haslo)[male p]
+-f 																		(zatrzymanie programu w przypadku znalezienia danych)
+-s                                                                    	(port)
+-vV																	(Tryb bardzo gadatliwy)
+-t 4																	(Liczba polaczen rownoleglych na cel)
+
+-I (duze i)                (Nie czeka jest szybciej)
+
+
+Example:
+	Atak na ssl:
+		hydra -l <login> -P <Plik z haslami> ssh://<adres ip komputera>
+		hydra -L <plik z loginami> -P <Plik z haslami> ssh://<adres ip komputera>:<mozna podac port nietypowy>
+	Atak typu GET:
+		hydra -l <login> -P <passwords> <ip> http-get-form “/<file>:<variables ^PASS^ ^USER^>:<invalid credentials>”
+		hydra -l <login> -P <passwords> <ip> http-get-form “/index.php:wejscie=^PASS^:<invalid credentials>”
+		hydra -l <login> -P <passwords> <ip> http-post-form “/:wejscie=^PASS^&wyjscie=^USER^:<invalid credentials>”
+	Atak na ftp:
+		hydra -l admin -P <passwords> ftp://<ip>
+	Atak http-get-form
+		hydra -l admin -P 500-worst-passwords.txt 10.10.x.x http-get-form "/login-get/index.php:username=^USER^&password=^PASS^:S=logout.php" -f 
+	Atak na smtp
+		hydra -l email@company.xyz -P /path/to/wordlist.txt smtp://10.10.x.x -v 
