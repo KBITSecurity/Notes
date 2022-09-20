@@ -1,0 +1,7 @@
+1) BASH
+      • Strony
+            ▪ https://devhints.io/bash
+      • Polecenie do debuggowania skryptu(bash -x script.sh)
+            ▪ Wyswietli nam ktore linie sie wykonuja
+            ▪ mozemy w skrypcie ustawic “set +x” i “set -x”
+            ▪ nastepnie wywolac script -x script.sh (powinno pokazac wybrany blok kodu)
