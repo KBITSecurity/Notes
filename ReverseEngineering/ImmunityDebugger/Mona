@@ -1,0 +1,13 @@
+[SCRIPT MONA]
+[Wyswietlenie help]
+   ⇒ !mona modules
+[Ustawienie folderu roboczego]
+   ⇒ !mona config -set workingfolder c:\mona\%p
+[Wygenerowanie tablicy charow]
+   ⇒ !mona bytearray -b “\x00”
+[Porownanie pamieci z danymi z pliku]
+   ⇒ !mona compare -f C:\mona\%p\bytearray.bin -a <adres ESP>
+[Wyszukanie instrukcji skoku w pamieci z pominieciem wybranych znakow]
+   ⇒ !mona jmp -r esp -cpb “\x00\x0a” 
+[Wyszukanie w bibliotece dll]
+   ⇒ !mona jmp -r esp -cpb “\x00\x0d” -m kernel32.dll
