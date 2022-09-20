@@ -3,7 +3,8 @@
 -oN   (standardowy)
 -oX (xml)
 
-
+[Ruch przez okreslony port]
+nmap -sS -Pn -g 80 -F 10.10.30.168
 
 
 # Dzialanie	
