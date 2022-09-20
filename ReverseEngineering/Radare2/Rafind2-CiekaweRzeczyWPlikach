@@ -1,0 +1,10 @@
+Opis:
+Program do szukania ciekawych rzeczy w plikach binarnych.
+mozna definiowac wzorce
+
+Uzycie:
+rafind2 -m <plik>        szuka ciekawostek :)
+
+
+Example:
+→ rafind2 -s “bin” -Z /bin/ls
