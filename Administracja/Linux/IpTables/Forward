@@ -1,0 +1,17 @@
+1) Sterowanie przekazywaniem ruchu
+      • Tylko regoly zdefiniowane beda przepuszczaly ruch
+            ▪ iptables -P INPUT DROP
+      • Pozwolenie na caly ruch
+            ▪ iptables -P INPUT ACCEPT
+      • Usuniecie regol
+            ▪ iptables -F FORWARD
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
