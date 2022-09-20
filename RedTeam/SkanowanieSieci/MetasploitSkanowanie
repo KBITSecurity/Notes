@@ -1,0 +1,12 @@
+Metasplit skanowanie portow
+→ search portscan
+   ⇒ CONCURRENCY - liczba celow do jednoczesnego skanowania
+   ⇒ PORTS - Zakres portow do przeskanowania
+   ⇒ RHOSTS - Siec docelowa
+   ⇒ THREADS - liczba watkow i wiecej tym szybciej
+→ search scanner/discovery/udp_sweep
+   ⇒ Skanownaie uslug UDP
+→ search (smb_enumshares  | smb_version)
+   ⇒ skanowanie smb
+→ search smb_login
+   ⇒ (podajemy SMBUser i pass_file i robi nam bruteforce)
