@@ -1,0 +1,8 @@
+1) Instalacja
+      • Command
+            ▪ apt-get install tor -y
+            ▪ service tor start
+            ▪ apt-get install proxychains -y
+            ▪ Odkomentowujemy (dynamic_chain i proxy_dns) vim /etc/proxychains.conf
+            ▪  
+            ▪ proxychains firefox (wczesniejsze okna trzeba zamknac przed uruchomieniem)
