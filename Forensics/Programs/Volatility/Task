@@ -1,0 +1,38 @@
+
+
+Podaje informacja o pliku, profilu I inne dane
+Vol.py imageinfo –f <plik> 
+
+Pokaze liste procesow z rzutu pamieci
+Vol.py pslist –f <plik> -profile=<profil> 
+<profil> - odczytujemy z danych ktore podalo imageinfo
+
+Wyswietli cale drzewo procesow
+Vol.py pstree –f <plik> --profile=<profil> 
+
+Pokazuje czy byly jakies polaczenia sieciowe
+Vol.py connscan –f <plik> --profile=<profil>
+
+Pokazuje czy jakies aplikacja nasluchiwaly na portach
+Vol.py sockets –f <plik> --profile=<profil>
+
+Pokaze ktore biblioteki dll wykozystuja dany process 
+Vol.py –f <plik> --profile=<profil> dlldump –p <process_id> --dump-dir ~/
+
+Komenda pokaze plik exe zwiazany z danym procesem  
+Vol.py malfind –f <plik> --profile=<profile> -p <ID_procesu> --dump-dir <Sciezka_zapisu_wynikow>
+
+Wyswietli ostatni katalog do ktorego uzytkownik uzyskal dostep
+vol.py -f <plik> --profile=<profil> shellbags
+ 
+Wyswietlenie polaczen sieciowych
+vol.py netscan 
+
+Wyszukuje ukrytych lub wstrzyknietych kodow
+malfind
+
+Wyszukanie zmiennych srodowiskowych  okreslonego procesu
+vol envars -f <plik> -p <pid> --profile=<profil>
+
+Mozemy wykonac komende “md5sum *.dmp” I otrzymamy hashe wszystkich plikow ktore wygenerowal program mozemy je wleic np. w google I zobaczyc co to za badziewie 
+
