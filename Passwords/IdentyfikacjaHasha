@@ -7,7 +7,10 @@
             ▪ https://www.virustotal.com
             
             
-            
+ [Program haiti]
+ → git clone https://github.com/noraj/haiti
+→ cd haiti
+→ sudo gem install haiti-hash
             
             
             
