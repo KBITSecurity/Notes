@@ -1,0 +1,15 @@
+Opis:
+Jest to prosty assembler/dissassembler
+
+Uzycie:
+rasm2 -a <arhitektura> -e -d "9de3bf90"
+
+Opcje:
+-e             					 (zmienai na literengliand (odwrotne adresowanie))
+-a <arhiterktura>		 (wybor architektury)
+-d 								 (czyli dissasemblacja)
+
+Example:
+→ rasm2 -a arm "add r0, r0, #2"
+→ rasm2 -a x86 "add rsp, 0x20"
+→ rasm2 -a x86 -d 5690
