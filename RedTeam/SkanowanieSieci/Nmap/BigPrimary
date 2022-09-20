@@ -1,0 +1,101 @@
+
+
+wget https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/nmap?raw=true -O nmap-pencer
+
+
+
+-sn											(Nie skanuje zadnych portow polega glownie na samych pakietach ICMP echo lub zadaniach ARP jesli jest uruchamiany jako root. Wysle rowniez pakiet 				TCP SYN do portu 443 i TCP ACK (lub TCP SYN jezeli jest jako root) do portu 80.
+-f												(Sluzy do fragmentacji pakietow)(Czyli podzielenia ich na mniejsze czesci)(zmniejsza to prawdopodobienstwo wykrycia przez IDS)
+--mtu <liczba>						(to samo co -f tylko ustalamy wielkosc apketu wielokrotnosc 8)
+--scan-delay <czas>ms			(opoznienie miedzy wysylanymi pakietami)
+--badsum									(sluzy do generowania niepoprawnej sumy kontrolnej)(Prawdziwy stos TCP/IP odrzucilby ten pakiet, jednak zapory moga potencjalnie odpowiedziec automatycznie, bez zwracania sobie glowy sprawdzaniem sumy kontrolnej. W zwiazku z tym ten przelacznik moze byc uzywany do okreslenia obecnosci zapory/IDS
+--data-length							(Dodawanie bzdurnych danych do pakietu o ustalonej dlugosci)
+-PR											(Odkrywanie adresow ARP / MAC)
+
+
+
+Przy skanowaniu mozemy sobie sami ustawic flagi ktore chcemy dodatkowo:
+-scanflags RSTSYNFIN
+
+
+(-d)(-dd)  - to tryb z debuggowaniem co tam nmap wysyla 
+
+-RP   Skanowanie arp bez skanowania portow
+-sn CELE
+-PS       TCP/SYN ping
+-PA       TCP/ACK tu podajemy liste portow (np. -PA21 lub -PA21-25)
+-PU       Pingowanie UDP
+sudo nmap -PR -sn 10.10.210.6/24
+-PE 	  Uzywa ICMP do wykrywania aktywnych hostow.
+-PP     Przy rzadaniach ICMP uzyw znacznikow czasu (wysyla 13 i oczekuje 14) with timestamp
+-PM 	  (typ 17)(oczekuje 18) maska adresu
+-n      (pomija zapytania dns)
+--dns-servers DNS_SERVER
+-R	  Wyszukujac dodatkowo pyta sie servera dns o nazwy co moze ujawnic wiecej informacji
+
+ARP Scan 	sudo nmap -PR -sn MACHINE_IP/24
+ICMP Echo Scan 	sudo nmap -PE -sn MACHINE_IP/24
+ICMP Timestamp Scan 	sudo nmap -PP -sn MACHINE_IP/24
+ICMP Address Mask Scan 	sudo nmap -PM -sn MACHINE_IP/24
+TCP SYN Ping Scan 	sudo nmap -PS22,80,443 -sn MACHINE_IP/30
+TCP ACK Ping Scan 	sudo nmap -PA22,80,443 -sn MACHINE_IP/30
+UDP Ping Scan 	sudo nmap -PU53,161,162 -sn MACHINE_IP/30
+
+-n 	no DNS lookup
+-R 	reverse-DNS lookup for all hosts
+-sn 	host discovery only
+
+-n 	no DNS lookup
+-R 	reverse-DNS lookup for all hosts
+-sn 	host discovery only
+
+-n               - nmap nie dziala na serverze dns
+-sL TARGETS      - Wyswietla jakie adresy skanuje
+-iL <plik.txt>   - Lista celow
+
+
+[script]
+Nmap moze do skanowania wykorzystywac skrypty napisane w jezyku LUA. 
+safe - bezpieczne nie wplywaja na cel
+intrusive - inwazyjne niebezzpieczne prawdopodobnie wplynie na cel
+vuln - skanuje w poszukiwaniu luk
+exploit - proba wykorzystania luk w zabezpieczeniach
+auth - proba ominiecia uwierzytelniania dla uruchomionych uslug np. ftp anonymous
+brute - proba uzycia danych uwierzytalniajacych typu bruteforce 
+discovery - Proba zapytania uruchomionych uslug o dalsze informacje o sieci
+
+[wyszukiwanie]
+/usr/share/nmap/scripts (w tym katalogu nmap szuka skryptow)
+/usr/share/nmap/scripts/script.db (taka mini baza)
+grep "ftp" /usr/share/nmap/scripts/script.db
+ls -l /usr/share/nmap/scripts/*ftp*
+
+[uruchomienie skryptow]
+--script=safe (aktywuje skrypty tylko do aktywnej uslugi)
+--script=vuln
+--script=http-fileupload-exploiter (uruchumi konkretny skrypt)
+--script=smb-enum-users,smb-enum-shares
+
+[Argumenty skryptow]
+Niekture skrypty wymagaja argumentow
+Argumenty skryptow sa oddzielone przecinkami i polaczone z odpowiednim skryptem kropka
+--script http-put --script-args http-put.url='<adres>',http-put.file='<file>'
+
+[Help skryptu]
+→ nmap --script-help <name_script>
+
+[instalacja / aktualizacja skryptow]
+Jezeli brak skryptu to: sudo apt && sudo apt install nmap (powinno zalatwic sprawe)
+Mozna zrobic to recznie:
+sudo wget -O /usr/share/nmap/scripts/<nazwa-skryptu>.nse https://svn.nmap.org/nmap/scripts /<nazwa-skryptu>.nse
+Następnie należy wykonać polecenie nmap --script-updatedb, które aktualizuje plik script.db tak, aby zawierał nowo pobrany skrypt.
+
+Example:
+Wykrywanie wafa:
+→ nmap --script http-waf-detect -p 80 --script-args="http-waf-detect.aggro,http-waf-detect.uri=/bWAPP/sqli_1.php?" <ip_address>
+→ nmap –script=http-waf-detect -p 443 onet.pl
+
+SSH:
+nmap --script ssh2-enum-algos rdb-server
+nmap host --script ssh-hostkey --script-args ssh_hostkey=all <ip>
+nmap -p 22 --script ssh-brute --script-args userdb=users.lst,passdb=pass.lst --script-args ssh-brute.timeout=4s <target>
