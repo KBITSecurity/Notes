@@ -1,3 +1,69 @@
+1. [ROZPOZNANIE]
+
 Jezeli wykonanie np. takiego url zwraca wynik operacji matematycznej
-  http://vulnerable-website.com/?username=${7*7}
+        http://vulnerable-website.com/?username=${7*7}
 No to wiemy ze aplikacja moze byc podatna
+
+
+Jedną z metod testowania wstrzykiwania szablonu po stronie serwera w tym kontekście jest najpierw ustalenie, że parametr nie zawiera bezpośredniej luki 
+XSS poprzez wstrzyknięcie dowolnego kodu HTML do wartości:
+        http://vulnerable-website.com/?greeting=data.username<tag>
+ W przypadku braku XSS zwykle spowoduje to albo pusty wpis w danych wyjściowych (po prostu Hello bez nazwy użytkownika), zakodowane znaczniki lub 
+ komunikat o błędzie.
+ 
+ 
+ 
+ Następnym krokiem jest próba wyrwania się z instrukcji przy użyciu wspólnej składni szablonów i próba wstrzyknięcia po niej dowolnego kodu HTML:
+        http://vulnerable-website.com/?greeting=data.username}}<tag>  
+ Jeśli to ponownie spowoduje błąd lub puste dane wyjściowe, użyto składni z niewłaściwego języka szablonów lub, jeśli żadna składnia stylu szablonu 
+ nie wydaje się prawidłowa, wstrzyknięcie szablonu po stronie serwera nie jest możliwe. Alternatywnie, jeśli dane wyjściowe są renderowane poprawnie, 
+ wraz z dowolnym kodem HTML, jest to kluczowa wskazówka, że istnieje luka w zabezpieczeniach polegająca na wstrzyknięciu szablonu po stronie serwera:
+ 
+ 
+ 
+ 
+ 2. [IDENTYFIKACJA]
+ Po wykryciu potencjału wstrzykiwania szablonu następnym krokiem jest identyfikacja silnika szablonów.
+
+Chociaż istnieje ogromna liczba języków szablonów, wiele z nich używa bardzo podobnej składni, która została specjalnie dobrana, aby nie kolidować 
+ze znakami HTML. W rezultacie tworzenie ładunków sondowania w celu przetestowania używanego aparatu szablonów może być stosunkowo proste.
+
+Zwykłe przesłanie nieprawidłowej składni jest często wystarczające, ponieważ wynikowy komunikat o błędzie powie dokładnie, czym jest silnik szablonów, 
+a czasem nawet w jakiej wersji. Na przykład nieprawidłowe wyrażenie <%=foobar%> wyzwala następującą odpowiedź z aparatu ERB opartego na Ruby:
+
+(erb):1:in `<main>': undefined local variable or method `foobar' for main:Object (NameError)
+from /usr/lib/ruby/2.5.0/erb.rb:876:in `eval'
+from /usr/lib/ruby/2.5.0/erb.rb:876:in `result'
+from -e:4:in `<main>'
+
+
+W przeciwnym razie musisz ręcznie przetestować różne ładunki specyficzne dla języka i zbadać, jak są one interpretowane przez aparat szablonów. 
+Korzystając z procesu eliminacji opartego na tym, która składnia wydaje się być prawidłowa lub nieprawidłowa, możesz zawęzić opcje szybciej niż myślisz. 
+Typowym sposobem na to jest wstrzykiwanie dowolnych operacji matematycznych przy użyciu składni z różnych aparatów szablonów. 
+Możesz wtedy zaobserwować, czy zostały pomyślnie ocenione. Aby pomóc w tym procesie, możesz użyć drzewa decyzyjnego podobnego do następującego:
+          (Patrz drzewkoRozpoznania.png)
+Należy pamiętać, że ten sam ładunek może czasami zwracać pomyślną odpowiedź w więcej niż jednym języku szablonu. Na przykład ładunek {{7*'7'}} zwraca 49 w 
+Twig i 7777777 w Jinja2. Dlatego ważne jest, aby nie wyciągać pochopnych wniosków na podstawie jednej udanej odpowiedzi.
+
+
+3. [EXPOITACJA]
+Wykorzystać
+
+Po wykryciu, że istnieje potencjalna luka w zabezpieczeniach i pomyślnym zidentyfikowaniu silnika szablonów, możesz zacząć szukać 
+sposobów na jej wykorzystanie.
+Czyt dalej[sposoby i laby]: (https://portswigger.net/web-security/server-side-template-injection/exploiting)
+
+
+
+4. [ZABEZPIECZENIE]
+Najlepszym sposobem zapobiegania wstrzykiwaniu szablonów po stronie serwera jest uniemożliwienie użytkownikom modyfikowania lub przesyłania nowych szablonów. Jednak czasami jest to nieuniknione ze względu na wymagania biznesowe.
+
+Jednym z najprostszych sposobów na uniknięcie wprowadzania podatności na wstrzykiwanie szablonów po stronie serwera jest używanie „bezlogicznego” 
+silnika szablonów, takiego jak Mustache, chyba że jest to absolutnie konieczne. 
+Oddzielenie logiki od prezentacji tak bardzo, jak to możliwe, może znacznie zmniejszyć narażenie na najniebezpieczniejsze ataki oparte na szablonach.
+
+Innym środkiem jest wykonywanie kodu użytkownika tylko w środowisku piaskownicy, w którym potencjalnie niebezpieczne moduły i funkcje zostały całkowicie 
+usunięte. Niestety, niezaufany kod w piaskownicy jest z natury trudny i podatny na obejście.
+
+Wreszcie innym uzupełniającym podejściem jest zaakceptowanie, że wykonanie dowolnego kodu jest prawie nieuniknione, i zastosowanie własnego sandboxingu, 
+na przykład poprzez wdrożenie środowiska szablonów w zablokowanym kontenerze Dockera.
