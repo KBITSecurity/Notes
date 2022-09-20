@@ -1,0 +1,5 @@
+1) Informacje
+      • Little Endian
+            ▪ Od najmniej znaczacego bajtu do najbardziej znaczacego
+      • Big Endian
+            ▪ Od najbardziej znaczacego bajtu do najmniej znaczacego.
