@@ -1,0 +1,7 @@
+Sequencer:
+→ Przejmujemy pakiet ktory powoduje odpowiedz servera z (Set-cookie)
+   ⇒ Czyli najczesciej pakiet do logowania (user, password)
+→ Wysylamy pakiet do sequencera
+→ Kllikamy start live
+   ⇒ Zbieramy okolo 10 tys pakietow
+→ Mozemy to porownac i wyciagnac wnioski
