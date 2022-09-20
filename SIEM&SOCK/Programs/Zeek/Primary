@@ -1,0 +1,60 @@
+
+
+1. Wget  https://wiki.wireshark.org/SampleCaptures?action=AttachFile&do=get&target=NMap+Captures.zip
+
+1. Unzip -||-
+ 
+1. Cp nmap_standard_scan nmap.pcap   
+ 
+
+ Zeek –Cr <plik>
+Zeek –Cr <plik> <sciezka_do_skryptu_zeek>
+Zeek –Cr nmap.pcap ./zeek/scripts/policy/misc/scan.zeek
+
+ 
+Zeek wygeneruje nam pliki
+Coon.log   – z aktywnymi polaczeniami jakie byly aktywne podczas zbierania ruchu sieciowego
+Notice.log – Pokazuje element ktore zostaly wychwycone przez nasz skrypt (jakies ciekawe rzeczy)
+
+ 
+Mozemy otworzyc scrypt I go edytowac np. zmienne stale, ktore przechowuja liczbe portow po ktorej skrypt wykrywa czy dany ruch sieciowy ma zaliczyc jako skanowanie.
+
+ 
+1. ./zeek/testing/btest/Traces/ftp/bruteforce.pcap
+
+
+ 
+Przykladowa sciezka do ruchu sieciowego z atakiem bruteforce. Zeek zawiera duzo takich przykladow.
+
+ 
+1. Zeek –Cr  ./zeek/testing/btest/Traces/ftp/bruteforce.pcap  ./zeek/scripts/policy/protocols/ftp/detect-bruteforcing.zeek
+
+
+ 
+W pliku notice.log pojawi sie informacja o 20 prubach nieudanych logowan czyli cos tam wykryje 
+
+ 
+1. Parametr –C czyli nie  sprawdzanie sum kontrolnych plikow
+
+
+ 
+Zeek –C –i eth0 ./zeek/scripts/policy/misc/scan.zeek
+Zeek bedzie na bierzaca skanowal ruch na eth0 I zapisywal wszystko w plikach.  
+
+ 
+1. zeek-cut (sluzy do filtrowania  wynikow)
+
+-d ts (sprawi ze czas zostanie zamieniony na normalny )
+
+ 
+cat coon.log | zeek-cut –d ts proto id.orig_p id.orig_h  
+
+ 
+na koncu podajemy nazwy plikow z danymi ktore chcemy wyswietlic (proto – protocol)
+
+ 
+1. zeekctl
+
+start
+uruchomi zeeka w tle I bedzie chodzil caly czas.
+Wtedy logi beda pojawiac sie w /usr/local/zeek/logs
