@@ -1,0 +1,16 @@
+1) Setoolkit
+      • Instalacja
+            ▪ https://github.com/trustedsec/social-engineer-toolkit
+            ▪ pip3 install -r requirement.txt
+      • Atak z klonowaniem strony
+            ▪ 1 social-enginering attack
+            ▪ 2 Website attack vectors
+            ▪ 3 Credential Harvaster Attack Method
+            ▪ 2 Site Cloner
+            ▪ Podajemy adres ip naszej ofiary w sieci lan
+            ▪ Podajemy adres url strony do skopiowania
+
+
+
+
+
