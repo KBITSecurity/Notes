@@ -9,3 +9,55 @@
             ▪ Wyszukamy hashcat -h | grep sha | grep 512
             ▪ Tam jest opcja hash z sola nr. 1710 
             ▪ hashcat -m 1710 hash solwnik
+
+
+
+
+
+
+
+
+
+
+Opis:
+Program do krakowania hashy. Moze uzywac kart graficznych.
+
+Strona z opisami algorytmow
+https://hashcat.net/wiki/doku.php?id=example_hashes
+
+Options:
+
+→ -m <hash-type=NUM>
+   ⇒ Numery sa wyswietlanie w helpie mozna szukac np. (hashcat --help | grep -i md5)
+	
+→ -a <attack-mode=NUM>
+   ⇒ Znajdziemy numery w (hashcat --help -> sekcja “Attack modes”)
+ 
+[wyswietlanie zkrakowanego hasha]
+→ Ta sama komenda co do krakowania z przelacznikiem --show
+   ⇒ !! --show
+
+
+Uzycie:
+→ hashcat -m <hash-type=NUM> -a <attack_mode=num> <file with hash> <dictionary>
+
+[maska]
+→ -i mas?la?H
+→ -i <maska>
+   ◇    ?l = abcdefghijklmnopqrstuvwxyz
+   ◇    ?u = ABCDEFGHIJKLMNOPQRSTUVWXYZ
+   ◇    ?d = 0123456789
+   ◇    ?h = 0123456789abcdef
+   ◇    ?H = 0123456789ABCDEF
+   ◇    ?s = «space»!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ 
+   ◇    ?a = ?l?u?d?s
+   ◇    ?b = 0x00 - 0xff
+
+Example:
+[MD5 Brute Force z maska]
+→ hashcat -m 0 -a 3 hash.txt -i fraz?l
+
+[Lamanie NTLM]
+→ hashcat –a 0 –m 1000 <plik_z_hashami> <plik_z_haslami>
+
+ 
