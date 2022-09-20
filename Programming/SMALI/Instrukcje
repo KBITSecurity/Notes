@@ -1,0 +1,13 @@
+1) Smile
+      • Skok do adresu pod (cond_0) jezeli (v0 = 0)
+            ▪ if-eqz v0, :cond_0              
+      • Definicja stalej (v2) o wielkosci 16 bitow z wartoscia 0x3d
+            ▪ const/16 v2, 0x3d	
+      • Przeniesienie wartosci v0 do v1
+            ▪ move v0, v1
+      • Dodanie 0x1 do v2 i zapisanie w v1
+            ▪ add-int v1, v2, 0x1
+      • Definicja bloku funkcji
+            ▪ .method public [public]
+      • Zwrocenie v0 z funkcji
+            ▪ return v0
