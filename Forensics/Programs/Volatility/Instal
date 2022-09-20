@@ -1,0 +1,18 @@
+Install: (pip2 - bo volality dziala na python2)
+→ apt-get install yara
+→ apt-get install python3-dev
+→ pip2 install pycrypto
+→ pip2 install cryptography
+→ pip2 install distorm3
+→ pip2 install crypto
+→ pip2 install cryptohash
+→ pip2 install pycrypto
+→ cd /opt
+→ git clone https://github.com/volatilityfoundation/volatility.git
+→ cd volatility
+→ make
+→ make install
+→ python2 vol.py -h     (Sprawdzenie czy dziala i czy nie wyswietla bledow)
+→ echo ‘python2 /opt/volatility/vol.py $1 $2 $3 $4 $5 $6 $7 $8 $9’ >> /usr/bin/vol 
+→ chmod +x /usr/bin/vol
+→ I teraz normalnie w konsoli “vol”
