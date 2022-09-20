@@ -1,0 +1,17 @@
+Opis:
+Wyswietla ciekawe informacje
+
+Uzycie:
+→ rabin2 <opcje> <plik binarny>
+
+Options:
+-I          show info
+-i          show imports
+-l          linked libraries
+-S         show sections
+-z         show strings
+
+Example:
+→ rabin2 -i strings.exe
+→ rabin2 -z strings.exe           (wyswietla stringi wiecej czesze niz strings)
+→ rabin2 -a x86 -e /bin/ls        (wyszukuje entrypoint)
