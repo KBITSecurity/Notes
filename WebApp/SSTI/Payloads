@@ -1,0 +1,4 @@
+Warto jest kodowac payloady w burpie np. do url-a.
+
+[Ruby]
+<%= 7*7 %>
