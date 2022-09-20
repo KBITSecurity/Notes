@@ -1,0 +1,20 @@
+Program do tworzenia listy chasel
+
+ 
+Crunch 3 4 znaki –o passwordlist.txt
+
+
+Dane na ekran:
+crunch <min> <max> <znaki>    (np. crunch 2 2 12345)
+
+
+Generowanie za pomoca maski
+→ dlugosc min i max powinna byc taka sama
+→ wielkosc maski musi odpowiadac tej dlugosci
+→ @ - male litery alfabetu
+→ , - wielkie litery 
+→ % - znaki numeryczne
+→ ^ - znaki specjalne ze spacja
+
+np. (crunch 1 1 -t @)
+	  (crunch 2 2 -t @,)
