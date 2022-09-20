@@ -1,0 +1,5 @@
+Opis:
+Program do hashow.
+
+Example:
+rarhash2 -a md5,shal,sha256 -s “SecurityBSides”
