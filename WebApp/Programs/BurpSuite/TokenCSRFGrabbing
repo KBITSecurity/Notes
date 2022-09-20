@@ -1,0 +1,36 @@
+→ Wchodzimy na strone z panelem logowania
+      • Przechwytujemy nazwy pul ktore chcemy wykorzystac (Token w formularzu i moze cookie sesyjne)
+
+→ Wpisujemy dane logowanie i wysylamy
+      • Lapiemy pakiet w interceptorze i wysylamy do intrudera
+    
+→ Ustawiamy pola ktore chcemy brutforcowac (login i haslo)
+
+
+→ Przechodzimy do zakladki Project Options -> Sessions
+      • Macro -> add
+            ▪ Wybieramy pakiet ktory pytalismy server przy wchodzeniu na strone z panelem logowania (raczej GET) (http://<ip>/login)
+                  → Ok -> Nadajemy nazwe -> Ok
+
+→ Teraz w “Sessions Handing Rules” -> Add
+      • Scope
+                  → Wybier	e)
+            ▪ URL Scope
+                  → Do jakich adresow ma wysylac (dajemy do wszyskich)
+                        • Opcjonalne opcje
+                              ▪ wszyskie
+                              ▪ Znajdujace sie w scopy
+                              ▪ Zdefiniowane
+            ▪ Przechodzimy do zakladki Details
+                  → Nadajemy nazwe regula
+                  → Rule Actions -> Add -> Run a macro
+                        • Update following update parametr (zaznaczamy pole radio)
+                              ▪ Edit -> Wpisujemy pole jak nazywa sie w formularzu np. (loginToken)
+                        • Update only the following cookie
+                              ▪ Edit -> Dodajemy nazwe cookie (np. session)
+            ▪ OK
+
+No i teraz generalnie jak cos robimy w intruderze to przed tym uruchamia sie nasze makro w ktorym zdefiniowalismy ze ma sie uruchomic pakiet wysylki do servera (czyli wejscie na strone logowania co da nowy token i cookie) a nastepnie przypisanie tych wartosci do nowego pakietu.
+
+Po wykonaniu naszego makra intruder dziala normalnie z czym ze ma nowe podmienione wartosci (tokenu i cookie)
+Wstawia swoje wartosci z payloadu i jedzie i tak w kolko :)
