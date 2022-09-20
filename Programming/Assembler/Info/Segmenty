@@ -1,0 +1,20 @@
+1) SEGMENTY PROGRAMU
+      • bss
+            ▪ Zawiera zmienne statyczne i globalne, ktorym nie zostala nadana wartosc
+      • heap
+            ▪ Segment sterty, ma zmienna wielkosc
+            ▪ Wykozystywany przy zmiennych dynamicznych
+      • stack
+            ▪ Segment stosu, wykorzystywany jest automatycznie przez zmienne lokalne(funkcji)
+      • text
+            ▪ Segment kodu, zawiera kod programu napisany przez programiste
+            ▪ Jego wielkosc nie zmienia sie po wczytaniu do pamieci
+      • data
+            ▪ Zawiera zmienne globalne oraz zadeklarowane stale np. lancuch znakowe
+        
+        
+        
+        
+        
+        
+        
