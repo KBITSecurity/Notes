@@ -1,0 +1,14 @@
+1) Programy do analizy
+      • Zapisanie stanu systemu, uruchomienie pliku, ponowny zapis systemu i analiza porownawcza.
+            ▪ Regshoot
+      • Program do monitorowania zdarzen systemowych na bierzaco (z dopisywaniem ich do listy)
+            ▪ Sysinternals -> procmon
+      • Program do monitorowania bierzacych procesow i ich badania
+            ▪ Sysinternals -> procexp
+      • win+r
+            ▪ resmon
+
+
+
+
+
