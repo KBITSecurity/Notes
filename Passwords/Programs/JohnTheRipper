@@ -1,0 +1,94 @@
+      • Moduly przygotowujace dane wejsciowe
+            ▪ zip2john <file.zip> hash.txt
+            ▪ rar2john <file.rar> hash.txt
+            ▪ ssh2john <ssh.key> hash.txt
+      • Uruchomienie programu
+            ▪ john hash.txt 
+            ▪ john hast.txt --wordlist=<word_list>
+            ▪ john --format=raw-sha512 <file_hash>
+               - sha512 sha1 md5
+      • Wyswietlenie wyniku
+            ▪ john -show <file>
+
+
+
+
+
+
+
+
+
+
+
+Opis:
+Program do krakowania hashy.
+
+
+Moduly: 
+[Prepare hash form file]
+→ rar2john file.rar > hash.txt
+→ zip2john file.zip > hash.txt
+→ ssh2john ssh.key > text           (To jesz dla kluczy rsa bo to ten klucz :))
+→ gpg2john
+→ ssh2john
+
+
+[wordlist]
+→ /usr/share/seclists/Password/*
+
+
+Uzycie:
+→ john –wordlist=<Lista.txt> <hash.txt>
+→ John –format=LM <plik>
+→ John –-format=RAW-SHA512 hash.txt
+→ john --format=raw-md5 --wordlist=rockyou.txt hash.txt
+→ john --format=nt --wordlist=<path-to-wordlist> <hash>
+→ john --format=gpg --wordlist=rockyou.txt <result gpg2john>
+→ John –format=LM <plik> --wordlist=/usr/share/seclists/Password/Leaked-Databases/rockyou-20.txt
+   ⇒ Pokazanie wynikow
+      • John –show <plik>
+ 
+Opis wersja 2
+→ john --wordlist=<slowa> hash.txt  (John sam znajdzie hash w pliku i sprubuje go rozpoznac i zacznie lamac)
+→ Nie jest to super dobry pomysl bo moze sie pomylic i lamac na daremno nie ten hash
+ 
+Lepiej jest samemu rozpoznac chash i podac go johnowi:
+→ john --wordlist=<slowa> --format=<typ hash> hash.txt
+
+Przedrostek raw oznacza podstawowa wersje hashu choc nie zawsze.
+Sprawdzenie listy johna:
+→ john --list=formats
+
+
+
+Lamanie hasel windowsowych
+Windows posiada skroty chasel w tzw. NTLM 
+Do lamania uzywamy w john min:
+--format=NT
+
+
+Lamanie hasel na linuxie
+Aby to zrobic trzeba uzyc narzedzia unshadow. Jest wbudowane w pakiet Johna.
+Laczy plik passwd z plikiem shadow i john wiecej rozumie i moze dzialac na danych.
+unshadow /etc/passwd /etc/shadow >> plik_dla_johna.txt
+
+Generalnie po stworzeniu takiego pliku mozemy wyodrebnic jeden hash lub podac caly plik johnowi.
+Nie musimy podawac formatu hashu ale w niekturych przypadkach moze byc to konieczne.
+
+
+
+Ogolnie w pliku najlepiej jest podac sam hash a nie liczyc ze john znajdzie go w tresci :)
+
+
+--single    (to tryb lamania pojedynczego hashowania)
+Czyli jesli lamiemy hash uzytkownika to john bierze pod uwage rozne anomalie i tworzy sobie liste.
+np. dane zawarte miedzy dwukropkami w ciagu calej linijki
+
+Example:
+-hash-> joker:7bf6d9bb82bed1302f331fc6b816aada
+-cmd->  john --single --format=raw-MD5 hash7.txt
+
+Mozna tworzyc maski w johnie.
+
+
+→ Lamanie ssh / rar / zip 
