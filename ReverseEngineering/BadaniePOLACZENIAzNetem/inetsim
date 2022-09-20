@@ -1,0 +1,14 @@
+Opis:
+Program do symulacji aplikacji internetowych. 
+
+
+[Uzycie]
+[Podlaczenie windowsa do linuxa]
+→ Ustawiamy na windowsie jako adres bramy naszego linux
+→ Adres dns tez podajemy na linuxa
+
+→ sudo vim /etc/inetsim/inetsim.conf
+   ⇒ service_bind_address <ip_bramy_na_windowsie>
+   ⇒ dns_default_ip <ip_dns_windowsa>
+→ sudo inetsim
+→ Od teraz w przegladarce na windowsie zobaczymy banner inetsim (mozemy go zmienic)
