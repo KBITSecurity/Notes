@@ -1,0 +1,3 @@
+Jezeli wykonanie np. takiego url zwraca wynik operacji matematycznej
+  http://vulnerable-website.com/?username=${7*7}
+No to wiemy ze aplikacja moze byc podatna
