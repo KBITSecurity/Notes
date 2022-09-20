@@ -1,0 +1,7 @@
+Wiele aparatów szablonów udostępnia pewnego rodzaju obiekt „self” lub „environment”, który działa jak przestrzeń nazw zawierająca wszystkie obiekty, 
+metody i atrybuty obsługiwane przez aparat szablonów. Jeśli taki obiekt istnieje, możesz go potencjalnie użyć do wygenerowania listy obiektów objętych 
+zakresem. Na przykład w językach szablonów opartych na Javie można czasami wyświetlić listę wszystkich zmiennych w środowisku za pomocą następującego 
+wstrzyknięcia:
+
+
+${T(java.lang.System).getenv()}
