@@ -1,0 +1,11 @@
+systemctl start postgresql
+msfdb init
+msfconsole
+db_status
+→ Od teraz mozemy tworzyc sobie obszary robocze
+→ workspace     (pokazuje)
+→ workspace -a   nowy_obszar
+→ workspace -b  usun_obszar
+→ workspace istniejacy_obszar      (przenosi do istniejacej bazy)
+→ workspace -h                                       (help)
+db_nmap  <ip>        (zapisze sie w bazie danych)
