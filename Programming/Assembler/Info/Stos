@@ -1,0 +1,15 @@
+1) STOS
+      • Instrukcja polozenia danych na stos
+            ▪ push
+      • Informacja
+            ▪ Stos rosnie w kierunku nizszych adresow
+      • Wierzcholek stosu
+            ▪ rsp
+      • Poczatek stosu
+            ▪ rbp
+                 
+                 
+                 
+                 
+                 
+                 
