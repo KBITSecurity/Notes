@@ -1,0 +1,9 @@
+1) BOOST
+      • Opis
+            ▪ https://cpp0x.pl/artykuly/Inne-artykuly/C++-boost-Tworzenie-testow-jednostkowych-unit-tests/67
+      • Opcje
+            ▪ https://www.boost.org/doc/libs/1_34_1/libs/test/doc/components/test_tools/reference/index.html
+      • Kompilacja 
+            ▪ g++ -o test test.cpp -lboost_unit_test_framework
+      • Instalacja on linux
+            ▪ apt-get install libboost-test-dev
