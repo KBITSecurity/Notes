@@ -1,0 +1,132 @@
+Opis:
+Program radare2 jest programem do dissasemblacji kodu. I badania zachowania programu.
+
+W programie komendy sa bardzo skrotowo zrobione najlepiej wyswietlic helpa “?”
+i jak cos potrzebujemy to literka z znakiem zapytania np.
+→ p?
+
+[opis komend]
+<litera>?
+→ a                (komendy zaczynajace sie na a sluza do analizy)
+→ i                 (komendy na i wyswietlaja dane)
+→ s                 (poruszanie sie po binarce i info gdzie jestesmy)
+→ p                (wyswietla dane w niezliczonych formatach)
+→ v                (tryb wizualny) (uzycie srednika dodaje komentarze)
+→ w               (tryby zapisu)
+
+→ @@            (uzycie znaczka oznacza ze dla kazdego wyniku np. cos tam wykonac)
+
+Uzycie:
+→ r2 <plik>
+→ r2 -
+
+Options:
+→ Znaczek ‘@’ przed nazwa to takie “temporary seek”
+   ⇒ Czyli np. pdf @main to ze chcemy wyswietlic funkcje main
+   ⇒ poszuka ja sobie na chwile skoczy do niez zdissasembluje i wyswietli i powruci do miejsca w ktorym jestesmy
+   ⇒ czyli nie zmieni adresu aktualnego
+
+→ Znaczek ‘~’ tyldy to jest jak komenda ‘grep’
+   ⇒ pd?~func 
+   ⇒ Normalnie ‘pd?’     wyswietli calego helpa 
+   ⇒ ‘pd?~func’             przegrepuje wyniki z ‘func’
+   ⇒ ao~code[1]            (wyswietli druga kolumne)
+
+Command:
+[start / pokazanie danych ]
+→ aaa (analiza wszystkich funkcji) (im wiecej a tym glebsza analiza)
+→ afll  (wyswietla szczegoly po analizie dla glownej funkcji)
+→ afl   (nazwy funkcji)
+
+→ pdf  (wyswietli start programu)
+→ pdf @main    (demontaz glownej funkcji)
+
+→ sf    (szuka adresu glownej funkcji)
+→ iz  (pokazuje stringi w programie)
+
+→ px @rbp-0x4   (Wyswietlenie zmiennej na stosie)
+
+[Przejscie do miejsca w pamieci / zapis pliku]
+→ s                                     (przechodzi do miejsca pamieci)
+   ⇒ s main                         (skoczy do main zmieni sie adres po lewej stronie)
+
+→ ao 3                                (wykonanie programu / petli 3 razy)
+→ Wyswietlenie i zapisanie do pliku 16 wartosci przejscia petli
+   ⇒ ao 16 @ 0x400544~opcode~[6]  > doooo
+
+→ oo+                               (program bedzie zapisywal w orginalnym programie to co zmieniamy)
+
+[Break point / wyswietlanie / zmiana danych]
+→ ood (cofniecie programu do poczatku) (otwarcie trybu debbagowania)
+→ db <adres> (ustawia punkt przerwania)
+
+→ dc                                             (wznowienie wykonywania programu)
+→ dr                                              (wyswietlenie rejestrow)
+→ dr <rejestr>=<wartosc>
+   ⇒ dr rdx=0x0000061                (zmiana wartosci rejestru)
+   ⇒ dr al                                       (pokaze mlodszy podrejestr rejestru ax)
+
+→ V!                                             (ala debugger)
+
+[Wyszukiwanie]
+→ /R?       (pokaze opcje)
+→ “/R/ pop rax;ret”         (wyszuka instrukcji z pop rex ret)
+→ e rob.len=2                 (dlugosc wyszukiwania)
+
+
+[Wyswietlenie bajtow z adresu]
+→ px 
+→ px 2 @ 0x400613 (wyswietli 2 bajty znajdujace sie pod tym adresem)
+
+[Widoki]
+→ V                     (wyswietlenie kodu)
+   ⇒ Tryb widoku
+      • p
+      • P
+   ⇒ Poruszanie
+      • Arrow up
+      • Arrow down
+   ⇒ exit
+      • q
+
+[Bloczki]
+→ VV                   (wyswietlenie bloczkow)
+   ⇒ widok wiekszy/mniejszy
+      • +
+      • -
+   ⇒ Wpisywanie komend cos jak w “vim”
+      • :
+         ◇ e scr.utf8.curvy = true (wlacza zaokraglenie naroznikow w ramkach)
+   ⇒ tab - zmieniamy bloczek
+      • z shiftem mozemy przesuwac bloczki
+      • f lub t (w bloczku true lub false) przechodzi odpowiednio
+   ⇒ shift + r (zmienia kolorystyke)
+   ⇒ Radare wyswietla podpowiedzi przy funkcjach w nawiasach “[oa]" 
+      • Wystarczy nadusic literki a program przejdzie do funkcji
+   ⇒ qq (wyjscie)
+   ⇒ nacisniecie ! ciekawy tryb
+      • nacisniecie s przechodzi o kolejny krok
+      • nacisniecie . wyswietla aktualny krok (jak bysmy zjechali np. ekranem na dul)
+
+[Rysowanie bloczkow]
+→ agn “nazwa1”
+→ agn “nazwa2”
+→ age “nazwa1” “nazwa2”
+→ agg         (wyswietli)
+
+Format jason
+→ ao
+→ aoj
+→ aoj~{}
+
+Example:
+→ VV @ 
+   ⇒ Wciskamy [tab] pokaze co mozemy wybrac do wyswietlenia
+
+[zamiana funkcji na nopy]
+→ oo+                      (uzycie komendy nadpisze prawdziwy program to co bedziemy robic)
+→ px 2 @ 0x400613 (wyswietlamy sobie 2 bajty pod adresem)
+→ s 0x400613          (przechodzimy pod ten adres)
+→ px 2                     (patrzymy czy to napewno to)
+→ wao nop              
+→ px 2                    (powinno pokazac 9090) (czyli dwa nopy)
