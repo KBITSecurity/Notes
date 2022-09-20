@@ -1,0 +1,29 @@
+1) strony
+      • Baza danych technik atakow (szczegolnie stosowanych przez APT)
+            ▪ https://attack.mitre.org/
+            ▪ https://engage.mitre.org/
+            ▪ https://valhalla.nextron-systems.com/
+            ▪ https://www.mandiant.com/resources/apt-groups
+            ▪ https://threatconnect.com/?s=m2
+            ▪ https://d3fend.mitre.org/
+            ▪ https://github.com/center-for-threat-informed-defense/adversary_emulation_library
+1) MITRE na komputer (lokalnie)
+      • Instalacja
+            ▪ cd /tmp
+            ▪ git clone https://github.com/MITRECND/mitrecnd.github.io.git
+            ▪ cd mitrecnd.github.io
+            ▪ cat Readme (dosc fajnie opisana instalacja) (ale w razie w komendy:)
+            ▪ gem install jekyll bundler
+            ▪ bundle install
+      • Uruchamianie (z katalogu)
+            ▪ bundle exec jekyll serve 
+            ▪ 127.0.0.1:4000
+    
+2) MITRE2
+      • Instalacja
+            ▪ 	https://github.com/MISP/MISP
+
+3) MISP
+      • https://tryhackme.com/room/misp
+      • https://github.com/MISP/MISP
+
