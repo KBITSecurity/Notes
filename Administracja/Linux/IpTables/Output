@@ -1,0 +1,14 @@
+1) Sterowanie ruchem wychodzacym
+      • Tylko regoly zdefiniowane beda przepuszczaly ruch
+            ▪ iptables -P INPUT DROP
+      • Pozwolenie na caly ruch
+            ▪ iptables -P INPUT ACCEPT
+      • Usuniecie regol
+            ▪ iptables -F OUTPUT
+ 
+   
+   
+   
+   
+   
+   
