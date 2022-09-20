@@ -1,0 +1,20 @@
+Opis:
+Program monitoruje procesy.
+
+Inicjacja[Linux]:
+→ wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
+→ chmod +x pspy64
+→ ./pspy64
+
+
+Opcje:
+-d             (opserwuje wybrany katalo ./pspy64 -d <dir>)
+-r              (opserwuje wybrany katalo ./pspy64 -d <dir>)[rekursywnie]
+-f              (drukuj zdarzenia systemu plików na STDOUT)
+-i               (skanuj co „interwał” milisekundy w poszukiwaniu nowych procesów (domyślnie 100))
+-p             ( drukuj nowe procesy na standardowe wyjście (domyślnie prawda), „processes=true”)
+
+
+Example:
+• ./pspy -p=false -f      (-p jest domyslnie wlaczone jak wylaczymy to pokazuje mniej procesow drukowania systemu)
+
