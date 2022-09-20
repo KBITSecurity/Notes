@@ -1,0 +1,11 @@
+Narzedzie do generowania hasel (daty urodzin, nazwy zwierzat)
+
+
+command (cupp -i)
+program sam zapyta o dane i utworzy slownik
+
+
+Pobranie slownika co do jezyka:
+cupp -l (to jest male L)
+wyswietli liste po czym wpisujemy nr jezyka i pobierze slownik
+
