@@ -1,0 +1,65 @@
+Opis:
+Sniffer i program do wysylania pakietow.
+
+Pozwala tworzyc swoje pakiety i wysylac w siec.
+
+Instalacja:
+→ Apt-get install scapy -y
+→ scapy
+
+Example
+Przechwycenie 8 pakietow icmp i wyswietlenie
+>>> test = sniff(iface=”eth0”, filter=”icmp”, count=8)
+>>>test
+>>>test[0]
+>>>test[1][1]
+
+test[<ktory_pakiet>][<ktora_warstwa>]
+>>>test[1][2].chksum
+>>>test[1][2].code
+
+>>>ls(“ICMP”)
+>>>ls(TCP)
+
+>>>test.show()
+>>>test[1].show()
+>>>test[0][1].dst
+>>>test[1][0].src (z warstwy lacza danych bo 0)
+>>>ls(IP)
+
+Pokaze jakie moga byc naglowki I ich nazwy
+>>>  test[2].haslayer(ICMP)
+Sprawdza czy posiada konkretna warstwe
+>>> test[2].getlayer(ICMP).id
+  
+Wyslanie pakietu zdfiniowanego samodzielnie 
+Definiujemy warstwy oddzielone sa slaszami /
+Warstwa lacza danych / sieciowa/
+>>> x = Ether(src=”aa:bb:cc:dd:ee:ff”)/IP(src=”11.12.13.14”, dst=”8.8.8.8”)/UDP(dport=54)/Raw(load=”test”)
+>>>sendp(x)
+Funkcji sendp uzywamy jak sami definiujemy dane do protokolu warstw lacza danych (tej pierwszej) inaczej to send
+
+ 
+Definiujemy pakiet:
+>>> x = IP(dst=”google.com”)/ICMP()/”Python Class”
+>>> and, notans = sr(x)
+Funkcja sr(x) wysyla pakiet I zaspisuje odpowiedz
+ans – pakiety z odpowiedziami
+notans – pakiety bez odpowiedzi
+>>>ans.show()
+>>>ans[0]
+  
+ 
+[CZYTANIE PLIKU WIRESHARKA]
+>>>wrpcap(“file_from_wireshark.pcap”, x)
+>>>new = rpdcap(“file_to_save.pcap”)
+>>>new.show()
+
+flaga SA oznacz SYN ACK
+ 
+>>> sendp (Ether()/IP(dst=”google.com”)/ICMP()/”Python Class”, iface=”eth0”, loop=1)
+
+ 
+>>> ans = srp1(x)
+funkcja srp1 zwaraca tylko pakiety z odpowiedziami (srp1 -jezeli zmieniamy warstwe lacza danych ether())
+funkcja sr1 zwraca tylko pakiety z odpowiedziami  
