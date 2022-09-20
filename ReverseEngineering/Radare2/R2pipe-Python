@@ -1,0 +1,46 @@
+Opis:
+Program do wykonywania komend radara w innnych jezykach.
+
+Install:
+→ pip3 install r2pipe
+
+Uzycie:
+→ r2 -q -i <script> <binarka>
+
+
+
+Example:
+[script python]
+import r2pipe
+
+r2p = r2pipe.open()
+r2p.cmd('aaa')
+r2p.cmd('s 0x00400544')
+
+enc = []
+for b in r2p.cmdj('aoj 16'):
+	by = b['opcode'].split()[-1]
+	enc.append(by)
+	print('[+] Byte '+ by)
+	
+dec = [chr(int(b, 16) ^1) for b in enc]
+print('[+] Solution: ‘ + ’'.join(dec))
+
+#r2p.cmd('q')
+
+[script python]
+(program zbiera znaki z rejestru dl i zapisuje do zmiennej)
+import r2pipe
+
+r2 = r2pipe.open("./smothie")
+r2.cmd('doo AAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+
+r2.cmd('db 0x80485bb')
+flag = ‘’
+for x in range(31):
+	r2.cmd('dc')
+	dl = r2.cmd('dr? dl')
+	flag += chr(int(dl, 16))
+	r2.cmd('dr eax = 0x0')
+	
+print flag
