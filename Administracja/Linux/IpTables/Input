@@ -1,0 +1,22 @@
+1) Sterowanie ruchem przychodzacym
+      • Tylko regoly zdefiniowane beda przepuszczaly ruch
+            ▪ iptables -P INPUT DROP
+      • Pozwolenie na caly ruch
+            ▪ iptables -P INPUT ACCEPT
+      • Usuniecie regol
+            ▪ iptables -F INPUT
+    
+2) Regoly pozwalajace na ruch
+      • ssh
+            ▪ iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+            ▪ iptables -A INPUT -p tcp --dport 30 -j ACCEPT
+      • http
+            ▪ iptables -I INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT
+      • https
+            ▪ iptables -I INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
+               
+               
+               
+               
+               
+               
