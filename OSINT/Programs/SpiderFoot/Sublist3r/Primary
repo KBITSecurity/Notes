@@ -1,0 +1,17 @@
+Opis:
+Program do wyszukiwania subdomen
+
+Opcje:
+-p      (port)
+-d      (domena)
+-v      (pokazuje na biezaco wyniki)
+-b      (uzywa bruteforce do enumeracji)
+-e      (uzywa silnika np. google)    (sublist3r -e google,yahoo,virustotal -d <adres>)
+
+Uzycie:
+→ sublist3r -d <adres>
+   ⇒ sublist3r -d example.com
+
+Przyklady:
+→ sublist3r -d synology.kate.local
+→ sublist3r -d vulnweb.com -e google,bing,yahoo
