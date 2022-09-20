@@ -1,0 +1,6 @@
+Opis:
+Program do porownywania dwuch programow.
+Pokazuje np. roznice w bajtach.
+
+Uzycie:
+radiff2 <plik1> <plik2>
