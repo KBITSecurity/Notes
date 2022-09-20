@@ -1,0 +1,18 @@
+To skanowanie wysyla pakiet z ustawiona flaga ACK.
+
+Opcja: -sA
+
+Cel odpowiedzial by na ACK za pomoca RST niezaleznie od stanu portu.
+To zachowanie ma miejsce poniewaz pakiet z ustawiona flaga ACK powinien byc wyslany tylko wy odpowiedzi na odebrany pakiet TCP. Aby potwierdzic jego odbior.
+
+
+Dobry jest ten scan przy zaporze. Bo pakiety leca tak jak by byly powrotne.
+Na te na ktore dostaniemy odpowiedz bedziemy wiedziec ze nie sa blokowane przez firewall.
+
+Opcja: -sW (ustawia tylko flage ACK)
+
+	Jest to taki sam skan tylko z skanowaniem okna (ramki pakietu)
+	Sprawdza pole okna zwroconych pakietow RST.
+	(W niektorych systemach moze to oznaczac ze port jest otwarty.)
+
+
