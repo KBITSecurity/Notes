@@ -1,3 +1,11 @@
+[Formaty zapisu do pliku]
+-oG FILENAME     (do grepowania w jednej lini istotne informacje)
+-oN   (standardowy)
+-oX (xml)
+
+
+
+
 # Dzialanie	
 		nmap <ip>																| Wykonuje domyslne skanowanie
 		nmap <ip> -p10-20													| Skanowanie wybranych portow
