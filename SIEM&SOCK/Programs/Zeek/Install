@@ -1,0 +1,17 @@
+Instalacja:
+1. Instalujemy (zika) zeek
+2. Apt update
+3. Instalujemy zaleznosci
+   1) Apt install cmake make gcc g++ flex bison libpcap-dev libssl-dev python3 python3-dev swig zlib1g-dev –y
+   2) sudo apt-get install libssl-dev -y
+1. Cd /root
+2. Git clone –recursive  https://github.com/zeek/zeek
+3. Cd zeek
+4. ./configure
+5. Make 
+6. Make install
+7. Make install-aux
+8. Export  PATH=/usr/local/zeek/bin:$PATH (ta linijka ustala ze w aktualnej  konsoli mozemy wydawac polecenie zeek mozna to dodac na stale)
+
+
+ 
