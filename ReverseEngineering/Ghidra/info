@@ -1,1 +1,10 @@
 
+Analiza danych:
+
+→ Funkcje zaczynajace sie od “_” sa tworzone przy kompilacji i ich nie zrobil tworca binarki.
+→ XREF[1];  Sa to odwolania w programie do danego miejsca taki skrut odsylaczy
+
+Zmiana danych:
+
+→ Prawym na instrukcje
+   ⇒ Patch instruction
