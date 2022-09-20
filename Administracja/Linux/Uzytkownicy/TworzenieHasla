@@ -1,0 +1,4 @@
+Tworzenie hasel:
+→ mkpasswd -m sha-512 <haslo>
+→ openssl passwd <haslo>      
+→ openssl passwd -1 -salt <sol> <haslo> 
