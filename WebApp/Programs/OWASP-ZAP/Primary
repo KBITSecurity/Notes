@@ -1,0 +1,37 @@
+Opis:
+Jest to automatyczny scanner Web Applications. 
+Aplikacja okienkowa.
+
+Uzycie:
+[Odpalamy jako root]
+→ Podajemy adres strony i -> Attack (czyli skanujemy)
+   ⇒ Wykryte mozliwe podatnosci pokaza sie w drzewku 
+      • Mozemy kliknac prawym na podatnosc i wybrac -> Open URL in Browser (i pokaze nam w przegladarce jak sytuacja wyglada)
+
+[Sessja]
+→ Logujemy sie na strone
+   ⇒ W programie dodajemy zakladke (HTTP session)
+   ⇒ i dodajemy zakladke z ciasteczkiem sesyjnym 
+→ Teraz skaner ma dostep do zalogowanej zawartosci strony i moze wiecej
+
+[Certyfikat]
+Tool -> Options -> Local Proxies -> Dynamic SSL Certificates
+
+Ataki:
+[enumeracja katalogow]
+Prawym_na_zakadke_z_strona -> Attack -> Force Browser Directory
+
+[Atak bruteforce]
+PPM -> Attack -> Fuzzer
+
+
+Opcje:
+[Dodanie listy slow]
+Tool -> Options -> Forced Browse
+
+[Instalacja Hounda]
+Pasywnie przeglada strone i szuka CSRF i innych rzeczy
+Manage ads-one (taka kolorowa ikonka na pasku) -> Market Place -> dodajemy 
+   ⇒ Python Scripting
+   ⇒ Community Scripts
+→ install
