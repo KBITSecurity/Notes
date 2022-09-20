@@ -1,0 +1,18 @@
+1) Programy do analizy
+      • Programy w terminalu
+            ▪ ltrace <file>
+            ▪ strace <file>
+               - strace <file> 2>&1 | grep -iE "open|access|no such file"
+      • Biblioteki po jakie siega program
+            ▪ ldd <file>
+      • Odpalenie programu bez zmiennych srodowiskowych
+            ▪ env -i <file>
+      • Skrypt pokazujacy przydatne informacje
+            ▪ git clone https://github.com/slimm609/checksec.sh
+            ▪ ./checksec --file=<plik>
+
+
+
+
+
+
