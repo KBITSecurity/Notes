@@ -1,0 +1,22 @@
+Opis:
+Narzedzie wyszukuje przydatne informacje po strnach z wyszukiwarki na temat zadanej domeny 
+komenda “theHarvester” - tak wpisujemy ta komende
+Znajduje wiele informacji subdomeny, adresy e-mail itp.
+
+Parametry:
+-b <domena>
+-l <ilosc wynikow>
+-b <silnik wyszukiwania>
+
+
+
+Silniki wyszukiwania:
+→ google
+→ yahoo
+
+Example:
+→ theHarvester –d kali.org –l 500 –b google
+→ theHarvester –d kali.org –l 500 –b linkedin
+→ theHarvester –d kali.org –l 500 –b google,linkedin,yahoo
+
+
