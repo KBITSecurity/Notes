@@ -1,5 +1,6 @@
 [scherlock]
 https://github.com/sherlock-project/sherlock
+-ExampleUsing-> ./scherlock.py <user/account name>
 
 
 [WhatsMyName]
