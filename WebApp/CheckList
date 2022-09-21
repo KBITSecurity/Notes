@@ -9,3 +9,4 @@
       • Sprawdzenie szyfrowania (Nmap)
 Linki na stronie (moga prowadzic do subdomen)
 Sprawdzenie subdomen w certyfikacie
+Moze byc tak ze uda nam sie znalezc klucz API lub tajny klucz to tworzenia sesji i utworzyc na jego podstawie np. ciasteczko sesyjne (opisane w Flasku)
