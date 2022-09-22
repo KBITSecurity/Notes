@@ -13,6 +13,7 @@ i jak cos potrzebujemy to literka z znakiem zapytania np.
 → p                (wyswietla dane w niezliczonych formatach)
 → v                (tryb wizualny) (uzycie srednika dodaje komentarze)
 → w               (tryby zapisu)
+- ds               Przejscie do nastepnej instrukcji
 
 → @@            (uzycie znaczka oznacza ze dla kazdego wyniku np. cos tam wykonac)
 
