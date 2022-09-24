@@ -2,3 +2,6 @@
 host i wyslac np. token resetujacy do naszego zlosliwego servera.
 (https://0aae009f04717726c0f02a68008c007f.web-security-academy.net/forgot-password)
 
+
+2. Czasem moze byc tak ze dostep do panelu admina bedzie z localhost i juz. Wiec zmieniamy naglowek Host na Host: localhost i mozna probowac wykonac 
+zlosliwy request.
