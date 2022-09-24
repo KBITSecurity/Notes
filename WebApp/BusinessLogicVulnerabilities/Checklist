@@ -22,3 +22,6 @@ to mozemy do koszyka naladowac rozne rzeczy i wykonac sam request potwierdzajacy
 
 8. [MakraDodanieDoKoszyka....png] Wykorzystujemy podatnosc na to ze jak kupimy przedmiot i uzyjemy kodu rabatowego to mamy taniej. Natomiast mozemy 
 zwrocic przedmiot po normalnej cenie zakupu i zarabiamy roznice. No i mozemy ustawic w kolko zeby sie tak robilo.
+
+9. Wykrylismy, ze funkcja na zle podanego e-maila deszyfruje go po stronie servera i dzieki temu osiagnelismy dostep do konta admina.
+Spory opis: (https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-authentication-bypass-via-encryption-oracle)
