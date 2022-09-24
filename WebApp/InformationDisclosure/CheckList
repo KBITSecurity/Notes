@@ -1,1 +1,2 @@
 1. Proba wywolania bledu servera 500 np. przez manipulacje parametrem. No i w odpowiedzi mozemy np. szukac wersji frameworka itp.
+2. Sprawdzenie /phpinfo.php lub /cgi-bin/phpinfo.php
