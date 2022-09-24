@@ -3,3 +3,4 @@ podlozyc go w zmiennej get. No to mozemy kupic przedmiot taniej.
 
 2. Moze byc taka sytuacja, ze na stronie znajdziemy nazwe uzytkownika lub email. Jezeli na stronie mozna zalozyc konto na dowolny adres e-mail a 
 nastepnie zmienic docelowy adres na znaleziony. Moze sie okazac ze aplikacja np. wpusci nas na konto istniejacego uzytkownika z wyzszymi uprawnieniami.
+(https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-inconsistent-security-controls)
