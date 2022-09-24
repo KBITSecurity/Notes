@@ -1,0 +1,4 @@
+1. Przy mechanizmie resetowania hasla, jezeli zauwazymy ze email jest wysylany na naglowek host tzw: adres@jakisHost.pl. To mozemy zamanipulowac naglowkiem
+host i wyslac np. token resetujacy do naszego zlosliwego servera.
+(https://0aae009f04717726c0f02a68008c007f.web-security-academy.net/forgot-password)
+
