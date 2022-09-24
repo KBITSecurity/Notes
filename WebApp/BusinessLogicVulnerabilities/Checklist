@@ -12,3 +12,7 @@ na minus aby zbic cene.
 
 5. Proba zmiany chasla. Np mamy konto to zawsze mozemy wykonac request zmiany hasla usuwajac pole aktualnego hasla. Jezeli usuniemy calkowicie pole
 a plikacja zwroci true to to praktycznie mozemy zmienic haslo dowolnego uzytkownika.
+
+6. Mozemy zbadac proces zamowienia i zobaczyc jak jest potwierdzane po stronie servera. No i np. jezeli jest to np. endpoint z zmienna pass=true
+to mozemy do koszyka naladowac rozne rzeczy i wykonac sam request potwierdzajacy zamowienie, omijajac validacje np. stanu konta.
+(https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-insufficient-workflow-validation)
