@@ -1,0 +1,33 @@
+Zachowanie TE.TE: zaciemnianie nagłówka TE
+
+W tym przypadku serwery frontonu i zaplecza obsługują nagłówek Transfer-Encoding, ale jeden z serwerów można nakłonić do nieprzetwarzania go przez 
+zaciemnienie nagłówka w jakiś sposób.
+
+Istnieją potencjalnie nieskończone sposoby zaciemniania nagłówka Transfer-Encoding. Na przykład:
+
+
+Transfer-Encoding: xchunked
+
+Transfer-Encoding : chunked
+
+Transfer-Encoding: chunked
+Transfer-Encoding: x
+
+Transfer-Encoding:[tab]chunked
+
+[space]Transfer-Encoding: chunked
+
+X: X[\n]Transfer-Encoding: chunked
+
+Transfer-Encoding
+: chunked
+
+
+
+
+Każda z tych technik wiąże się z subtelnym odejściem od specyfikacji HTTP. Rzeczywisty kod, który implementuje specyfikację protokołu, rzadko stosuje 
+się do niej z absolutną precyzją i często różne implementacje tolerują różne odchylenia od specyfikacji. Aby odkryć lukę w zabezpieczeniach TE.TE, 
+konieczne jest znalezienie takiej odmiany nagłówka Transfer-Encoding, aby przetwarzał ją tylko jeden serwer front-end lub back-end, a drugi ignoruje.
+
+W zależności od tego, czy można nakłonić serwer front-end czy back-end do nieprzetwarzania zaciemnionego nagłówka Transfer-Encoding, pozostała część 
+ataku przyjmie taką samą formę jak w przypadku luk w zabezpieczeniach CL.TE lub TE.CL już opisane.
