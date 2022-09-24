@@ -16,3 +16,6 @@ a plikacja zwroci true to to praktycznie mozemy zmienic haslo dowolnego uzytkown
 6. Mozemy zbadac proces zamowienia i zobaczyc jak jest potwierdzane po stronie servera. No i np. jezeli jest to np. endpoint z zmienna pass=true
 to mozemy do koszyka naladowac rozne rzeczy i wykonac sam request potwierdzajacy zamowienie, omijajac validacje np. stanu konta.
 (https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-insufficient-workflow-validation)
+
+7. Jezeli mamy np. wybor roli(admin/user i rozne) to zawsze mozemy opuscic ten krok i zobaczyc czy aplikacja nie udziela dostepu do admina.
+(https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-authentication-bypass-via-flawed-state-machine)
