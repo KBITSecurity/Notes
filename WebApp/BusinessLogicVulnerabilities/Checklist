@@ -9,3 +9,6 @@ nastepnie zmienic docelowy adres na znaleziony. Moze sie okazac ze aplikacja np.
 na minus aby zbic cene.
 
 4. Dostepne kody rabatowe w skelpie np. jezeli mamy wiecej niz 2 mozemy probowac wykozystywac je na przemian.
+
+5. Proba zmiany chasla. Np mamy konto to zawsze mozemy wykonac request zmiany hasla usuwajac pole aktualnego hasla. Jezeli usuniemy calkowicie pole
+a plikacja zwroci true to to praktycznie mozemy zmienic haslo dowolnego uzytkownika.
