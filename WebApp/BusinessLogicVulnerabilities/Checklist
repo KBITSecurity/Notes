@@ -1,0 +1,2 @@
+1. Sprawdzenie czy manipulacja parametrem nie ma wplywu na np. koszyk na stronie. Jezeli chcemy kupic przedmiot i mozemy zmienic parametr np. price lub 
+podlozyc go w zmiennej get. No to mozemy kupic przedmiot taniej.
