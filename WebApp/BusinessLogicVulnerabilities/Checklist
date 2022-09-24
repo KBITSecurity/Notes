@@ -19,3 +19,6 @@ to mozemy do koszyka naladowac rozne rzeczy i wykonac sam request potwierdzajacy
 
 7. Jezeli mamy np. wybor roli(admin/user i rozne) to zawsze mozemy opuscic ten krok i zobaczyc czy aplikacja nie udziela dostepu do admina.
 (https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-authentication-bypass-via-flawed-state-machine)
+
+8. [MakraDodanieDoKoszyka....png] Wykorzystujemy podatnosc na to ze jak kupimy przedmiot i sprzedamy z kodem rabatowym to mamy o 3$ wiecej. Skoro tak idzie
+ustawic to robimy tak w kolko zeby nabijac kase na koncie.
