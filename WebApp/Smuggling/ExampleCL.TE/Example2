@@ -14,7 +14,7 @@ zaprojektowane, aby pomóc. Możesz go zainstalować za pośrednictwem BApp Stor
 POST / HTTP/1.1
 Host: 0a5300a40400cfa2c07f3051008e005d.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 39
+Content-Length: 35
 Transfer-Encoding: chunked
 
 0
