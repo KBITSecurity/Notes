@@ -1,3 +1,5 @@
+(https://portswigger.net/web-security/request-smuggling/lab-basic-cl-te)
+
 Aby rozwiązać laboratorium, przemytuj żądanie do serwera zaplecza, aby następne żądanie przetworzone przez serwer zaplecza wydawało się używać 
 metody GPOST.
 
