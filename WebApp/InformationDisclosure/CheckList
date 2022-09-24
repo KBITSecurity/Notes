@@ -2,4 +2,4 @@
 2. Sprawdzenie /phpinfo.php lub /cgi-bin/phpinfo.php
 3. Sprawdzenie robots.txt / sitemap.xml
 4. Czasem zasoby moga byc dostepne tylko z wewnatrz sieci. Mozemy to probowac obejsc naglowkiem. "X-Custom-IP-Authorization: 127.0.0.1"
-
+5. Sprawdzenie repozytorium /.git
