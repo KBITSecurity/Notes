@@ -1,0 +1,6 @@
+(https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-inconsistent-handling-of-exceptional-input)
+
+W labolatorium mamy przyklad gdzie adres e-mail jest obcinany jezeli jest za dlugi, ale mozemy to wykozystac tworzac odpowiednio dugi ciag.
+Tworzymy ciag gdzie adres e-mail konczy sie na adres administratorow :) znaleziony na stronie.
+No i wklejamy taki ciag po czym dostaniemy email z potwierdzeniem zalozenia konta a sam email zostanie zapisany w bazie po opcieciu do 255 znakow.
+No i mamy konto z adresem email adminow i go to /admin.
