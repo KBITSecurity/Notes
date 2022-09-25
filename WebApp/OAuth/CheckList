@@ -12,3 +12,10 @@ W labolatorium mamy przyklad gdzie mamy mozliwosc przekierowania responsu autent
 Czyli przegladarka wykonuje request do orginalnego servera i wysyla mu adres przekierowania na nasz zlosliwy gdzie przejmiemy respons nie wykonujac akcji.
 Jezeli uzytkownik byl zalogowany na danym serverze to automatycznie dostaniemy kod autentykacji dla jego sessji.
 Teraz wykonamy logowanie po naszej stronie podmieniajac w (interceptorze) kod logowania i git.
+
+
+
+3. (https://portswigger.net/web-security/oauth/lab-oauth-stealing-oauth-access-tokens-via-an-open-redirect)
+Labolatorium pokazuje jak mozna przejac token administratora wykorzystujac przekierowanie na stronie omijajac mechanizm cors.
+Do tego jest script do zmiany adresu url aby nasz token zostal wyslany do zlego servera.
+Przedstawiono tez mechanizm omijania bialej listy, gdzie nie mozna podac obojetnego adresu do przekierowania, ale mozna wykozystac przekierowanie na stronie
