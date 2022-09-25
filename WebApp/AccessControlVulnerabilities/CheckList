@@ -18,3 +18,8 @@ X-Original-URL: /admin
 
 10. Mozemy te same zmienne co wysylane metoda POST przekazac metoda GET i zobaczyc jaki bedzie efekt. Lub wyslac je do akcji ktora wymaga autoryzacji.
 (https://portswigger.net/web-security/access-control/lab-method-based-access-control-can-be-circumvented)
+
+11. Wykonanie requestu administracyjnego bez sesji admina. Ale wymaga wczesniejszego zbadania panelu administratora.
+(https://portswigger.net/web-security/access-control/lab-multi-step-process-with-no-access-control-on-one-step)
+W panelu admina mozna podniesc sobie uprawnienia, po zmianie uprawnien server wysyla drugi respons z zapytaniem czy napewno.
+No i jak pominiemy pierwsze i wyslemy na drugie wszystkie dane to ominiemy autentykacje.
