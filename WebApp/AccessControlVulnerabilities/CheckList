@@ -1,0 +1,7 @@
+1. Sprawdzenie dostepnych miejsc takich jak (robots.txt itp) gdzie moze byc informacja o endpointach. Czasem panele sa dostepne bez logowania.
+2. Sprawdzenie skryptow manipulacja zmienna moze dac admina po stronie clienta i pozwolic na wykonywanie odpowiednich requestow
+3. Proba manipulowania cookie
+4. Proba manipulowania json np. wyslanie dodatkowego parametru o takiej samej nazwie co w responsie ale zmiana z "roleid":1 na "roleid":2
+5. Manipulacja zmienna GET np. id i zmiana na innego uzytkownika
+6. Czasem userID moze byc dluga losowa wartoscia, mozemy probowac ja odkryc przez szukanie na stronie np. postow napisanych przez innych uzytkowniko 
+i tam szukajac czy nie wyswietla sie np. w adresie ich id.
