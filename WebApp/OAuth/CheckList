@@ -5,3 +5,10 @@ Wiec przechwytujemy request odpowiedzialny za autentykacje pobierajac z niego ak
 Jezeli ofiara na niego wejdzie to nasza sesja stanie sie sesja ofiary.
 (https://portswigger.net/web-security/oauth/lab-oauth-forced-oauth-profile-linking)
 
+
+
+2. (https://portswigger.net/web-security/oauth/lab-oauth-account-hijacking-via-redirect-uri)
+W labolatorium mamy przyklad gdzie mamy mozliwosc przekierowania responsu autentykacji do innego servera.
+Czyli przegladarka wykonuje request do orginalnego servera i wysyla mu adres przekierowania na nasz zlosliwy gdzie przejmiemy respons nie wykonujac akcji.
+Jezeli uzytkownik byl zalogowany na danym serverze to automatycznie dostaniemy kod autentykacji dla jego sessji.
+Teraz wykonamy logowanie po naszej stronie podmieniajac w (interceptorze) kod logowania i git.
