@@ -1,0 +1,2 @@
+1. Mozna wywolac blad servera przez manipulacje parametrem GET. Moznna przez to np. enumerowac porty na maszynie.
+(https://tryhackme.com/room/learncyberin25days) [Task 21, Day 19]
