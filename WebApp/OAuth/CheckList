@@ -1,0 +1,7 @@
+1. Jezeli aplikacja nie uwzgladnia tokenu csrf przy autentykacji to mozemy probowac sie zalogowac lub przejac sesje innego uzytkownika.
+Sledzimy proces autentykacji i jezeli sie okaze ze jak raz sie zalogujemy to nastepnym razem proces autentykacji jest pomijany bo wiadomo sesja na 
+serverze pozostala. 
+Wiec przechwytujemy request odpowiedzialny za autentykacje pobierajac z niego aktualny token (copy URL) i wysylamy do maszyny ofiary (CSRF).
+Jezeli ofiara na niego wejdzie to nasza sesja stanie sie sesja ofiary.
+(https://portswigger.net/web-security/oauth/lab-oauth-forced-oauth-profile-linking)
+
