@@ -14,3 +14,7 @@ nawet jak sie wyswietla to nastapi wylogowanie i przekierowanie.
 Jezeli panel jest dostepny np. z poziomu wewnetrznej sieci to mozemy zrobic tak: 
 GET / HTTP 1.1
 X-Original-URL: /admin 
+
+
+10. Mozemy te same zmienne co wysylane metoda POST przekazac metoda GET i zobaczyc jaki bedzie efekt. Lub wyslac je do akcji ktora wymaga autoryzacji.
+(https://portswigger.net/web-security/access-control/lab-method-based-access-control-can-be-circumvented)
