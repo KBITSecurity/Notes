@@ -8,3 +8,4 @@ i tam szukajac czy nie wyswietla sie np. w adresie ich id.
 7. Sprawdzenie strony w BurpRepeaterze np. moze byc tak ze manipulujac zmienna id dla uzytkownika zostaniemy wylogowani, ale moze sie okazac ze to 
 czego przegladarka nam nie pokaze bedzie w responsie. Bo jezeli server zarespektuje zapytanie i zwroci dane to mozemy je podejrzec. Gdzie w przegladarce
 nawet jak sie wyswietla to nastapi wylogowanie i przekierowanie.
+8. Jezeli mozemy sciagnac jakis plik to warto zmienic jego nazwe i zobaczyc czy nie pobierzemy czegos fajnego :)
