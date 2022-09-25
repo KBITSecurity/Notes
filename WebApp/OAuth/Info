@@ -3,3 +3,7 @@ Klika on przycisk o zalogowanie i nasza strona.
 Wykonuje request do servera podajac adres zwrotny i w zaleznosci od API jakies tokeny i inne cuda.
 Server przetwarza dane uwierzytelniajac urzytkownika i zwraca dane do strony ktora podalismy w przekierowaniu.
 Wyswietlajac ja uzytkownikowi w przegladarce.
+
+
+Ogolne wyjasnienie:
+https://portswigger.net/web-security/oauth
