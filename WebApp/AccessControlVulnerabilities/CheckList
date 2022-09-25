@@ -9,3 +9,8 @@ i tam szukajac czy nie wyswietla sie np. w adresie ich id.
 czego przegladarka nam nie pokaze bedzie w responsie. Bo jezeli server zarespektuje zapytanie i zwroci dane to mozemy je podejrzec. Gdzie w przegladarce
 nawet jak sie wyswietla to nastapi wylogowanie i przekierowanie.
 8. Jezeli mozemy sciagnac jakis plik to warto zmienic jego nazwe i zobaczyc czy nie pobierzemy czegos fajnego :)
+9. Proba obejscia dostepu do panelu przez manipulowanie naglowkiem (X-Original-URL)
+(https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented)
+Jezeli panel jest dostepny np. z poziomu wewnetrznej sieci to mozemy zrobic tak: 
+GET / HTTP 1.1
+X-Original-URL: /admin 
