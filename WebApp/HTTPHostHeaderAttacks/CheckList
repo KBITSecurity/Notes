@@ -5,3 +5,8 @@ host i wyslac np. token resetujacy do naszego zlosliwego servera.
 
 2. Czasem moze byc tak ze dostep do panelu admina bedzie z localhost i juz. Wiec zmieniamy naglowek Host na Host: localhost i mozna probowac wykonac 
 zlosliwy request.
+
+
+3. Warto sprawdzac czy zmiana naglowka lub dolozenie drugiego takiego samego nie powoduje, ze w tresci strony sie on pojawia. 
+Na labie mamy przyklad jak wartosc sie pojawia w linku, wiec mozemy go przekierowac
+(https://portswigger.net/web-security/host-header/exploiting/lab-host-header-web-cache-poisoning-via-ambiguous-requests)
