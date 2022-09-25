@@ -5,3 +5,6 @@
 5. Manipulacja zmienna GET np. id i zmiana na innego uzytkownika
 6. Czasem userID moze byc dluga losowa wartoscia, mozemy probowac ja odkryc przez szukanie na stronie np. postow napisanych przez innych uzytkowniko 
 i tam szukajac czy nie wyswietla sie np. w adresie ich id.
+7. Sprawdzenie strony w BurpRepeaterze np. moze byc tak ze manipulujac zmienna id dla uzytkownika zostaniemy wylogowani, ale moze sie okazac ze to 
+czego przegladarka nam nie pokaze bedzie w responsie. Bo jezeli server zarespektuje zapytanie i zwroci dane to mozemy je podejrzec. Gdzie w przegladarce
+nawet jak sie wyswietla to nastapi wylogowanie i przekierowanie.
