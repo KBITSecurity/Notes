@@ -1,0 +1,3 @@
+Sprawdzenie czy F2A mozna ominac przy logowaniu. Zakladamy normalne konto i kopiujemy adres panelu uzytkownika.
+Zakladamy ze mamy skradzione dane innego uzytkownika, logujemy sie na jego konto w momecie kiedy zapyta nas o F2A wklejamy adres w pasek url
+i przechodzimy do niego jezeli aplikacja uwierzytelnila nas przy pierwszej probie to F2A zostanie pominiete.
