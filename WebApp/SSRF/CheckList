@@ -1,2 +1,5 @@
 1. Mozna wywolac blad servera przez manipulacje parametrem GET. Moznna przez to np. enumerowac porty na maszynie.
 (https://tryhackme.com/room/learncyberin25days) [Task 21, Day 19]
+
+2. Mozna uzystkac dostep do autoryzowanych zasobow. Przez manipulowanie zmienna POST.
+(https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost)
