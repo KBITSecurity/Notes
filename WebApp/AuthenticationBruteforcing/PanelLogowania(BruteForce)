@@ -13,3 +13,8 @@ No i mozemy enumerowac uzytkownikow.
 X-Forwarded-For: <liczba>
 Ustawiamy np. atak w burpie i jako payload dla naglowka podajemy liczby tak aby rosly w nieskonczonosc, no i wiadomo drugi payload np. z haslami.
 Naglowek pozwala sfalszowac adres ip.
+
+
+4. Jezeli panel sie blokuje po kilku prubach, ale zalogowanie sie na poprawne konto resetuje ten licznik to mozemy to wykorzystac.
+Wykonujemy x prob po czy poprawne logowanie i dalej x prob i tak bruteforcujemy co chcemy.
+(https://portswigger.net/web-security/authentication/password-based/lab-broken-bruteforce-protection-ip-block)
