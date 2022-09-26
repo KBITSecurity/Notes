@@ -1,0 +1,7 @@
+(https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-backend-system)
+
+Odkryty wadliwy parametr POST
+
+ustawiamy 192.168.55.<payload>/admin
+
+i w intruderze jedziemy kolejno od 1 do 255
