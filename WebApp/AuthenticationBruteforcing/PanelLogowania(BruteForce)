@@ -29,3 +29,9 @@ wyslani np. 20 prob zalogowania i patrzeniu czy nie dostajemy innego requestu.
 "za duza ilosc prob prosze czekac 1 min"
 ale moze sie okazac ze dla poprawnych danych servera nas nie zaloguje ale zwroci inna wartosc lub brak napisu.
 (https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)
+
+
+8. Moze byc tak ze 2AF jest liczba i da sie ja bruteforcowac. Badamy walsciwe logowanie a nastepnie logujemy sie na konto ofiary i w momecie podania 2AF
+w intruderze/ffaf brutefrocujemy ktora liczba zwroci nam autentykacje. 
+(https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic)
+
