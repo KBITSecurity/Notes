@@ -7,3 +7,10 @@
 3. Jezeli testujemy parametr to do obejscia filtrow, warto jest zakodowac url dwa razy.
 
 4. http://127.0.0.1 = http://127.1
+
+5. Jezeli znajdziemy na stronie przekierowanie to mozemy to probowac wykorzystac do wykonania zlosliwego requestu do panelu administratora
+(https://portswigger.net/web-security/ssrf/lab-ssrf-filter-bypass-via-open-redirection)
+np. Moze byc na stronie funkcja ktora szuka czegos po stronie servera (to znaczy wykonuje wewnetrzny request)
+Jezeli znajdziemy przekierowanie na stronie to mozemy ta funkcja wykonac request do strony gdzie nastepuje przekierowanie.
+Wtedy to przekierowanie nastapi wewnatrz na serverze i wykona sie jako zapytanie localhost.
+No i mozemy tu umiescic np. zlosliwy request do panelu admina.
