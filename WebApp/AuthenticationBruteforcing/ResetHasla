@@ -1,0 +1,6 @@
+1. (https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-broken-logic)
+
+np. Strona do resetu hasla wysyla e-mail z waznym tokenem do resetu.
+Przechodzac pod link widzimy ze w zmiennych post jest nazwa uzytkownika, no wiec ja zmieniamy na innego.
+I w ten sposob moglismy zmienic haslo innego uzytkownika.
+
