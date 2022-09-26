@@ -1,0 +1,15 @@
+(https://portswigger.net/web-security/authentication/other-mechanisms/lab-brute-forcing-a-stay-logged-in-cookie)
+
+W labolatorium badamy cookie, ktore po zdekodowaniu base64 okazuje sie byc <username>:<md5 hasla>
+
+Ogolnie warto sprawdzac czy w ciasteczkach i innych wartosciach nie znajduja sie ciagi hashow lub podobne wartosci hasla lub usera czy emaila.
+
+No w tym przypadku w burpie ustawiamy regoly payloadu:
+-> Ustawiamy payload na ciasteczko stalego zalogowania
+-> Dodajemy wordliste
+-> Regola1: hash:md5
+-> Regola2: Prefix: wiener:
+-> Regola3: Encode:base64
+
+Ustawiamy podazanie za przekierowaniami zeby grepowac wlasciwa odpowiedz strony.
+Do grepowania dodajemy 'email' to slowo pojawia sie dla zalogowanego uzytkownika.
