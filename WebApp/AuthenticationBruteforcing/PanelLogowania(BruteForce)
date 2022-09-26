@@ -23,3 +23,9 @@ Wykonujemy x prob po czy poprawne logowanie i dalej x prob i tak bruteforcujemy 
 5. Czasem moze byc tak ze panel sie nie blokuje ale zablokuje sie dla konkretnego uzytkownika. Czyli mozemy prubowac enumerowac uzytkownikow poprzez
 wyslani np. 20 prob zalogowania i patrzeniu czy nie dostajemy innego requestu.
 (https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)
+
+
+6. Warto sobie zobaczyc czy np. jak znamy poprawny login i brutforsujemy haslo to moze byc taka sytuacja ze panel zwroci nam
+"za duza ilosc prob prosze czekac 1 min"
+ale moze sie okazac ze dla poprawnych danych servera nas nie zaloguje ale zwroci inna wartosc lub brak napisu.
+(https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)
