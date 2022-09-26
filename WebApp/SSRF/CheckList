@@ -14,3 +14,10 @@ np. Moze byc na stronie funkcja ktora szuka czegos po stronie servera (to znaczy
 Jezeli znajdziemy przekierowanie na stronie to mozemy ta funkcja wykonac request do strony gdzie nastepuje przekierowanie.
 Wtedy to przekierowanie nastapi wewnatrz na serverze i wykona sie jako zapytanie localhost.
 No i mozemy tu umiescic np. zlosliwy request do panelu admina.
+
+
+6. Mozna probowac wykryte podatnosci obfuskowac przy uzyciu zakodowanego znaku #(%2523)
+np.
+    stockApi=http://localhost:80%2523@stock.weliketoshop.net/admin/delete?username=carlos
+    
+(https://portswigger.net/web-security/ssrf/lab-ssrf-with-whitelist-filter)
