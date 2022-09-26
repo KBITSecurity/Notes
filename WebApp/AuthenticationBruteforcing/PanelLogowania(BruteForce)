@@ -11,5 +11,5 @@ No i mozemy enumerowac uzytkownikow.
 
 3. Jezeli panel blokuje sie po kilku prubach mozemy prubowac to obejsc naglowkiem:
 X-Forwarded-For: <liczba>
-Ustawiamy np. atak w burpie i jako payload dla naglowka podajemy liczby tak aby rosly w nieskonczonosc.
+Ustawiamy np. atak w burpie i jako payload dla naglowka podajemy liczby tak aby rosly w nieskonczonosc, no i wiadomo drugi payload np. z haslami.
 Naglowek pozwala sfalszowac adres ip.
