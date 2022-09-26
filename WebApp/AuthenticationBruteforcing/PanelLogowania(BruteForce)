@@ -18,3 +18,8 @@ Naglowek pozwala sfalszowac adres ip.
 4. Jezeli panel sie blokuje po kilku prubach, ale zalogowanie sie na poprawne konto resetuje ten licznik to mozemy to wykorzystac.
 Wykonujemy x prob po czy poprawne logowanie i dalej x prob i tak bruteforcujemy co chcemy.
 (https://portswigger.net/web-security/authentication/password-based/lab-broken-bruteforce-protection-ip-block)
+
+
+5. Czasem moze byc tak ze panel sie nie blokuje ale zablokuje sie dla konkretnego uzytkownika. Czyli mozemy prubowac enumerowac uzytkownikow poprzez
+wyslani np. 20 prob zalogowania i patrzeniu czy nie dostajemy innego requestu.
+(https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)
