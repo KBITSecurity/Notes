@@ -3,3 +3,9 @@
 
 2. CTF
     https://tryhackme.com/room/dunklematerieptxc9
+
+
+Ogolnie program do ktorego wgrywamy pliki
+*.pcap - ruch sieciowy
+*.csv  - logi
+Z tego program tworzy nam interaktwny graf i mozna szukac. Na stronie jest opisane jak to skonfigurowac i dzialac.
