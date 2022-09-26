@@ -1,0 +1,5 @@
+Jezeli w panelu uzytkownika korzystamy z funkcji zmiany hasla to mozemy probowac zmienic nazwe uzytkownika na innego.
+W intruderze mozemy ustawic inna nazwe uzytkownika payload na aktualne haslo i dwa nowe hasla ktore sie roznia.
+Wiec jezeli ustrzelimy poprawne chaslo to dostaniemy zwortke ze nowe hasla roznia sie od siebie.
+
+(https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-brute-force-via-password-change)
