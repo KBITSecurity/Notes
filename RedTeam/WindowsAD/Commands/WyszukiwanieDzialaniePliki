@@ -26,9 +26,10 @@ Odczytanie zawartosci pliku:
 Ilosc slow w pliku:
       Get-Content -Path file.txt | Measure-Object -Word
       
-Wyswietlenie znaku w indexi:
+Wyswietlenie slowa z indexu:
       (Get-Content -Path plik)[index]
       (Get-Content -Path plik)[4]
+      (Get-Content -Path plik)[23, 452]
       
 Zmiana folderu:
       Set-Location -Path c:\users\administrator\desktop
