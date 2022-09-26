@@ -36,3 +36,5 @@ Zmiana folderu:
       
 Przeszukanie pliku wedlug okreslonego wzorca.
       Select-String -Path 'c:\users\administrator\desktop' -Pattern '*.pdf'
+      Select-String .\2.txt -Pattern 'redryder'
+      
