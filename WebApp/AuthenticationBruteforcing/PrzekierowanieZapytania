@@ -1,0 +1,5 @@
+Jezeli mamy mozliwosc resetowania hasla i np. dostajemy email z tokenem to mozemy probowac przekierowac to zapytanie przy uzyciu naglowka.
+X-Forwarded-Host: exploit.server
+
+Przekieruje on zapytanie do innego hosta ale nie podajemy tu http wiec pewnie jest to przekierowanie lokalne.
+(https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-poisoning-via-middleware)
