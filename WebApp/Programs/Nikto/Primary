@@ -1,0 +1,7 @@
+2) Nikto (Automatyczne skanowanie) + Wtyczka wapalizer
+      • Uruchomienie skanowania
+            ▪ nikto -h <ip>
+      • Wapalizer dodatek do przegladarek czasem pokazuje ciekawe rzeczy
+            ▪ Google: wapalizer add to <browser>
+      • Skan jezeli wymga logowania (np. server tomcat)
+            ▪ nikto -h http://10.10.233.89:1234/manager/html -id bob:bublles
