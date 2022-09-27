@@ -1,3 +1,10 @@
 Do poczytania:
   https://portswigger.net/web-security/websockets/what-are-websockets
   https://portswigger.net/web-security/websockets
+
+
+Protokol soketow 
+    ws://
+Protokol szyfrowany
+    wss://
+    
