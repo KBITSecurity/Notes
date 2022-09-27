@@ -1,0 +1,5 @@
+Mozemy testowac websockety przy uzyciu repeatera. Przchwytujemy w burpie request i wysylamy do repetera.
+Jezeli nam zerwie polaczenie to mozemy je nawiazac ponownie wykonujac handshake jezeli nie ma zabezpieczen.
+
+Jezeli nasz ip zostanie dodany do czarnej listy(np. przez przeslanie xss) to mozemy probowac obejsc to naglowkiem:
+X-Forwarded-For: 1.1.1.1
