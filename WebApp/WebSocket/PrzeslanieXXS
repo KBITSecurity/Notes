@@ -1,0 +1,5 @@
+Przyklad w aplikacji mamy livechat do ktorego przy pomocy websocket przesylamy wiadomosci na zywo. No i wiadomix jezeli nie sa filtrowane to mozemy 
+zarzucic xxesem :)
+
+W burpie przechwytujemy wiadomosc w json i w interceptorze ja zmieniamy.
+(https://portswigger.net/web-security/websockets/lab-manipulating-messages-to-exploit-vulnerabilities)
