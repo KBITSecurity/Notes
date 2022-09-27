@@ -1,0 +1,2 @@
+1) Jezeli poszukujemy procesu ktory migrowal to warto zwrocic uwage na (Sysmon EventID=8)
+2) Poszukiwanie webshella (mozna odfiltrowac IIS i metody (POST OR GET))
