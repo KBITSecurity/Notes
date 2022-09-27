@@ -1,0 +1,29 @@
+Commands:
+→ adb shell pm list packages
+   ⇒ Wylistowanie wszystkich pakietow / aplikacji zainstalowanych na telefonie
+→ adb shell pm list packages | findstr termux
+   ⇒ W konsoli windowsa przeszukanie wynikow
+→ adb shell pm path
+   ⇒ Wyswietli sciezki
+→ adb pull <sciezka>/<nazwa>.apk
+   ⇒ Pobranie aplikacji z telefonu
+→ adb push <nazwa> /sdcard
+   ⇒ wyslanie czegos na telefon
+→ adb shell ls /sdcard
+→ adb shell am start -n com.revo.evabs/.ExportedActivity
+→ adb shell am start -n <nazwa aplikacji>
+   ⇒ Uruchomi na aplikacje zainstalowana na telefonie
+
+
+Podgladanie logow aplikacji: 
+→ adb shell ps | findstr <fraza>
+→ adb logcat --pid=<id_procesu>
+
+
+Logi systemowe:
+→ adb logcat
+   ⇒ adb logcat --pid=<numer_pid>
+
+
+Wyswietlenie “Activity” aplikacji
+→ adb shell am start -n <aplikacja>/<Activity>
