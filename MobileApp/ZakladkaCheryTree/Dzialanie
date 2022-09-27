@@ -1,0 +1,68 @@
+Zamiana apk na zip
+→ Po to aby rozpakowac sobie zawartosc aplikacji
+   ⇒ copy <aplikacja>.apk   <name>.zip
+
+Rozpakowanie zipa applikacji
+→ Expand-Archive <name>.zip
+
+
+Konwersja class.ex do javy
+→ d2j-dex2jar classes.dex -o <name>.jar
+
+
+Dekompilacja aplikacji
+→ narzedzie “apktool” opcja “d”
+   ⇒ apktool d <name>.apk
+
+
+Kompilacja aplikacji
+→ narzedzie “apktool” opcja “b”
+   ⇒ apktool b <folder> -o <name>.apk
+
+
+Program CodeBlocks
+→ Dobra praktyka jest sobie zaladowanie zdekompilowanego folderu aplikacji do programu.
+→ Mozna sobie wygodnie wyszukiwac roznych fraz i zmieniac program w smali
+
+
+Podgladanie kodu javy
+→ odpalamy program jd-gui
+   ⇒ jd-gui
+→ I graficznie wczytujemy plik <name>.jar
+
+
+Deinstalacja programu
+→ adb shell pm list packages | findstr <name>
+→ adb uninstall <name>
+
+
+Instalacja programu
+→ adb install <name>.apk
+
+
+Sprawdzenie zipalign
+→ Wykonujemy sprawdzenie swiezo skompilowanego programu
+   ⇒ zipalign -v -p 4 <swiezy>.apk <wynik>.apk
+
+
+Generowanie certyfikatu
+→ Narzedzie “keytool” jest w pakiecie java
+   ⇒ keytool -genkey -v -keystore <name>.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload 
+→ haslo obojetnie jakie
+→ reszty wartosci nie trzeba podawac
+→ Tylko na koncu Yes jak zapyta o poprawnosc danych
+
+
+Podpisanie aplikacji (wygenerowanym kluczem)
+→ apksigner sign --ks <name>.jks <app>.apk
+
+Adb kill-server
+→ Jak by adb wariowal do mozemy uzyc tej komendy
+   ⇒ adb kill-server
+   ⇒ adb devices
+→ Powinno pokazac uzadzenia
+
+
+Strona:
+→ decompiler.com
+   ⇒ Mozna podjzec dekompilacje na stronie czasem warto bo moga sie roznic.
