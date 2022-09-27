@@ -1,0 +1,8 @@
+Donwload:
+→ https://github.com/termux/termux-app/releases
+
+Wchodzimy w ustawienia → Aplikacje → Permission (uprawnienia) I dajemy na wszystko  
+
+Commands:
+→ ls /sdcard
+→ ifconfig
