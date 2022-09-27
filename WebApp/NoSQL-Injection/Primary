@@ -1,0 +1,12 @@
+1) NoSql
+      • Uzycie wartosci jako nie rowne co pozwoli na zalogowanie jako pierszy znaleziony uzytkownik
+            ▪ user[$ne]=name&pass[$ne]=password
+            ▪ $ne - czyli nie rowne
+      • Strony z podpowiedziami do wstrzykniec
+            ▪ https://book.hacktricks.xyz/pentesting-web/nosql-injection
+    
+    
+    
+    
+    
+    
