@@ -1,0 +1,9 @@
+Na stronie mamy rozne payloady i rodzaje xxe ktore mozemy osadzic w srodku pliku:
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#xxe-inside-xlsx-file
+
+
+Najlepsze dzialanie:
+Sciagniecie pliku z linku:
+https://github.com/0xdeadbeefJERKY/Office-DDE-Payloads/raw/master/templates/payload.xlsx
+Zmiana pliku w sposob opisany w pierwszym linku zaleznie od pliku.
+
