@@ -12,3 +12,11 @@ Sprawdzenie subdomen w certyfikacie
 
 Moze byc tak ze uda nam sie znalezc klucz API lub tajny klucz to tworzenia sesji i utworzyc na jego podstawie np. ciasteczko sesyjne (opisane w Flasku)
 W ten sposob mozna tez doszukiwac sie innych luk jezeli w ciasteczku jest nazwa uzytkownika i jest wyswietlana na stronie to np. XXS SSTI
+
+4) Przeszukanie zrodla strony
+      • Komentarze
+            ▪ Rzeczy pozostale z produkcji mogace miec znaczenie
+      • Kody strony
+            ▪ Wstepna analiza do dalszych dzialan
+      • Sprawdzenie konsoli
+            ▪ <F12>
