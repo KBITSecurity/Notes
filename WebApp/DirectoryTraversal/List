@@ -1,1 +1,2 @@
 1. Zdjecia ladowane na strone sa pewnie z zasobow servera. Zawsze mozna sprobowac ../../../etc/hosts
+2. Filtr moze byc tak ustawiony ze sprawdza czy poczatek zaczyna sie od ustalonego folderu wtedy wiadomix /var/www/html/../../../../../etc/hosts
