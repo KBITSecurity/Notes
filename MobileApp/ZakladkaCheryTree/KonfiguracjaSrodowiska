@@ -1,0 +1,34 @@
+Wymagania wstepne:
+→ Zainstalowany Genymotion
+→ Zainstalowany Android Studio
+
+Dodanie zmiennej srodowiskowej:
+→ Wyszukujemy w pasku startu “variables evinioment”
+→ Evinioment Variables ...
+→ System variables
+→ Zmienna $PATH
+→ Edit ...
+→ New
+
+Dodanie sciezek do zmiennych srodowiskowych
+→ Uruchamiamy android studio
+   ⇒ Tools
+   ⇒ SDK Manager
+→ Kopiujemy sciezke i przechodzimy do niej w exploratorze
+→ Znajdziemy tam katalog “Platform-tools” i “bulid-tools”
+   ⇒ Dodajemy do zmiennej $PATH katalog Platform-tools
+   ⇒ Dodajemy do zmiennej $PATH jeden z podkatalogow bulid-tools (obojetnie ktory)
+
+→ Szukamy na systemie gdzie jest zainstalowana java
+   ⇒ Podpinamy folder javy do zmiennych srodowiskowych
+
+→ google -> download dex2jar
+   ⇒ dodajemy program do zmiennych srodowiskowych
+
+→ http://java-decompiler.github.io/
+   ⇒ pobieramy dekompiler i podpinamy do zmiennych srodowiskowych
+
+Kolorowanie skladni smali w CodeBlocks:
+→ ctrl + shift + b
+→ wyszukujemy smail
+→ install
