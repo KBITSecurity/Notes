@@ -1,0 +1,19 @@
+Czyli identyfikator dostepu do servera:
+
+Np. mozemy robic aplikacje ktora wyswietla dane o pogodzie, no wiadomix nie mamy uzadzen zbierajacych takie dany tylko kozystamy z innych servisow i one moga byc np. platne. Wtedy Nasze “api key” zaszyty w aplikacji lepiej zeby nie zostal wykradziony.  (np. wykupimy pakiet ktory dopuszcz 100 tys. zapytan w miesiacu)
+
+Jak ktos nam wykradnie api key to bedzie sie mogl podszywac pod nas. I nabijac np. rachunek.
+
+W API googla mozna nalozyc sobie restrykcje np. ze jest tylko do obslugi zapytan androidowych.
+
+
+
+
+
+
+Jak to zrobic?
+Zakladamy ze jakas stronka udostepnia fajne api dostep jest platny kupujemy i wio.
+(w kodzie - slabo, w res - slabo, w sharePreference - slabo)
+Najlepszym sposobem jest zakodowanie api natywnie (uzywajac ndk - native developed kid) 
+
+W takim wypadku piszemy w c/c++, jest to pisanie na nizszym poziomie niz java czy kotlin i w ten sposob mozemy zakodowac sobie ten identyfikator API i wzywac go sobie z posiomu kotlina albo javy. 
