@@ -1,0 +1,26 @@
+1) Instalacja
+      • Ze strony
+            ▪ https://osquery.readthedocs.io/en/stable/installation/install-linux/
+            ▪ https://osquery.readthedocs.io/en/stable/installation/install-windows/
+      • Uruchamianie
+            ▪ osqueryi
+      • Opisy tabel
+            ▪ https://osquery.io/schema/4.7.0/
+
+2) Podstawowe polecenia
+      • Pomoc
+            ▪ .help
+            ▪ .version
+            ▪ .schema
+            ▪ .tables
+            ▪ .schema <tabela>
+      • Podstawowe tabele i zapytania
+            ▪ .tables process
+   
+3) Zapytania wykonujemy jak do bazy danych mysql
+   
+   
+   
+   
+   
+   
