@@ -1,0 +1,18 @@
+1) Instalacja
+      • Pobranie i rejestracja (na email -> kod z aktywacja)
+            ▪ https://temp-mail.org/pl/
+            ▪ https://www.tenable.com/products/nessus/nessus-essentials
+            ▪ dpkg -i <nazwa paczki.deb>
+            ▪ systemctl start nessusd.service
+      • (Zalogowanie) https://127.0.0.1:8834
+            ▪ Essential -> Skip -> (kod z e-maila) -> (Username z rejestracji + mocna haslo)
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
