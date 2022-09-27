@@ -1,0 +1,4 @@
+1) Analiza plikow (Sysinternals)
+      • Sprawdzenie czy nie ma niepodpisanych plikow w folderze systemowym
+            ▪ sigcheck -u -e C:\Windows\System32
+      
