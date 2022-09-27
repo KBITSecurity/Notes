@@ -1,0 +1,61 @@
+INSTALACJA:
+System -> Package Manager -> Available Package -> szukamy “snort” -> install -> confirm
+
+ 
+Wchodzimy na snort.org I sie rejestrujemy
+W panelu  uzytkownika wchodzimy w “Oink code” I kopiujemy kod
+
+ 
+Wchodzimy do pfSense: Services -> Snort -> Global Settings  
+W oknie “Snort Subscriber Rules” zaznaczamy “Enable Snort VRT” I wklejamy kod -> save
+
+ 
+Zaznaczamy rowniez “Enables Snort GPLv2” I “Enable ET Open” -> save
+
+ 
+
+ 
+Zakladka “Snort Interfaces”
++Add
+Interface: LAN (em1)
+Description: LAN
+Send Alerts to System Log: checked  
+Block Offenders: checked
+Save
+
+ 
+Zakladka “Updates”
+• Update Rules
+
+
+
+ 
+Zakladka “Snort Interfaces” edykujemy dodany wczesniej interfejs
+◇ LAN Categories
+
+◇ Select all
+
+◇ Save
+
+
+
+ 
+Znowu “Update” -> Update Rules
+
+ 
+Zakladka “Snort Interfaces” znaczek play aktywuje naszego IPS-a na interfejsie
+
+ 
+Znowu edytujemy nasz interfejs I wchodzimy do “LAN Rules”
+Category Selection: castom.rules
+
+ 
+Alert <protocol> <sorce> <destination>
+
+ 
+alert tcp any any -> $HOME_NET any (msg:”TCP Port Scan Detected”; detection_filter:track by_src, count 30, seconds 60; sid:1000006; rev:1;)
+(z kazdego sorce I z dowolnego portu ->(do) zmienna_snort na dowolny port)  
+detection_filter – czyli chcemy sledzic informacje po adresie zrudlowym czyli z kad atak nadszedl
+
+ 
+Po dodaniu tej regoly beda pojawialy sie alerty np. przy skanowaniu nmapem w zakladce “Alerts” bedzie je widac
