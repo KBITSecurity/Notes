@@ -5,7 +5,20 @@ AndroidManifest -> HardoWpisanePozwolenia (trzeba spojrzec czy nie ma tam niepot
 (Bo jak nam zhakuja applikacje to moze cos byc za duzo i zostac wykorzystane)
 
 
-Zabezpieczenie Plikow:
+---------------Zabezpieczenie Plikow:
 Najlepiej szyfrowac
-
 Mozemy uzyc encryptFile z biblioteki SecurityLibrary jest to czesc JetpackAndroid
+
+---------------Warzne Operacje
+Przy waznych operacjach powinnismy, pytac ponownie o weryfikacje tozsamosci np. poprzez pattern unlock, fingerprint itp.
+
+---------------Dane zewnetrzne:
+Jezeli aplikacja laduje dane z pamieci zewnetrznej, nalezy je weryfikowac.
+A najlepiej podpisywac.
+
+---------------Obfuskacja:
+Nalez zaciemniac dane aplikacji jak sie ja kompiluje aby byl mniej czytelny dla czlowieka.
+
+Nalezy to robic przedewszystkim jak wypuszczamy aplikacje na swiat.
+
+np. ProGuard czyba ze mamy kase to DexGuard
