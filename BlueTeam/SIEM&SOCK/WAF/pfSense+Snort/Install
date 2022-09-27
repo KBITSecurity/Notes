@@ -1,0 +1,49 @@
+Pobieramy instalke:
+https://www.pfsense.org/download/
+
+ 
+Virtual Box:
+Name: pfsense
+Type: BSD
+Version: FreeBSD (64-bit)
+
+ 
+4 GB  - ram
+16 GB – dysk
+
+ 
+Instalacja potrzebuje dwa interfejsy sieciowe:
+Np.  
+1. Bridge Adapter
+
+2. Internal Network
+
+Advanced -> Promiscout Mode: Allow VMs
+
+ 
+  Odpalamy maszyne I instalujemy:
+• Accept
+
+• Install
+
+• Continue with default keymap
+
+• Auto (ZFS)
+
+• Install
+
+• Stripe
+
+• Zaznaczamy dysk (musi sie pojawic  gwiazdka [spacja]) -> ok
+
+• YES
+
+• Instaluje sie
+
+• NO
+
+• Reboot
+
+
+Mozemy z innej maszyny zalogowac sie do panelu w przegladarce na adres ip podany na psSensie.
+    Login: admin password: pfsense
