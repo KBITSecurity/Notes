@@ -5,3 +5,7 @@ AndroidManifest -> HardoWpisanePozwolenia (trzeba spojrzec czy nie ma tam niepot
 (Bo jak nam zhakuja applikacje to moze cos byc za duzo i zostac wykorzystane)
 
 
+Zabezpieczenie Plikow:
+Najlepiej szyfrowac
+
+Mozemy uzyc encryptFile z biblioteki SecurityLibrary jest to czesc JetpackAndroid
