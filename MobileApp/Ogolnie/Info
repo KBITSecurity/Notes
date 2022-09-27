@@ -1,0 +1,13 @@
+Ogolnie przypomina strukture linuxa (unixowy system):
+Pliki:
+Config -> Ustawienia systemu operacyjnego
+bin -> Narzedzia systemowe (np. mkdir cat)
+etc -> pliki i katalogi konfiguracyjne
+
+sdcard -> (nie trzeba miec wlozonej zadnej karty jest to dodatkowa partycja do kotrej uzytkownik ma domyslny caly czas dostep, po podpieciu kabla usb automatycznie mamy dostep do tej czesci)
+
+
+Termux (consola pozwala przegladac pliki (takie explorowanie plikow))
+
+
+Generalnie kazda aplikacja jest uruchamiana w osobnym kontenerze ktory nie ma dostepu do zadnych funkcji typu polaczenia, smsy itp. aktualnie uprawnienia do internetu dla aplikacji sa dawane domyslnie.
