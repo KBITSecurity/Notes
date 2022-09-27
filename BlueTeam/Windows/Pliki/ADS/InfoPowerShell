@@ -1,0 +1,4 @@
+Gdy pobierasz plik z Internetu do punktu końcowego, w usłudze ADS zapisywane są identyfikatory, które identyfikują, że został pobrany z Internetu.
+
+Polecenie do przeglądania ADS za pomocą Powershell: Get-Item -Path file.exe -Stream *
+    Get-Item -Path file.exe -Stream *
