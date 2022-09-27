@@ -1,0 +1,11 @@
+SharePreference:
+(Jezeli chcemy cos przenies miedzy dwoma aplikacjami) (Jest to bardzo zly pomysl)
+Mozna sie dostac do (SharePreference) innej aplikacji jezeli nie ma ona ustawione (SharePreference na PrivateMode)
+Czyli jezeli tworzymy (SharePreference) Musimy zadbac o to aby mialo ustawione PrivateMode. Czyli dostep tylko i wylacznie dla naszej aplikacji.
+
+
+Do dzielenia sie danymi z innymi aplikacjami nie sluzy SharePreverence tylko CnetentProvider.
+CenterProvider ma tak zawny atrybut exported i mozemy nadac tu true/flase.
+Jezeli chcemy miec dostep tylko dla naszej aplikacji no i takie co ma takie samo id to ustawiamy taki service w AndroidManifest i ustawiamy flage na false.
+
+Mozemy kozystajac z permission i providera ustawiac dostep do naszego servisu.
