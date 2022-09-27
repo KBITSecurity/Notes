@@ -1,0 +1,55 @@
+1) Instalacje
+      • Android studio
+            ▪ https://developer.android.com/studio
+      • Genymotion (Emulator)
+            ▪ https://www.genymotion.com/download/  
+      • CodeBlock (Smali kolorowanie skladni)
+            ▪ https://code.visualstudio.com/download
+            ▪ → ctrl + shift + b
+            ▪ wyszukujemy smail
+            ▪ install
+      • Dodanie zmiennych srodowiskowych (windows) (Path)
+            ▪ Katalogi z AndroidStudio (Platform-tools) i (bulid-tools [obojetny podkatalog])
+            ▪ Folder javy zainstalowanej na systemie
+            ▪ Program dex2jar (sciagamy z neta)
+            ▪ Dekompilator (http://java-decompiler.github.io/)
+                   
+                   
+                   
+                   
+                   
+                   
+1) Rozpakowanie
+      • Na windowsie
+            ▪ copy <aplikacja>.apk   <name>.zip
+            ▪ Expand-Archive <name>.zip
+      • Konwersja do javy
+            ▪ d2j-dex2jar classes.dex -o <name>.jar
+   
+2) Dekompilacja
+      • Na windowsie
+            ▪ apktool d <name>.apk   
+      • Strona (mozna podejrzec dekompilacje)
+            ▪ decompiler.com
+               
+               
+               
+1) Kompilowanie aplikacji
+      • Na windowsie
+            ▪ apktool b <folder> -o <name>.apk
+      • Sprawdzenie swierzo kompilowanej aplikacji
+            ▪ zipalign -v -p 4 <swiezy>.apk <wynik>.apk
+                 
+2) Certyfikaty
+      • Generowanie (Haslo obojetne reszty wartosci nie podajemy)
+            ▪ keytool -genkey -v -keystore <name>.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+      • Podpisanie aplikacji
+            ▪ apksigner sign --ks <name>.jks <app>.apk
+                 
+                 
+                 
+                 
+               
+               
+               
+               
