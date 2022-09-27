@@ -1,0 +1,65 @@
+Aktywnosci
+→ Activity 													
+   ⇒ Widok taki jaki mamy aktualnie w telefonie
+→ onCreate													
+   ⇒ Kiedy metoda jest wywolywana - na ekranie najczesciej pojawia sie spiner o ladowniu aplikacji
+→ onStart														
+   ⇒ Wywolywana kiedy aktywnosc staje sie widoczna
+→ onResume
+   ⇒ Na tej metodzie dopiero mamy mozliwosc klikania w palikacje
+→ onPause
+   ⇒ Wywolywana kiedy inna aktywnosc wchodzi w reakcje z uzytkownikiem (np. powiadomienie o sms i sciagamy z gory okno)
+→ onStop
+   ⇒ Wywolywana kiedy aktywnosc przestaje byc widoczna dla uzytkownika
+   ⇒ Aplikacja w tel jest na metodzie onStop
+→ onDestroy
+   ⇒ Wywolywana wtedy kiedy zamykamy aplikacje (zwalnia zasoby).
+
+
+Plik strings
+→ Jest to plik ktory przechowuje stringi jakiejs aplikacji 
+→ Glownie jest do tego zeby aplikacje mogly byc w wielu jezykach
+→ Ulatwia to sprawe bo wystarczy przetlumaczyc/podmienic tylko jeden plik
+→ Ale czase mozna tu znalesc jakies hasla lub inne rzeczy
+
+
+Plik AndroidManifest.xml
+Mamy wyswietlone informacje o aktywnosciach w tym przypadku jest jedna aktywnosc.
+Moze byc ich wiele ten na samej gurze jest domyslny pierwszy.
+Gdyby aplikacja potrzebowala jakis dodatkowych uprawnien beda one w tym pliku wylistowane.
+
+ 
+Moga tu byc umieszczane “brodkast recivery :)”  to sa wiadomosci ktore wysylamy badz otrzymujemy od systemu lub innnych aplikacji np. Informacje ze konczy sie bateria lub dostalismy sms. I taka aplikacja moze sobie takiego sms-a odczytac o ile posiada stosowne uprawnienia.
+Mozemy tez miec servis lub usluge ktora chodzi w tle
+
+ 
+Ostatnim elementem moze byc tu “Content provider” czyli dostawca uslug autoryzowanych tresci.
+
+Oglne pliki w aplikacji:
+AndroidManifest.xml – Jest najwazniejszym plikiem konfiguracyjnym.
+META-INF – Zawiera informacje na temat podpisywanych elementow w aplikacji.
+Res – Plik zawiera informacje o obrazkach, audio, layout itp.
+Resources.arsc – Podobne informacje do Res
+Classes.dex – Jest plikiem w ktorym zawiera sie caly kod aplikacji rozszerzenie dex informuje ze  jest to przeznaczone do maszyny wirtualnej
+
+
+MDM
+MDM – system nadrzedny nad telefonem stosowany w duzych korporacjach dzieki niemu korporacja moze sterowac telefonem I wie co dany uzytkownik na nim robi I gdzie sie znajduje. Stosuje sie to np. Zeby nie wyciakaly dane itp. Np. Moze zrobic tak ze aplikacje korporacyjne sa w innym dockerze do ktorego nie maja dostepu zadne inne aplikacje.
+Czyli z jednej strony jest to smycz dla pracownika ale z drugie zabezpiecza pracodawce przed wyciekiem danych.
+
+
+Moja uwaga:
+Jezeli mozemy wyswietlac aktywnosci aplikacji przy uzyciu adb
+No a w jednym z plikow (manifest, strings lub innym teraz nie pamietam ale chodzi o plik aplikacji)
+Sa zapisane aktywnosci
+To mozemy je sobie prubowac po kolei wyswietlac na telefonie :)
+
+
+Wzmianka:
+Instalowanie aplikacji na wirtualizatorach i ich testowanie trzeba dodac
+uprawnienia takie jak potrzebuje aplikacja i trzeba to zrobic w ustawieniach
+poniewaz aplikacje sie moga o to nie pytac.
+
+
+Path:
+→ /data/data             (Katalog z zainstalowanymi aplikacjami)
