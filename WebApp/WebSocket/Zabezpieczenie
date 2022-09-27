@@ -1,0 +1,9 @@
+Jak zabezpieczyć połączenie WebSocket
+
+Aby zminimalizować ryzyko wystąpienia luk w zabezpieczeniach związanych z WebSockets, skorzystaj z następujących wskazówek:
+
+     Użyj protokołu wss:// (WebSockets przez TLS).
+     Zakoduj na stałe adres URL punktu końcowego WebSockets i na pewno nie dołączaj do tego adresu URL danych kontrolowanych przez użytkownika.
+     Chroń wiadomość uzgadniania WebSocket przed CSRF, aby uniknąć luk w zabezpieczeniach przechwytujących WebSockets między witrynami.
+     Traktuj dane otrzymane przez WebSocket jako niezaufane w obu kierunkach. Bezpiecznie obsługuj dane zarówno po stronie serwera, jak i klienta, 
+     aby zapobiec usterkom związanym z danymi wejściowymi, takimi jak wstrzykiwanie SQL i wykonywanie skryptów między lokacjami.
