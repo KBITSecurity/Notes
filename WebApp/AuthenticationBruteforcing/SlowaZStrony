@@ -1,0 +1,11 @@
+5) Pobranie stringow z strony
+      • Slowa z adresami email oraz wyliczone powtorzenia
+            ▪ cewl -d 3 -m 2 -e -a -c <IP> -w cewl_strings_primary       
+      • Same adresy email
+            ▪ cewl -d 3 -m 2 -e  -n <IP> -w cewl_only_emails
+      • Same slowa (Sprawdza do 3 podstron parametr -d)
+            ▪ cewl -d 3 -m 2 <IP> -w cewl_clear_strings 
+      • Chodzenie po stronie i wyszukiwanie
+            ▪ Loginy i hasla
+            ▪ Imiona i nazwiska
+            ▪ Pseudonimy
