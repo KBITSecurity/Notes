@@ -1,0 +1,9 @@
+Frida sluzy to tego abysmy sie dynamicznie wstrzykiwali w proces. Abysmy mogli zmieniac logike.
+
+np. Ominiecie sprawdzania certyfikatu ssl zebysmy mogli wpiac sie w komunikacje.
+
+Moze byc tak ze jak skrypty fridy nie zadzialaja wtedy trzeba sobie radzic :)
+np. Scignac wiecej skryptow roznych
+
+
+Frida jest po to zeby sie wstrzyknac w proces i zmienic logike dzialajacej aplikacji.
