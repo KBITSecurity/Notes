@@ -1,0 +1,42 @@
+Podlaczenie burpa:
+→ Na linuxie
+   ⇒ adb connect <ip_telefonu>:5555
+   ⇒ adb devices  (powinno pokazac podlaczenie)
+→ W burpie generujemy certyfikat “Certificate in DER format”
+   ⇒ burp.crt
+→ Wysylamy certyfikat do telefonu
+   ⇒ adb push burp.crt /sdcard
+→ Na telefonie
+   ⇒ Settings
+   ⇒ Security
+   ⇒ Encryption & credentials
+   ⇒ Install from SD card
+      • (jak by nie bylo widac certyfikatu do klikamy trzy kreski i zmieniamy lokalizacje na sdcard)
+   ⇒ Podajemy jakas nazwe i ok
+   ⇒ Certyfikat bedzie widoczny w zakladce Trusted credential -> USER
+
+Ustawienie Proxy:
+→ Settings
+→ Network & internet
+→ Wi-Fi
+→ Android Wifi
+→ Network details
+   ⇒ Proxy
+      • Manual
+
+
+Generowanie certyfikatu na prawdziwy telefon:
+→ openssl x509 -inform der -in <name>.der -out <name>.pem
+→ openssl x509 -inform PEM -subject_hash_old -in <name>.pem|head -1
+→ ls (zobaczymy nazwe)
+→ openssl x509 -inform PEM -text -in <name>.pem -out /dev/null >> <zobaczona nazwa>
+(Taki certyfikat mozemy wgrac na zrootowany telefon)
+→ adb push <zobaczona nazwa> /data/local/tmp
+→ adb shell 
+   ⇒ su
+   ⇒ mount -o rw, remount /system
+   ⇒ mv /data/local/tmp/<zobaczona nazwa> /system/etc/security/cacerts
+   ⇒ chown root:root /system/etc/security/cacert/<zobaczona nazwa>
+   ⇒ chmod 644 /system/etc/security/cacerts/<zobaczona nazwa>
+   ⇒ reboot
+→ Certyfikat powinien pojawic sie w zaufanych certyfikatach systemowych
