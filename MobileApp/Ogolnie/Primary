@@ -1,0 +1,7 @@
+
+sms Wap Direct Billing - usluga ktora jak jest wlaczona to samo wejscie na strone moze spowodowac pobranie kasy.
+
+AndroidManifest -> HardoWpisanePozwolenia (trzeba spojrzec czy nie ma tam niepotrzebnie wpisanych itp.)
+(Bo jak nam zhakuja applikacje to moze cos byc za duzo i zostac wykorzystane)
+
+
