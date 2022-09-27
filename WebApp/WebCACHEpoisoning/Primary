@@ -1,0 +1,13 @@
+1. (https://portswigger.net/web-security/web-cache-poisoning/exploiting-design-flaws/lab-web-cache-poisoning-with-an-unkeyed-header)
+Badamy odpowiedz servera mozemy dodac jakas zmienna get ("?cb=123") aby odpowiedz nie pochodzila z cache.
+Dodajemy naglowek do requestu:
+    X-Forwarded-Host: generuj.to
+    
+I sprawdzamy czy w responsie nie znajduje sie generuj.to 
+(jezeli tak to wiadomo mozemy nagrzebac, na labie byl ladowany plik js z servera no to podanie w naglowku swojego servera i umiezczenie na nim skryptu
+powodowalo zaciagniecie przez strone naszego skryptu a to mozna xss i inne)
+
+
+Ogolnie jezeli w responsie znajduje sie X-Cache: hit to znaczy ze respons pochodzi z pamieci podrecznej.
+
+
