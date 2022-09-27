@@ -1,0 +1,5 @@
+Cache-Control: no-cache, no-stroe, must-revalidate
+Pragma: no-cache
+
+
+Server np. banku powinien zwracac naglowek np. no-cache zeby przegladarka nic sobie na dysku nie zapisywala bo moga tam sie znalezc np. dane kart bankowych itp.
