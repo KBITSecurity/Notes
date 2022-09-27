@@ -1,0 +1,57 @@
+1) Uzycie null-byte
+      • W adresie url
+            ▪ <adres>/<plik>%00
+            ▪ <adres>/<plik>%2500
+
+3) Typy MIME (zmiana w burpie omija filtr po stronie clienta)
+      • Rodzaje
+            ▪ image/jpeg
+            ▪ text/x-php
+
+4) Ominiecie filtrowania po stronie clienta
+      • Przechwycenie w Burpie
+            ▪ W locie przechwytujemy odpowiedz od servera z kodem aplikacji
+            ▪ Modyfikujemy kod w Burpie
+            ▪ Puszczamy ruch 
+            ▪ W przegladarce mamy zmodyfikowany kod
+
+5) Dzialania
+      • Nadpisanie pliku na serverze
+            ▪ uzycie takiej samej nazwy jak na serverze (np. z gobustera).
+      • Obfuskacja
+            ▪ Podmiana “magic byte” w pliku 
+            ▪ Dopasowanie rozmiaru pliku do oczekiwanego przez aplikacje
+            ▪ Ominiecie filtru po stronie clienta -> Burp i podmiana danych 
+      • Uzycie podwojnych slaszy
+            ▪ //
+      • Sprawdzenie placecholder
+            ▪ Podpowiedzi na szaro w polach input text
+      • Wczytanie zdalnie pliku
+            ▪ Podanie jako parametru adresu url naszego pliku (np. z python3 -m http.server)
+      • Wczytanie sciezki (powrot do calego adresu)
+            ▪ https://website.thm/item/2?server=server.website.thm/flag?id=9&
+            ▪ dodajemy &
+            ▪ https://website.thm/item/2?server=server.website.thm/flag?id=9&
+            ▪ Zamyka to nam zmienne get i dziala :)
+      • Ominiecie filtru kiedy server sprawdza np. poczatek sciezki
+            ▪ Nie moze byc /private
+            ▪ To robimy
+            ▪ x/../private
+
+6) Plik uruchomienie / tworzenie
+      • Strony z gotowym revershellem / web-shellem
+            ▪ https://www.revshells.com/
+            ▪ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/ -
+               - Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+      • Dopasowanie do kodu strony
+            ▪ Sprawdzic framework jak np. Java to moze php nie zadzialac
+      • Metody poszukiwania sciezki na serverze
+            ▪ Wgranie przewidzianego normalnie pliku i proba jego wyswietlenia
+            ▪ Poszukiwanie sciezki na stronie (w css / kodach javascript)
+            ▪ Pruba okreslenia sposobu zapisu przez server (np. dodanie daty, losowe ciagi)
+
+
+
+
+
+
