@@ -1,0 +1,14 @@
+1) Dodatkowe Aplikacje
+      • Dodawanie reczne
+            ▪ Pobieramy aplikacje ze strony splunka
+            ▪ Umieszczamy rozpakowana applikacje w katalogu “apps”
+      • Odinstalowanie
+            ▪ cmd> splunk.exe remove app app-name -auth splunk-username:splunk-password
+   
+2) Po instalacji
+      • Nalezy dodac zrodlo danych do splunka
+            ▪ Settings -> Data inputs
+               
+               
+               
+               
