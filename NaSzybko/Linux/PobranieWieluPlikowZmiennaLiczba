@@ -1,0 +1,1 @@
+for x in {0..100}; do wget <adres>$x.<rozszerzenie>; done
