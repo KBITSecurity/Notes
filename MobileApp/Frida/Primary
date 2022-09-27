@@ -1,0 +1,34 @@
+Install: (Instalacja na kalim to [pip3 install Frida;pip3 install frida-tools])
+→ Sprawdzamy wersje bitowa telefonu
+   ⇒ adb shell getprop ro.product.cpu.abi
+→ I pobieramy odpowiedni server fridy ze strony
+   ⇒ https://github.com/frida/frida/releases
+→ Pobieramy kod ze strony:
+   ⇒ https://codeshare.frida.re/@pcipolloni/universal-android-ssl-pinning-bypass-with-frida/
+→ Zapisujemy w fridascript.js (kod jest zapisany w winrar -> “Frida.odt”)
+→ adb push frida-server-15.1.1-android-x86 /data/local/tmp/frida-server
+→ adb shell “chmod 755 /data/local/tmp/frida-server”
+→ adb shell ls -l /data/local/tmp/frida-server
+→ adb shell “/data/local/tmp/frida-server &”
+   ⇒ & - dajemy po to zeby server sobie pracowal w tel
+
+Frida na telefonie powinna dzialac do zresetowania telefonu.
+→ Uruchomienie fridy:
+   ⇒ adb shell “/data/local/tmp/firda-server &”
+   ⇒ ctrl + c
+→ I mamy uruchomiony na telefonie w tel ctrl+c bo konsola sie zawiesi i normalnie wracamy do niej
+
+Podmiana certyfikatu w aplikacji:
+→ Generujemy certyfikat w burpie (ten sam co instalowalismy do polaczenia sie przez proxy)
+→ Otwieramy fridascript.js (vim)
+→ Zamieniamy nazwe certyfikatu na nasz
+→ frida -U -l fridascript.js -f <aplikacja> --no-pause
+   ⇒ Jak nie dany --no-pause to potem trzeba dac resume
+→ Generalnie frida powinna teraz wstrzyknac w aplikacje nasz certyfikat
+→ W winrar -> “Frida.odt” jest to pokazane z screenami uzlismy tam dla przykladu aplikacji twitter
+→ Po tym zabiegu aplikacja laczy sie normalnie przez proxy MIDM
+
+
+Command:
+→ frida-ps -U
+   ⇒ Wylistowanie aplikacji aktualnie uruchomionych na telefonie.
