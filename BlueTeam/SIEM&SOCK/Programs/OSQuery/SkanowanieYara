@@ -1,0 +1,9 @@
+1) OsQuery skanowanie Yara
+      • Skanowanie pliku
+            ▪ SELECT * FROM yara WHERE path='<path file>' AND sigfile='/var/osquery/yara/scanner.yar' 
+   
+   
+   
+   
+   
+   
