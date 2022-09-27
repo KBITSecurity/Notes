@@ -1,0 +1,14 @@
+1) Rozszerzenia plgx_win_extension
+      • Zaladowanie
+            ▪ osqueryi --allow-unsafe --extension "<path to plgx_win_extension.ext.exe>"
+      • Zapytania
+            ▪ select description from services where name="WinDefend";
+            ▪ SELECT name,publisher from programs;
+            ▪ .shema win_event_log_data
+            ▪ select * from win_event_log_channels where source like "%defend%";
+
+   
+   
+   
+   
+   
