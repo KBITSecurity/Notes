@@ -1,0 +1,18 @@
+1) Ustawienia
+      • Windows
+            ▪ C:\Program Files\Splunk\etc\apps\user-prefs\default\user-prefs.conf
+      • Linux
+            ▪ /opt/splunk/etc/apps/user-pref/default/user-prefs.conf
+      • Wprowadzenie ustawien
+            ▪ net stop splunkd
+            ▪ net start splunkd
+
+2) Opcje
+      • Ustawienie aby po otwarciu pokazywal sie ekran search
+            ▪ default_namespace = search
+               
+         
+         
+
+
+
