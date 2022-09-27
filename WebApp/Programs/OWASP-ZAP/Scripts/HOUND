@@ -1,0 +1,3 @@
+1) OWASP-ZAP (Automatyczne skanowanie)
+      • Uruchomienie skryptu analizujacego na biezaco
+            ▪ [+] -> Scripts -> Passive Rules -> HOUND.py -> PP -> Enable script
