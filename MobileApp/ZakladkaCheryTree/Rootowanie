@@ -1,0 +1,29 @@
+WLACZAMY TRYB DEVELOPERSKI:
+→ Settings → About emulated device → Build number (klikamy w to 7 razy)
+[najlepiej sobie wyszukac “Build number”]
+
+
+→ komunikacja po kablu usb
+   ⇒ Setting → System advanced → Developer options → USB Debuging
+
+
+
+ADB:
+Android Debug Bridge – Daje mozliwosc zazadzania telefonem o ile mamy wlaczony tryb developerski. Program sluzy do tego abysmy mogli zarzadzac naszym telefonem, testowac, debagowac itp. W momencie kiedy mamy telefon zrutowany czyli jak mamy podniesione uprawnienia nasze do root-a wtedy mamy dostep do wszystkich opcji I mozemy je zmieniac. Jest to przydatne kiedy robimy testy aplikacji.
+
+ 
+(mamy to narzedzie dostepne w konsoli bo podpielismy je do zmiennych srodowiskowych)
+
+ 
+adb devices – wylistuje podpiete urzadzenia
+adb -s emulator-5554 devices (dla konkretnego urzadzenia jak bedzie ich duzo)
+adb shell (polaczy sie z naszym telefonem I mozemy sie poruszac)
+
+→ adb shell
+   ⇒ su
+   ⇒ whoami
+
+
+Plik z screenami:
+→ winrar -> “ADB rutowanie telefonu.odt”
+   ⇒ Znajdziemy tam instalacje “Magic disc” i rootowanie prawdziwego telefonu
