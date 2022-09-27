@@ -1,0 +1,16 @@
+1) Analizowanie kodu
+      • Uzywanie breakpoint
+            ▪ Moze ujawnic ukryte miejsca na stronie
+
+2) Wyszukanie linkow w plikach js i na stronie
+      • LinkFinder (subdomeny trzeba dopisac do /etc/hosts)
+            ▪ git clone https://github.com/GerbenJavado/LinkFinder.git
+            ▪ pip3 install -r requirements.txt
+            ▪ sudo apt-get install -y jsbeautifier
+            ▪ python3 linkfinder.py -d -i http://vulnnet.thm/ -o cli
+
+3) Pliki konfiguracyjne serverow (jezeli da sie odczytac)
+      • Apache2
+            ▪ /etc/apache2/sites-enabled/000-default.conf
+            ▪ https://www.rbcafe.com/security/lfi-great-list-954-lfi/
+
