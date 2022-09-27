@@ -1,0 +1,16 @@
+
+
+
+
+
+
+1) Instalacja i uruchomienie
+      • Logowanie admin:admin (Przy pierwszym logowaniu poczekac trzeba bo skanuje)
+            ▪ docker run -d -p 443:443 --name openvas mikesplain/openva
+    
+    
+    
+    
+    
+    
+    
