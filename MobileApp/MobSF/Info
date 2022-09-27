@@ -1,0 +1,14 @@
+Opis:
+Program do analizowania applikacji mobilnych. 
+Posiada graficzny interface w przegladarce.
+
+Install:
+→ git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+→ cd Mobile-Security-Framework-MobSF
+→ apt-get install python3-venv
+→ ./setup.sh   
+→ ./run.sh 127.0.0.1:8092
+
+[docker]
+→ docker pull opensecurity/mobile-security-framework-mobsf
+→ docker run -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
