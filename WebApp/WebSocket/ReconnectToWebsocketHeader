@@ -3,3 +3,5 @@ Jezeli nam zerwie polaczenie to mozemy je nawiazac ponownie wykonujac handshake 
 
 Jezeli nasz ip zostanie dodany do czarnej listy(np. przez przeslanie xss) to mozemy probowac obejsc to naglowkiem:
 X-Forwarded-For: 1.1.1.1
+
+(https://portswigger.net/web-security/websockets/lab-manipulating-handshake-to-exploit-vulnerabilities)
