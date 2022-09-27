@@ -1,0 +1,49 @@
+Install:
+Na linuxie: (Na stronie gita jest opisana instalacja)
+→ https://github.com/mwrlabs/drozer/releases/download/2.4.4/drozer-2.4.4-py2-none-any.whl
+→ pip2.7 install drozer-2.4.4-py2-none-any.whl (poszlo na pip2)
+→ pip install setuptools
+→ pip install Twisted
+
+Na telefonie:
+→ Najlepiej sciagnac najnowsza wersje https://github.com/WithSecureLabs/drozer-agent/releases
+→ wget https://www.mwrinfosecurity.com/system/assets/934/original/drozer-agent-2.3.4.apk
+→ adb install drozer-agent-2.3.4.apk
+
+
+Podlaczenie do telefonu z komputerem:
+→ Odpalamy aplikacje na telefonie 
+   ⇒ Zalaczamy server na “ON”
+→ Na linuxie ustawiamy przekierowanie portow
+   ⇒ adb forward tcp:31415 tcp:31415
+→ I sie laczymy z terminala
+   ⇒ drozer console connect
+→ Powinna palic sie zielona lampka w aplikacji na telefonie
+
+
+Commands:
+→ list                
+   ⇒ Wyswietli liste dostepnych bibliotek (ktore mozemy uzyc)
+→ run.app.package.list 
+   ⇒ Wylistuje zainstalowane aplikacje na telefonie
+→ run app.package.info -a <nazwa_pakietu / aplikacji>
+   ⇒ Wyswietli informacje o zainstalowanej aplikacji
+→ run app.package.list -f diva
+→ run app.package.attacksurface <aplikacja>
+   ⇒ Wyswietli mozliwe vektory aktaku na plikacje
+→ run scanner.provider.finduris -a <aplikacja>
+
+Elementy jakie mozemy sprawdzic przy pomocy drozera:
+→ activities exported
+   ⇒ Jakie mamy mozliwosci wyswietlenia widoku do otworzenia bez dzialania aplikacji
+→ brodcast recivers exproted
+   ⇒ informacje ktore wysylamy od/do systemu lub innych aplikacji
+→ content providers exported
+   ⇒ ustrukturyzowane tresci ktore pochodza z bazy danych
+→ service exported
+   ⇒ czy sa jakies uslugi
+
+
+Wyszukanie “Activity” i wyswietlenie
+→ run app.activity.info -a <applikacja>
+   ⇒ run app.activity.start --component <aplikacja> <component wyswietli komenda wyzej>
