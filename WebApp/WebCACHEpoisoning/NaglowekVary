@@ -1,0 +1,6 @@
+Podstawowy sposób, w jaki często używany jest nagłówek Vary, może również zapewnić atakującym pomocną dłoń. Nagłówek Vary określa listę dodatkowych 
+nagłówków, które powinny być traktowane jako część klucza pamięci podręcznej, nawet jeśli normalnie nie mają klucza. Jest powszechnie używany do 
+określenia, że nagłówek User-Agent jest kluczowany, na przykład, aby jeśli mobilna wersja witryny internetowej jest buforowana, nie zostanie ona przez 
+pomyłka udostępniona użytkownikom niemobilnym.
+
+(https://portswigger.net/web-security/web-cache-poisoning/exploiting-design-flaws/lab-web-cache-poisoning-targeted-using-an-unknown-header)
