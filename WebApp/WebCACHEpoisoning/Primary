@@ -1,6 +1,6 @@
 1. (https://portswigger.net/web-security/web-cache-poisoning/exploiting-design-flaws/lab-web-cache-poisoning-with-an-unkeyed-header)
 Badamy odpowiedz servera mozemy dodac jakas zmienna get ("?cb=123") aby odpowiedz nie pochodzila z cache.
-Dodajemy naglowek do requestu:
+Dodajemy naglowek do requestu: (jezeli okaze sie ze strona dynamicznie generuje adresy url to moze cos zdzialamy)
     X-Forwarded-Host: generuj.to
     
 I sprawdzamy czy w responsie nie znajduje sie generuj.to 
