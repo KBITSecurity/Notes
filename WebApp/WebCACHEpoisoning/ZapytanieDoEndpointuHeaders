@@ -1,0 +1,16 @@
+(https://portswigger.net/web-security/web-cache-poisoning/exploiting-design-flaws/lab-web-cache-poisoning-with-multiple-headers)
+
+Badajac request/respons odpowiedzi endpinta dodajemy naglowek(dodajemy get ?cb=1234)
+    X-Forwarded-Scheme: nothttp
+
+Okazuje sie ze podanie takiej wartosci wywoluje 302 a adres przekerowania jest taki jak w requescie+dodatkowa sciezka
+Sprawdzamy czy da sie go zmienic dodajemy naglowek:
+    X-Forwarded-Host: exploit-0a7f004703221a83c072b7a701b9001f.web-security-academy.net
+
+No i ok jest. Ustawiamy adres na nasz zlosliwy server. Nastepnie na serverze tworzymy w odpowiedniej sciezce nasz skrypt.
+
+No i wysylamy spreparowany request do servera na orginalny adres bez ?cb=1234, wtedy zapisze sie on w pamieci podrecznej servera i zostanie
+wyslany innym wchodzacym na strone az do odswiezenia go przez server.
+
+Dodanie zmiennej get ?cb=1234 jest wazne poniewaz jak badamy odpowiedz to dostajemy z cache a chcemy zobaczyc jak server sie zachowuje gdy cache 
+nie jest ustawione. Tak wiec za kazdym razem dajemy 1234, 12345, 123456, .... itp.
