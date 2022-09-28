@@ -1,0 +1,9 @@
+(https://portswigger.net/web-security/web-cache-poisoning/exploiting-design-flaws/lab-web-cache-poisoning-with-an-unkeyed-cookie)
+
+Zauwazamy ze zmiana cookie jest bezposrednio odzwierciedlana w responsie. To znaczy ze server tak przetwarza cookie, ze wysyla je do uzytkownika a 
+nastepnie jak uzytkownik je odsyla to zapisuje je w pamieci podrecznej i wysyla z powrotem. Tak ten proces wyglada
+
+No i jezeli jakis uzytkownik zmieni wartosc tego cookie to wszyscy co wchodza na strone beda dostawali zmienione cookie.
+    someString"-alert(1)-"someString
+    
+Oczywiscie do czasu odswiezenia pamieci przez server. na labie co 30s.
