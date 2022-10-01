@@ -1,0 +1,10 @@
+Kopie zapasowe plikow systemowych itp.
+
+
+Mozemy wejsc w "disk manager" i jak jest cos takiego tam np "backup" to mozemy przypisac mu litere i explorowac.
+
+(https://tryhackme.com/room/learncyberin25days [day 23, task 25])
+
+cmd:
+-> vssadmin
+-> vssadmin List Volumes
