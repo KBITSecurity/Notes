@@ -3,3 +3,7 @@
     -> Instalujemy go
         -> go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
     -> No i odpalamy ./wcvs -u <url>
+
+2. git clone https://github.com/fngoo/web_cache_poison
+    -> cd web_cache_poison
+    -> ./web_cache_poison.sh url <url>
