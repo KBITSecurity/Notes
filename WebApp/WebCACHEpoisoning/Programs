@@ -1,0 +1,5 @@
+1. https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner
+    -> Pobieramy wersje release
+    -> Instalujemy go
+        -> go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
+    -> No i odpalamy ./wcvs -u <url>
