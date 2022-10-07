@@ -1,0 +1,4 @@
+apt install gcc-mingw-w64-x86-64
+
+[EXAMPLE]
+x86_64-w64-mingw32-gcc windows_dll.c -shared -o output.dll
