@@ -3,3 +3,8 @@ netstat add <ip celu> mask 255.255.255.255 <ip GW>
 
 <ip GW> - adres naszej bramy od ktorej ruch ma dalej isc wedlug ustawien
 <ip celu> - adres gdzie docelowo pakiety powinny trafic np google.com
+
+
+Ogolnie po takich ustawieniach jak przegladarka bedzie sie laczyc ze strona to przez wiadomix nasz dodany adres, ale np. w stronie moze byc skrypt ktory 
+laduje sie z innej strony i on bedzie mial inny adres ip. wtedy zostanie dociagniety z innej bramy domyslnej oczywiscie zalez jak jest to poustawiane.
+Najlepiej dodac sobie 0.0.0.0. i ruch bedzie przez np. vpn.
