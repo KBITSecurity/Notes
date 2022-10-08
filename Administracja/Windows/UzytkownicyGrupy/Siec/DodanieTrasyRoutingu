@@ -1,0 +1,5 @@
+netstat -nr (sprawdzenie tras)
+netstat add <ip celu> mask 255.255.255.255 <ip GW>
+
+<ip GW> - adres naszej bramy od ktorej ruch ma dalej isc wedlug ustawien
+<ip celu> - adres gdzie docelowo pakiety powinny trafic np google.com
