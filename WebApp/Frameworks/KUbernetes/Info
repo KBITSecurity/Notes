@@ -1,0 +1,3 @@
+Domyslna sciezka do tokenow:
+
+/var/run/secrets/kubernetes.io/serviceaccount/token
