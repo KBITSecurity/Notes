@@ -3,3 +3,7 @@ Ogolnie to trzeba przeszukiwac cale repozytorium stare/nowe commentarze i patrze
 
 https://github.com/internetwache/GitTools (zrzuca repozytorium przyklad na printscreenie)
 https://github.com/lijiejie/GitHack
+
+
+git log -p > logi
+cat logi | grep :)
