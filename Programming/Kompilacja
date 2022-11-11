@@ -1,2 +1,0 @@
-[Statyczna]
-gcc -o myapp -static main.c
