@@ -3,7 +3,9 @@
             ▪ rsp
       • Poczatek stosu
             ▪ rbp
-                 
+     * Aktualny wskaznik instrukcji
+            * EIP
+      
                  
                  
                  
