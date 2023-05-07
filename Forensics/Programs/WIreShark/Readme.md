@@ -14,3 +14,7 @@ https://www.wireshark.org/docs/dfref/s/smtp.html
 ## Deszyfracja TLS 
 ### Jak mamy klucze
 Edit > Preferences > TLS (podajemy w polu (Pre)-Master-Secret)
+
+## Filatry
+### Wyswietlenie certyfikatow
+    tls.handshake.certificate
