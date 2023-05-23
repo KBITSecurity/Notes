@@ -2,4 +2,4 @@
 nc -nlvp 9999 > dane
 
 [Wyslanie]
-nc -N <ip> 9999 < <file>
+nc -n <ip> 9999 < <file>
