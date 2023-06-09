@@ -18,3 +18,5 @@ Edit > Preferences > TLS (podajemy w polu (Pre)-Master-Secret)
 ## Filatry
 ### Wyswietlenie certyfikatow
     tls.handshake.certificate
+### Odfiltrowanie ip
+    ip.addr==192.168.234.234 and ip.addr==192.168.234.134
