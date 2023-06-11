@@ -17,7 +17,7 @@ ssh -L 8000:172.16.0.10:80 użytkownik@172.16.0.5 -fN
 ### Example 2
 Tunelowanie zwrotne używa flagi -R, tak jak w przypadku forward, jest ona zazwyczaj używana do tunelowania pojedynczego portu ze zdalnej maszyny z powrotem do naszej lokalnej. Podany przykład to:  
 
-```sh
+```bash
 ssh -R 8000:172.16.0.10:80 kali@172.16.0.20 -i PLIK KLUCZY -fN  
 ```
 
