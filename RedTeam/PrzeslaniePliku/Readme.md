@@ -5,8 +5,6 @@
 
 
 # Podzial na fragmenty
-### Pierwotna wersja
-![](PodzielenieNaMniejszeFragmenty.png)
 ### Dobry sposob
 Podzielenie na ilosc partii
 ```console
@@ -16,6 +14,9 @@ Zlaczenie podzielonych kawalkow
 ```console
 cat x* > scale_file
 ```
+### Pierwotna wersja
+![](PodzielenieNaMniejszeFragmenty.png)
+
 
 
 # Przeslanie nc
