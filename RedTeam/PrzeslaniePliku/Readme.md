@@ -5,6 +5,10 @@
 
 
 # Podzial na fragmenty
+### Mozna przed podzieleniem zakodowac do base64
+```console
+base64 -w file.ext > file_to_split
+```
 ### Dobry sposob
 Podzielenie na ilosc partii
 ```console
