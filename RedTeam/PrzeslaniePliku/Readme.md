@@ -23,7 +23,7 @@ cat x* > scale_file
 ```console
 nc -nlvp 9999 > dane
 ```
-# Wyslanie
+### Wyslanie
 ```consle
 nc -n <ip> 9999 < file
 ```
