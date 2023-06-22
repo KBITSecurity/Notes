@@ -1,7 +1,7 @@
 # Content
-1. [Podzial na fragmenty](Podzial na fragmenty)
-2. [Przeslanie nc](Przeslanie nc)
-3. [Przeslanie przez ssh scp](#Przeslanie przez ssh scp)
+1. [Podzial na fragmenty](Podzial-na-fragmenty)
+2. [Przeslanie nc](Przeslanie-nc)
+3. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
 
 
 # Podzial na fragmenty
