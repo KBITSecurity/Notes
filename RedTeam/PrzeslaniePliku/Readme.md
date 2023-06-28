@@ -49,3 +49,15 @@ Pobieramy plik na innej maszynie
 ```console
 wget http://naszeIP/zasob
 ```
+
+# Upload flask
+```console
+git clone https://github.com/romeokienzler/flask-file-upload.git
+```
+```console
+mv upload.py app.py
+```
+```console
+flask run
+```
+Connect i browser **127.0.0.1:5000**
