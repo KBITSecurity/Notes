@@ -3,7 +3,7 @@
 2. [Przeslanie nc](#Przeslanie-nc)
 3. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
 4. [Apache](#Apache)
-
+5. [Upload flask](#-Upload-flask)
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
