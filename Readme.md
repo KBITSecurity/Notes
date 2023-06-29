@@ -1,5 +1,5 @@
+# Crypt
     gpg -o file -c arch.zip
-    PentestDjango
+# Decrypt
     gpg -o arch.zip -t file
-    ok..no...siem..ko
-    unzip arch.zip
+    o..osiem..o
