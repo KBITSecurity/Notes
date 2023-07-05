@@ -25,6 +25,15 @@ cat x* > scale_file
 
 
 
+# Dekodowanie base64 do binarki pliku powershell
+```powershell
+$contentString = Get-Content $filePath -Encoding UTF8
+$binary = [Convert]::FromBase64String($contentString)
+Set-Content -Path $newFileName -Value $binary -Encoding Byte
+```
+
+
+
 # Przeslanie nc
 ### Nasluch
 ```console
