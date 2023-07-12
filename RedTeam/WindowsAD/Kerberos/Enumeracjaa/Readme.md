@@ -23,7 +23,10 @@ kerbrute userenum -d inlanefreight.local --dc 172.16.5.5 /opt/jsmith.txt
             ▪ .\Rubeus.exe harvest /interval:30 
 
 
-
+# Wylistowanie userow jak mamy poprawne poswiadczenia
+```console
+crackmapexec smb 172.16.5.5 -u htb-student -p Academy_student_AD! --users
+```
       
       
       
