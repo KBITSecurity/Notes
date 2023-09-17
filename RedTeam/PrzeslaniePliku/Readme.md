@@ -1,6 +1,6 @@
 # Content
 1. [Podzial na fragmenty](#Podzial-na-fragmenty)
-2. [Powershell)(#Powershell)
+2. [Powershell](#Powershell)
 3. [Przeslanie nc](#Przeslanie-nc)
 4. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
 5. [Apache](#Apache)
