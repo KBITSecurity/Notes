@@ -1,10 +1,11 @@
 # Content
 1. [Podzial na fragmenty](#Podzial-na-fragmenty)
-2. [Przeslanie nc](#Przeslanie-nc)
-3. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
-4. [Apache](#Apache)
-5. [Upload flask](#Upload-flask)
-6. [Using SMB server](#SMB-server)
+2. [Powershell)(#Powershell)
+3. [Przeslanie nc](#Przeslanie-nc)
+4. [Przeslanie przez ssh scp](#Przeslanie-przez-ssh-scp)
+5. [Apache](#Apache)
+6. [Upload flask](#Upload-flask)
+7. [Using SMB server](#SMB-server)
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
