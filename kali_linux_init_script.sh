@@ -10,6 +10,7 @@ apt-get install -y wmctrl
 apt-get install -y git 
 apt-get install -y 7z 
 apt-get install -y xclip
+apt-get install -y ghidra
 
 
 
