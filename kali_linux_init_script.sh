@@ -2,7 +2,7 @@
 
 
 apt-get update
-apt-get install -y gobuster feroxbuster seclists wmctrl git 7z
+apt-get install -y gobuster feroxbuster seclists wmctrl git 7z xclip
 
 
 ##############################################################################################
