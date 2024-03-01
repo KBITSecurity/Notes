@@ -66,7 +66,7 @@ alias offsec="nohup openvpn /home/kali/universal.ovpn &"
 alias htb="nohup openvpn /home/kali/HTB.ovpn &"
 alias thm="nohup openvpn /home/kali/Binio.ovpn &"
 export ALIEN_THEME="red"
-source /opt/alien/alien.zsh
+source /opt/software/alien/alien.zsh
 export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,asp,aspx,jsp,json"
 wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 ' >> /root/.zshrc
@@ -80,9 +80,12 @@ echo -n "'" >> /root/.zshrc
 
 
 cd /opt
+mkdir software
+cd software
 git clone https://github.com/eendroroy/alien.git
 cd alien
 git submodule update --init --recursive
+sleep 2
 source /opt/alien/alien.zsh
 
 
@@ -342,11 +345,8 @@ autologin-user=kali
 
 ##############################################################################################
 
-cd /opt
-mkdir software
-cd software
+cd /opt/software
 wget https://raw.githubusercontent.com/zackelia/ghidra-dark-theme/main/ghidra-dark.theme
-
 
 ##############################################################################################
 ##############################################################################################
