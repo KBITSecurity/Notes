@@ -290,6 +290,14 @@ autologin-user=kali
 
 
 ##############################################################################################
+
+cd /opt
+mkdir software
+cd software
+wget https://raw.githubusercontent.com/zackelia/ghidra-dark-theme/main/ghidra-dark.theme
+echo 'Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
+
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
