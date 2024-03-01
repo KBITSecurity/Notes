@@ -346,7 +346,6 @@ cd /opt
 mkdir software
 cd software
 wget https://raw.githubusercontent.com/zackelia/ghidra-dark-theme/main/ghidra-dark.theme
-echo 'Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
 
 
 ##############################################################################################
@@ -363,6 +362,7 @@ echo '-> Tapeta pobrana do /home/kali/wallpaper.jpg nalezy recznie ustawic'
 echo '-> Schowac ikony na pulpicie'
 echo '-> Ustawic wyswietlcz aby sie nie wygasal na ladowaniu/i nie ladowaniu'
 echo '-> Zmienic transparentnosc teminala, ustawic trzcionke na 12 w stylu pogrubionym'
+echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
 
 
 ##############################################################################################
