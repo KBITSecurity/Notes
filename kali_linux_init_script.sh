@@ -12,6 +12,8 @@ apt-get install -y 7z
 apt-get install -y xclip
 apt-get install -y ghidra
 apt-get install -y dirsearch
+apt-get install -y bloodhound
+apt-get install -y chisel
 
 
 ##############################################################################################
@@ -132,6 +134,25 @@ cd godPotato
 wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe
 cp GodPotato-NET4.exe gp.exe
 
+cd /opt/windows
+mkdir software
+cd software
+mkdir mimikatz
+cd mimikatz
+wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20220919/mimikatz_trunk.7z
+7z x mimikatz_trunk.7z
+
+cd /opt/windows/software
+mkdir rubeus
+cd rubeus
+wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/blob/master/Rubeus.exe
+
+
+cd /opt/windows
+mkdir scripts
+cd scripts
+wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1
+wget https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/Invoke-Portscan.ps1
 ##############################################################################################
 
 
