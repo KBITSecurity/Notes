@@ -333,7 +333,7 @@ echo 'Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/softw
 
 cd
 clear
-echo 'Tapeta pobrana do /home/kali/wallpaper.jpg' nalezy recznie ustawic
+echo 'Tapeta pobrana do /home/kali/wallpaper.jpg nalezy recznie ustawic'
 
 
 ##############################################################################################
