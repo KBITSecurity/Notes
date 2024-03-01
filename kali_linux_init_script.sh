@@ -357,6 +357,7 @@ clear
 echo '####################   DO ZROBIENIA RECZNIE   #####################'
 echo '-> Tapeta pobrana do /home/kali/wallpaper.jpg nalezy recznie ustawic'
 echo '-> Schowac ikony na pulpicie'
+echo '-> Ustawic wyswietlcz aby sie nie wygasal na ladowaniu/i nie ladowaniu'
 echo '-> Zmienic transparentnosc teminala, ustawic trzcionke na 12 w stylu pogrubionym'
 
 
