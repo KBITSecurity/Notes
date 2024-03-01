@@ -92,6 +92,15 @@ wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b/linpeas_fat.sh
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b/linpeas_linux_386
 
+cd /opt/linux
+mkdir exploit
+cd exploit
+mkdir dirtyPipe
+cd dirtyPipe
+git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
+cd CVE-2022-0847-DirtyPipe-Exploits
+./compile.sh
+
 
 ##############################################################################################
 
