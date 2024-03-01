@@ -119,6 +119,18 @@ wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b/winPEAS.bat
 wget https://github.com/carlospolop/PEASS-ng/releases/download/20240226-e0f9d47b/winPEASx86_ofs.exe
 
+cd /opt/windows
+mkdir exploit
+cd exploit 
+mkdir printSpoofer
+cd printSpoofer
+wget 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
+
+cd /opt/windows/exploit
+mkdir godPotato
+cd godPotato
+wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe
+cp GodPotato-NET4.exe gp.exe
 
 ##############################################################################################
 
@@ -320,5 +332,8 @@ echo 'Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/softw
 ##############################################################################################
 
 cd
+clear
+echo 'Tapeta pobrana do /home/kali/wallpaper.jpg' nalezy recznie ustawic
+
 
 ##############################################################################################
