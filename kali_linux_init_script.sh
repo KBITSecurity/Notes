@@ -363,6 +363,7 @@ echo '-> Schowac ikony na pulpicie'
 echo '-> Ustawic wyswietlcz aby sie nie wygasal na ladowaniu/i nie ladowaniu'
 echo '-> Zmienic transparentnosc teminala, ustawic trzcionke na 12 w stylu pogrubionym'
 echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
+echo '-> Ustawic dark-mode w burpie community'
 
 
 ##############################################################################################
