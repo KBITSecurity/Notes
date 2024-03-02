@@ -67,7 +67,7 @@ alias htb="nohup openvpn /home/kali/HTB.ovpn &"
 alias thm="nohup openvpn /home/kali/Binio.ovpn &"
 export ALIEN_THEME="red"
 source /opt/software/alien/alien.zsh
-export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,asp,aspx,jsp,json"
+export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,asp,aspx,jsp,json,docx"
 wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 ' >> /root/.zshrc
 
