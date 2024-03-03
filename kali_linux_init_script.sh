@@ -15,6 +15,7 @@ apt-get install -y dirsearch
 apt-get install -y bloodhound
 apt-get install -y chisel
 apt-get install -y golang
+apt-get install -y checksec
 
 ##############################################################################################
 
