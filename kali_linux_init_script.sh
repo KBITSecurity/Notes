@@ -82,7 +82,7 @@ wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 
 echo -n "alias backup='zip -r /opt/backup.zip " >> /root/.zshrc
 echo -n '$(ls /root | egrep "^[^.]" | xargs -I dupa echo "/root/"dupa)' >> /root/.zshrc
-echo -n "'" >> /root/.zshrc
+echo "'" >> /root/.zshrc
 
 
 echo -n "alias backupTO='zip -r /opt/TU.zip * && rm -rf * && mv /opt/TU.zip .'" >> /root/.zshrc
