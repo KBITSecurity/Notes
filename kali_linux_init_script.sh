@@ -18,6 +18,7 @@ apt-get install -y golang
 apt-get install -y checksec
 apt-get install -y gdb
 apt-get install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+apt-get install -y 2to3
 
 ##############################################################################################
 
