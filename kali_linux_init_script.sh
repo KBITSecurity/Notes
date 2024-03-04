@@ -85,6 +85,8 @@ echo -n '$(ls /root | egrep "^[^.]" | xargs -I dupa echo "/root/"dupa)' >> /root
 echo -n "'" >> /root/.zshrc
 
 
+echo -n "alias backupTO='zip -r /opt/TU.zip * && rm -rf * && mv /opt/TU.zip .'" > /root/.zshrc
+
 ##############################################################################################
 
 
