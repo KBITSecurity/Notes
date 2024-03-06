@@ -20,6 +20,8 @@ apt-get install -y gdb
 apt-get install -y python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 apt-get install -y 2to3
 apt-get install -y nuclei
+apt-get install -y xxd
+apt-get install -y hexedit
 
 ##############################################################################################
 
