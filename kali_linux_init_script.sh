@@ -82,6 +82,7 @@ export ALIEN_THEME="red"
 source /opt/software/alien/alien.zsh
 export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,asp,aspx,jsp,json,docx"
 wmctrl -r ":ACTIVE:" -b toggle,fullscreen
+alias cb="xclip -select clipboard"
 ' >> /root/.zshrc
 
 echo -n "alias backup='zip -r /opt/backup.zip " >> /root/.zshrc
