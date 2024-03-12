@@ -22,6 +22,7 @@ apt-get install -y 2to3
 apt-get install -y nuclei
 apt-get install -y xxd
 apt-get install -y hexedit
+apt-get install -y steghide
 
 ##############################################################################################
 
