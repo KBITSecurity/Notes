@@ -153,6 +153,7 @@ cd exploit
 mkdir printSpoofer
 cd printSpoofer
 wget 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
+cp PrintSpoofer64.exe ps.exe
 
 cd /opt/windows/exploit
 mkdir godPotato
