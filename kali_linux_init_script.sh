@@ -23,6 +23,7 @@ apt-get install -y nuclei
 apt-get install -y xxd
 apt-get install -y hexedit
 apt-get install -y steghide
+apt-get install -y jq
 
 ##############################################################################################
 
