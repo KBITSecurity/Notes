@@ -392,6 +392,12 @@ wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32'
 cd /opt/linux/exploit
 mkdir sudoCVE-2021-3156
 cd sudoCVE-2021-3156
+mkdir '1-python'
+cd '1-python'
+wget 'https://raw.githubusercontent.com/worawit/CVE-2021-3156/main/exploit_nss.py'
+cd ..
+mkdir 2
+cd 2
 git clone https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit.git
 touch 'ExploitKompilujemyNaMaszynieOfiary'
 
