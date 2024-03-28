@@ -388,6 +388,14 @@ wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64'
 wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32'
 
 ##############################################################################################
+
+cd /opt/linux/exploit
+mkdir sudo-exploit
+cd sudo-exploit
+git clone https://github.com/redhawkeye/sudo-exploit.git
+cd sudo-exploit
+make
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
