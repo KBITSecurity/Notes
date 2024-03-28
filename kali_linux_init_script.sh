@@ -384,7 +384,7 @@ mkdir software
 cd software
 mkdir pspy
 cd pspy
-wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64s'
+wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64'
 wget 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32'
 
 ##############################################################################################
