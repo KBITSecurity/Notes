@@ -402,6 +402,14 @@ git clone https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit.git
 touch 'ExploitKompilujemyNaMaszynieOfiary'
 
 ##############################################################################################
+
+cd /opt/windows/software
+mkdir chisel
+cd chisel
+wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_windows_amd64.gz
+7z x chisel_1.9.1_windows_amd64.gz
+rm -rf chisel_1.9.1_windows_amd64.gz
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
