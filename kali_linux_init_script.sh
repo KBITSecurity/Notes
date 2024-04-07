@@ -26,6 +26,8 @@ apt-get install -y steghide
 apt-get install -y jq
 apt-get install -y unblob
 apt-get install -y npm
+apt-get install -y nuclei
+apt-get install -y owasp-zap
 
 ##############################################################################################
 
@@ -445,6 +447,6 @@ echo '-> Zmienic transparentnosc teminala, ustawic trzcionke na 12 w stylu pogru
 echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
 echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
-
+echo '-> Ustawic ciemne tlo w owasp-zap'
 
 ##############################################################################################
