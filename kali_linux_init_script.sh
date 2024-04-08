@@ -447,6 +447,6 @@ echo '-> Zmienic transparentnosc teminala, ustawic trzcionke na 12 w stylu pogru
 echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/software/ghidra-dark.theme'
 echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
-echo '-> Ustawic ciemne tlo w owasp-zap'
+echo '-> Ustawic ciemne tlo w owasp-zap [Tools -> Options -> Display -> Look and Fell = GTK+'
 
 ##############################################################################################
