@@ -186,6 +186,12 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/
 wget https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/Invoke-Portscan.ps1
 wget -O Get-WebCredentials.ps1 https://raw.githubusercontent.com/KBITSecurity/Notes/main/creds.ps1
 wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+
+cd /opt/windows
+mkdir sysinternals
+cd sysinternals
+wget https://live.sysinternals.com/procdump.exe
+wget https://live.sysinternals.com/PsExec.exe
 ##############################################################################################
 
 
