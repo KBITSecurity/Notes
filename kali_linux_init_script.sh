@@ -172,6 +172,12 @@ mkdir mimikatz
 cd mimikatz
 wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20220919/mimikatz_trunk.7z
 7z x mimikatz_trunk.7z
+cd ..
+mkdir vshadow
+cd vshadow
+wget https://github.com/KBITSecurity/Notes/raw/main/vshadow.zip
+unzip vshadow.zip
+rm -rf vshadow.zip
 
 cd /opt/windows/software
 mkdir rubeus
