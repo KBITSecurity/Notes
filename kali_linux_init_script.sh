@@ -511,5 +511,6 @@ echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/so
 echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
 echo '-> Ustawic ciemne tlo w owasp-zap [Tools -> Options -> Display -> Look and Fell = GTK+'
+echo '-> Zainstalowac OpenOffice http://www.openoffice.org/download/'
 
 ##############################################################################################
