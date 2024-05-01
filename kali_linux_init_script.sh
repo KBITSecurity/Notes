@@ -513,5 +513,8 @@ echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
 echo '-> Ustawic ciemne tlo w owasp-zap [Tools -> Options -> Display -> Look and Fell = GTK+'
 echo '-> Zainstalowac OpenOffice http://www.openoffice.org/download/'
+echo '     * sciagamy paczke *.deb'
+echo '     * rozpakowujemy i w katalogu "DEBS" wydajemy komende ->               [    dpkg -i *.deb   ]'
+echo '     * przechodzimy do katalogu "DEBS/desktop-integration" i komenda ->    [    dpkg -i *.deb   ]'
 
 ##############################################################################################
