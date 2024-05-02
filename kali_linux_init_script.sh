@@ -438,6 +438,15 @@ wget https://github.com/int0x33/nc.exe/raw/master/nc.exe
 wget https://github.com/int0x33/nc.exe/raw/master/nc64.exe
 
 ##############################################################################################
+
+cd /opt/software
+go install github.com/mlcsec/headi@latest
+git clone https://github.com/mlcsec/headi.git
+cd headi
+make before.build
+make build.headi
+sudo mv headi /usr/local/bin
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
