@@ -529,9 +529,11 @@ echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/so
 echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
 echo '-> Ustawic ciemne tlo w owasp-zap [Tools -> Options -> Display -> Look and Fell = GTK+'
+echo '-> Zainstalowac chroma [   https://www.instalki.pl/download/programy/linux/internet/przegladarki-www/google-chrome-3/   ]'
 echo '-> Zainstalowac OpenOffice http://www.openoffice.org/download/'
 echo '     * sciagamy paczke *.deb'
 echo '     * rozpakowujemy i w katalogu "DEBS" wydajemy komende ->               [    dpkg -i *.deb   ]'
 echo '     * przechodzimy do katalogu "DEBS/desktop-integration" i komenda ->    [    dpkg -i *.deb   ]'
+
 
 ##############################################################################################
