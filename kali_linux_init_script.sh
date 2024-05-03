@@ -29,6 +29,7 @@ apt-get install -y npm
 apt-get install -y nuclei
 apt-get install -y owasp-zap
 apt-get install -y docker.io
+apt-get install -y docker-composed
 
 ##############################################################################################
 
