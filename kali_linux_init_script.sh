@@ -499,16 +499,16 @@ dpkg -i google.deb
 ##############################################################################################
 
 cd /tmp
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaa
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxab
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxac
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxad
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxae
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaf
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxag
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxah
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxai
-wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaj
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaa
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xab
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xac
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xad
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xae
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaf
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xag
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xah
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xai
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaj
 cat x* > apacheof.tar.gz
 7z x apacheof.tar.gz
 tar xvf apacheof.tar
