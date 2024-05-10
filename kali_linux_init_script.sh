@@ -459,6 +459,27 @@ echo '#!/bin/bash\n\ncd /opt/software/HostPanic\npython3 main.py $1 $2 $3 $4 $5 
 chmod 777 /bin/hostpanic
 
 ##############################################################################################
+
+cd /opt/software
+mkdir postman
+cd postman
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xaa
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xab
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xac
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xad
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xae
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xaf
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xag
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xah
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xai
+wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xaj
+cat x* > postman.tar.gz
+7z x postman.tar.gz
+tar xvf postman.tar
+echo '#!/bin/bash' > /usr/bin/postman
+chmod 777 /usr/bin/postman
+echo 'sudo -u kali /opt/software/postman/Postman/app/Postman' >> /usr/bin/postman
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
