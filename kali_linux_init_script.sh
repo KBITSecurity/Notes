@@ -481,6 +481,21 @@ chmod 777 /usr/bin/postman
 echo 'sudo -u kali /opt/software/postman/Postman/app/Postman' >> /usr/bin/postman
 
 ##############################################################################################
+
+cd /tmp
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xaa
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xab
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xac
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xad
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xae
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xaf
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xag
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xah
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xai
+wget https://github.com/KBITSecurity/Notes/raw/main/chr/xaj
+cat x* > google.deb
+dpkg -i google.deb
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
