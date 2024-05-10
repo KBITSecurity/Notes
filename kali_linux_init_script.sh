@@ -483,6 +483,7 @@ echo 'sudo -u kali /opt/software/postman/Postman/app/Postman' >> /usr/bin/postma
 ##############################################################################################
 
 cd /tmp
+rm -rf *
 wget https://github.com/KBITSecurity/Notes/raw/main/chr/xaa
 wget https://github.com/KBITSecurity/Notes/raw/main/chr/xab
 wget https://github.com/KBITSecurity/Notes/raw/main/chr/xac
@@ -499,6 +500,7 @@ dpkg -i google.deb
 ##############################################################################################
 
 cd /tmp
+rm -rf *
 wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaa
 wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xab
 wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xac
