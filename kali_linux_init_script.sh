@@ -497,6 +497,27 @@ cat x* > google.deb
 dpkg -i google.deb
 
 ##############################################################################################
+
+cd /tmp
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaa
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxab
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxac
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxad
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxae
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaf
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxag
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxah
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxai
+wget https://github.com/KBITSecurity/Notes/raw/main/apaoff/xaaxaj
+cat x* > apacheof.tar.gz
+7z x apacheof.tar.gz
+tar xvf apacheof.tar
+cd en-US
+cd DEBS
+dpkg -i *.deb
+cd desktop-integration
+dpkg -i *.deb
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
@@ -567,11 +588,5 @@ echo '-> Ustawienie dark-mode in ghidra, Edit->Theme->Import i wymieramy /opt/so
 echo '-> Ustawic dark-mode w burpie community'
 echo '-> Ustawic na 6szt pulpitow'
 echo '-> Ustawic ciemne tlo w owasp-zap [Tools -> Options -> Display -> Look and Fell = GTK+'
-echo '-> Zainstalowac chroma [   https://www.instalki.pl/download/programy/linux/internet/przegladarki-www/google-chrome-3/   ]'
-echo '-> Zainstalowac OpenOffice http://www.openoffice.org/download/'
-echo '     * sciagamy paczke *.deb'
-echo '     * rozpakowujemy i w katalogu "DEBS" wydajemy komende ->               [    dpkg -i *.deb   ]'
-echo '     * przechodzimy do katalogu "DEBS/desktop-integration" i komenda ->    [    dpkg -i *.deb   ]'
-
 
 ##############################################################################################
