@@ -521,6 +521,96 @@ cd desktop-integration
 dpkg -i *.deb
 
 ##############################################################################################
+
+cd /opt/software
+mkdir inteliij
+cd inteliij
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaa
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xab
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xac
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xad
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xae
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaf
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xag
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xah
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xai
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaj
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xak
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xal
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xam
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xan
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xao
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xap
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaq
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xar
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xas
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xat
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xau
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xav
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaw
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xax
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xay
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xaz
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xba
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbb
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbc
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbd
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbe
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbf
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbg
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbh
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbi
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbj
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbk
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbl
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbm
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbn
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbo
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbp
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbq
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbr
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbs
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbt
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbu
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbv
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbw
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbx
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xby
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xbz
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xca
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcb
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcc
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcd
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xce
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcf
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcg
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xch
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xci
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcj
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xck
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcl
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcm
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcn
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xco
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcp
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcq
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcr
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcs
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xct
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcu
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcv
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcw
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcx
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcy
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcz
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xda
+wget https://github.com/KBITSecurity/Notes/raw/main/ij/xdb
+cat x* > intel.tar.gz
+tar xvf intel.tar.gz
+echo '#!/bin/bash\n\nsudo -u kali /opt/software/inteliij/idea-IU-241.15989.150/bin/idea.sh' > /bin/IJ
+chmod -R 777 /opt/software/inteliij/
+chmod 777 /bin/IJ
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
