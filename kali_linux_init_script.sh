@@ -619,6 +619,19 @@ cd stegoveritas
 git clone https://github.com/bannsec/stegoVeritas.git && cd stegoVeritas && pip3 install stegoveritas && stegoveritas_install_deps
 
 ##############################################################################################
+
+cd /tmp
+rm -rf *
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xaa
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xab
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xac
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xad
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xae
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xaf
+wget https://github.com/KBITSecurity/Notes/raw/main/sc/xag
+cat x* > package.deb
+dpkg -i package.deb
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
