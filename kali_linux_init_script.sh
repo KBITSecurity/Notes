@@ -606,8 +606,9 @@ wget https://github.com/KBITSecurity/Notes/raw/main/ij/xcz
 wget https://github.com/KBITSecurity/Notes/raw/main/ij/xda
 wget https://github.com/KBITSecurity/Notes/raw/main/ij/xdb
 cat x* > intel.tar.gz
+rm -rf x*
 tar xvf intel.tar.gz
-echo '#!/bin/bash\n\nsudo -u kali /opt/software/inteliij/idea-IU-241.15989.150/bin/idea.sh' > /bin/IJ
+echo '#!/bin/bash\n\n/opt/software/inteliij/idea-IC-241.17011.79/bin/idea.sh' > /bin/IJ
 chmod -R 777 /opt/software/inteliij/
 chmod 777 /bin/IJ
 
