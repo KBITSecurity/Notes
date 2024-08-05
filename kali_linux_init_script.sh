@@ -456,7 +456,10 @@ sudo mv headi /usr/local/bin
 cd /opt/software
 git clone https://github.com/mr-medi/HostPanic.git
 cd HostPanic
-echo '#!/bin/bash\n\ncd /opt/software/HostPanic\npython3 main.py $1 $2 $3 $4 $5 $6 $7 $8 $9' > /bin/hostpanic
+echo '#!/bin/bash
+
+cd /opt/software/HostPanic
+python3 main.py $1 $2 $3 $4 $5 $6 $7 $8 $9' > /bin/hostpanic
 chmod 777 /bin/hostpanic
 
 ##############################################################################################
@@ -578,7 +581,9 @@ wget https://github.com/KBITSecurity/Notes/raw/main/ij/com/xbw
 wget https://github.com/KBITSecurity/Notes/raw/main/ij/com/xbx
 cat x* > intel.tar.gz
 tar xvf intel.tar.gz
-echo '#!/bin/bash\n\n/opt/software/inteliij/idea-IC-241.17011.79/bin/idea.sh' > /bin/IJ
+echo '#!/bin/bash
+
+/opt/software/inteliij/idea-IC-241.17011.79/bin/idea.sh' > /bin/IJ
 chmod -R 777 /opt/software/inteliij/
 chmod 777 /bin/IJ
 
