@@ -8,6 +8,7 @@
 7. [Using SMB server](#SMB-server)
 8. [WebDav](#webdav)
 9. [RDesktop](#rdesktop)
+10. Szyfrowanie AES plikow windows/linux https://academy.hackthebox.com/module/24/section/684
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
