@@ -7,6 +7,7 @@
 6. [Upload flask](#Upload-flask)
 7. [Using SMB server](#SMB-server)
 8. [WebDav](#webdav)
+9. [RDesktop](#rdesktop)
 
 # Podzial na fragmenty
 ### Mozna przed podzieleniem zakodowac do base64
@@ -139,4 +140,10 @@ sudo wsgidav --host=0.0.0.0 --port=80 --root=/tmp --auth=anonymous
 Polaczenie do zasobow z powershella
 ```powershell
 dir \\192.168.49.128\DavWWWRoot
+```
+
+# rdesktop
+Podlaczenie udostepnionego katalogu przy polaczeniu rdp (potem widac go w mojKomputer itp.)
+```bash
+Binio69@htb[/htb]$ xfreerdp /v:10.10.10.132 /d:HTB /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
 ```
