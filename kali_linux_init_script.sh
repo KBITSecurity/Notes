@@ -34,6 +34,7 @@ apt-get install -y docker-composed
 apt-get install -y zaproxy
 apt-get install -y awscli
 apt-get install -y python3-boto3
+apt-apt install -y trivy
 
 ##############################################################################################
 
