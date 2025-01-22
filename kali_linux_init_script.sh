@@ -100,6 +100,50 @@ export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,as
 #wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 alias cb="xclip -select clipboard"
 alias download="mv /home/kali/Downloads/* ."
+
+enumweb() {
+        echo 'enumweb-fast <addr>       | enumeracja optymalnie duza lista rekurencyjnie'
+        echo 'enumweb-slow <addr>       | enumeracja duza lista rekurencyjnie'
+        echo 'enumweb-full <addr>       | enumeracja jednego endpointu cala dostepna lista'
+        echo 'enumweb-exts <addr>       | enumeracja jednego endpointu z rozszerzeniami optymalna lista'
+
+        echo '\nenumweb-show <addr>     | wyswietla wszystko co zostalo wynumerowane dla danego podanego hosta'
+        echo "\n[save directory output](/usr/my_enum/enumerations)\n"
+}
+
+cutaddress() {
+        url=$1
+        url=${url#http://}
+        echo $url | tr '/' '.'
+        #echo "${url%%/*}"
+}
+
+enumweb-full() {
+        arg=$(cutaddress $@)
+        gobuster dir -t 30 -u $@ -w /usr/my_enum/wordlists/unik -o /usr/my_enum/enumerations/gobusterFULLonlyENDPOINT-$arg
+}
+
+
+enumweb-fast() {
+        arg=$(cutaddress $@)
+        feroxbuster -t 30 -u $@ -w /usr/my_enum/wordlists/fast -o /usr/my_enum/enumerations/feroxbusterFASTrek-$arg
+}
+
+enumweb-slow() {
+        arg=$(cutaddress $@)
+        feroxbuster -t 30 -u $@ -w /usr/my_enum/wordlists/clean -o /usr/my_enum/enumerations/feroxbusterSLOWbiglistREK-$arg 
+}
+enumweb-exts() {
+        arg=$(cutaddress $@)
+        gobuster dir -t 30 -u $@ -x $ext -w /usr/my_enum/wordlists/normal -o /usr/my_enum/enumerations/gobusterEXTS-$arg 
+}
+
+
+enumweb-show() {
+        find /usr/my_enum/enumerations -type f -name "*$@*" | for x in $(cat -);do cat $x; done
+}
+
+
 ' >> /root/.zshrc
 
 echo -n "alias backup='zip -r /opt/backup.zip " >> /root/.zshrc
