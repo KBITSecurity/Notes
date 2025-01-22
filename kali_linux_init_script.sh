@@ -73,6 +73,35 @@ chmod 600 /etc/sudoers
 ##############################################################################################
 
 
+mkdir /usr/my_enum/enumerations
+mkdir /usr/my_enum/wordlists
+cd  /usr/my_enum/wordlists
+
+find /usr/share/seclists/Discovery/Web-Content/ -type f -iname "*.txt" | for x in $(cat -);do cat $x >> /tmp/lista; done
+cat /tmp/lista | sort | uniq > unik
+
+cat unik | grep ' ' -v | grep '%' -v | grep '\?' -v | grep '\/' -v > clean
+
+
+cat /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-big.txt > dupa
+cat /usr/share/seclists/Discovery/Web-Content/big.txt >> dupa
+cat /usr/share/seclists/Discovery/Web-Content/common.txt >> dupa
+cat /usr/share/seclists/Discovery/Web-Content/raft-large-* >> dupa
+cat dupa | sort | uniq > normal
+rm -rf dupa
+
+
+cat /usr/share/seclists/Discovery/Web-Content/big.txt > dupa
+cat /usr/share/seclists/Discovery/Web-Content/common.txt >> dupa
+cat /usr/share/seclists/Discovery/Web-Content/raft-large-words.txt >> dupa
+cat /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt >> dupa
+cat /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt >> dupa
+cat dupa | sort | uniq > fast
+rm -rf dupa
+
+##############################################################################################
+
+
 echo '
 sudo su
 exit
