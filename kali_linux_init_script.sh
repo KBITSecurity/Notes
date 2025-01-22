@@ -125,7 +125,7 @@ alias htb="nohup openvpn /home/kali/HTB.ovpn &"
 alias thm="nohup openvpn /home/kali/Binio.ovpn &"
 export ALIEN_THEME="red"
 source /opt/software/alien/alien.zsh
-export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,back,php,htm,html,asp,aspx,jsp,json,docx"
+export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,bac,back,php,htm,html,asp,aspx,jsp,json,docx,lock"
 #wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 alias cb="xclip -select clipboard"
 alias download="mv /home/kali/Downloads/* ."
@@ -169,8 +169,9 @@ enumweb-exts() {
 
 
 enumweb-show() {
-        find /usr/my_enum/enumerations -type f -name "*$@*" | for x in $(cat -);do cat $x; done
+        find /usr/my_enum/enumerations -type f -name "*$@*" | for x in $(cat -);do cat $x; done | egrep '^([0-9]{3}|\/)'
 }
+
 
 
 ' >> /root/.zshrc
