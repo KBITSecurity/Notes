@@ -123,6 +123,7 @@ alias l="clear;ls -lash"
 alias offsec="nohup openvpn /home/kali/universal.ovpn &"
 alias htb="nohup openvpn /home/kali/HTB.ovpn &"
 alias thm="nohup openvpn /home/kali/Binio.ovpn &"
+alias pass="xclip -o > dataClipboard"
 export ALIEN_THEME="red"
 source /opt/software/alien/alien.zsh
 export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,bac,back,php,htm,html,asp,aspx,jsp,json,docx,lock"
