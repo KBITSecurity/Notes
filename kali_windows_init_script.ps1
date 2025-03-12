@@ -28,8 +28,7 @@ del first,second,together
 
 
 
-'
-function sqlmap {
+'function sqlmap {
         python C:\tools\sqlmap\sqlmap.py $args
 }
 function gobuster {
@@ -43,5 +42,4 @@ function ffuf {
 }
 function nc {
         C:\tools\nc\nc64.exe $args
-}
-' > C:\Users\$USERCONF\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+}' > C:\Users\$USERCONF\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
