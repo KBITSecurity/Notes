@@ -689,6 +689,14 @@ cat x* > package.deb
 dpkg -i package.deb
 
 ##############################################################################################
+
+rm -rf /tmp/*
+find /usr/share/seclists/Discovery/ -type f -iname "*.txt" | for x in $(cat -); do cat $x >> /tmp/listWeb; done
+find /usr/share/seclists/Fuzzing/ -type f -iname "*.txt" | for x in $(cat -); do cat $x >> /tmp/listWeb; done
+cat /tmp/listWeb | sort | uniq > /tmp/listWebSort
+mv /tmp/listWebSort /opt/webFullListEndpointsPayloads
+rm -rf /tmp/*
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
