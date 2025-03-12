@@ -24,7 +24,7 @@ del first,second,together
 
 
 
-
+mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
 'function sqlmap {
         python C:\tools\sqlmap\sqlmap.py $args
 }
