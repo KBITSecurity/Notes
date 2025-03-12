@@ -10,9 +10,6 @@ echo "------------------------------------------------------------------------"
 echo ""
 $USERCONF = Read-Host "Nazwa usera do konfiguracji"
 
-echo "Hello $dupa"
-
-
 mkdir C:\tools
 mkdir C:\tools\wordlists
 cd C:\tools\wordlists
