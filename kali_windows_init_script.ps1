@@ -1,3 +1,18 @@
+clear
+echo "************************************************************************"
+echo ""
+ls C:\Users
+echo ""
+echo ""
+echo "________________________________________________________________________"
+echo "*************************** Podaj nazwe ********************************"
+echo "------------------------------------------------------------------------"
+echo ""
+$USERCONF = Read-Host "Nazwa usera do konfiguracji"
+
+echo "Hello $dupa"
+
+
 mkdir C:\tools
 mkdir C:\tools\wordlists
 cd C:\tools\wordlists
@@ -13,7 +28,7 @@ del first,second,together
 
 
 
-'''
+'
 function sqlmap {
         python C:\tools\sqlmap\sqlmap.py $args
 }
@@ -29,4 +44,4 @@ function ffuf {
 function nc {
         C:\tools\nc\nc64.exe $args
 }
-''' > C:\Users\Krzys\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+' > C:\Users\$USERCONF\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
