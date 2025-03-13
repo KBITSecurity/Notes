@@ -16,19 +16,19 @@ $USERCONF = Read-Host "Nazwa usera do konfiguracji"
 
 mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
 'function sqlmap {
-        python C:\tools\sqlmap\sqlmap.py $args
+        python C:\tools\prog\sqlmap\sqlmap.py $args
 }
 function gobuster {
-        C:\tools\Enumeracja\gobuster.exe $args
+        C:\tools\prog\gobuster\gobuster.exe $args
 }
 function feroxbuster {
-        C:\tools\Enumeracja\feroxbuster.exe $args
+        C:\tools\prog\feroxbuster\feroxbuster.exe $args
 }
 function ffuf {
-        C:\tools\Enumeracja\ffuf.exe $args
+        C:\tools\prog\ffuf\ffuf.exe $args
 }
 function nc {
-        C:\tools\nc\nc64.exe $args
+        C:\tools\prog\nc\nc64.exe $args
 }' > C:\Users\$USERCONF\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 #########################################################################################################################
