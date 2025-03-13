@@ -82,13 +82,22 @@ Expand-Archive -Path gobuster.zip -DestinationPath . -Force
 
 cd C:\tools\prog
 
+mkdir feroxbuster
+cd feroxbuster
+
+iwr -uri 'https://github.com/epi052/feroxbuster/releases/download/v2.11.0/x86-windows-feroxbuster.exe.zip' -o feroxbuster.zip
+Expand-Archive -Path feroxbuster.zip -DestinationPath . -Force
+
+#########################################################################################################################
+
+cd C:\tools\prog
+
 mkdir ffuf
 cd ffuf
 
-iwr -uri 'https://github.com/epi052/feroxbuster/releases/download/v2.11.0/x86-windows-feroxbuster.exe.zip' -o ffuf.zip
+iwr -uri 'https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_windows_386.zip' -o ffuf.zip
 Expand-Archive -Path ffuf.zip -DestinationPath . -Force
 
-#########################################################################################################################
 #########################################################################################################################
 #########################################################################################################################
 #########################################################################################################################
