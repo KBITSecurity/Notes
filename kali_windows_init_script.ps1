@@ -79,6 +79,15 @@ iwr -uri 'https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Windo
 Expand-Archive -Path gobuster.zip -DestinationPath . -Force
 
 #########################################################################################################################
+
+cd C:\tools\prog
+
+mkdir ffuf
+cd ffuf
+
+iwr -uri 'https://github.com/epi052/feroxbuster/releases/download/v2.11.0/x86-windows-feroxbuster.exe.zip' -o ffuf.zip
+Expand-Archive -Path ffuf.zip -DestinationPath . -Force
+
 #########################################################################################################################
 #########################################################################################################################
 #########################################################################################################################
