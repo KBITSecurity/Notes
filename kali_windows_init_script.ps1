@@ -42,6 +42,17 @@ git clone https://github.com/danielmiessler/SecLists.git
 Get-ChildItem -Path "C:\tools\wordlists\SecLists\Discovery\", "C:\tools\wordlists\SecLists\Fuzzing\" -Recurse -File -Filter "*.txt" | Get-Content | sort.exe /unique > C:\tools\wordlists\webFullListEndpointsPayloads
 
 #########################################################################################################################
+
+cd C:\tools
+mkdir prog
+cd prog
+
+mkdir gobuster
+cd gobuster
+
+iwr -uri 'https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Windows_x86_64.zip' -o gobuster.zip
+Expand-Archive -Path gobuster.zip -DestinationPath . -Force
+
 #########################################################################################################################
 #########################################################################################################################
 #########################################################################################################################
