@@ -105,7 +105,7 @@ cd C:\tools\prog
 mkdir nc
 cd nc
 
-iwr -uri 'https://github.com/int0x33/nc.exe/blob/master/nc64.exe' -o nc64.exe
+iwr -uri 'https://github.com/skyformat99/netcat-for-windows/raw/refs/heads/master/1.12/nc64.exe' -o nc64.exe
 
 #########################################################################################################################
 #########################################################################################################################
