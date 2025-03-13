@@ -39,7 +39,32 @@ cd C:\tools\wordlists
 
 git clone https://github.com/danielmiessler/SecLists.git
 
-Get-ChildItem -Path "C:\tools\wordlists\SecLists\Discovery\", "C:\tools\wordlists\SecLists\Fuzzing\" -Recurse -File -Filter "*.txt" | Get-Content | sort.exe /unique > C:\tools\wordlists\webFullListEndpointsPayloads
+#########################################################################################################################
+
+$folderPaths = @("C:\tools\wordlists\SecLists\Fuzzing", "C:\tools\wordlists\SecLists\Discovery")
+
+$outputFile = "C:\tools\wordlists\webFullListEndpointsPayloads"
+
+$uniqueLines = New-Object System.Collections.Generic.HashSet[string]
+
+$files = $folderPaths | ForEach-Object { Get-ChildItem -Path $_ -Recurse -Filter "*.txt" }
+
+$totalFiles = $files.Count
+$currentFile = 0
+
+foreach ($file in $files) {
+    $currentFile++
+
+    Write-Progress -PercentComplete (($currentFile / $totalFiles) * 100) `
+                   -Activity "$currentFile z $totalFiles plikow" `
+                   -CurrentOperation $file.FullName
+
+    Get-Content $file.FullName | ForEach-Object {
+        $uniqueLines.Add($_) | Out-Null
+    }
+}
+
+$uniqueLines | Set-Content -Path $outputFile
 
 #########################################################################################################################
 
