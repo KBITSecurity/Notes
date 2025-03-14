@@ -34,6 +34,8 @@ function nc {
 #########################################################################################################################
 
 mkdir C:\tools
+Add-MpPreference -ExclusionPath "C:\tools\"
+
 mkdir C:\tools\wordlists
 cd C:\tools\wordlists
 
