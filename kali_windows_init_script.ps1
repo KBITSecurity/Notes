@@ -16,7 +16,7 @@ $USERCONF = Read-Host "Nazwa usera do konfiguracji"
 
 mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
 'function sqlmap {
-        python C:\tools\prog\sqlmap\sqlmap.py $args
+        python C:\tools\prog\sqlmap\sqlmap\sqlmap.py $args
 }
 function gobuster {
         C:\tools\prog\gobuster\gobuster.exe $args
