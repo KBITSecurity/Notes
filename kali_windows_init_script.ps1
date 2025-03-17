@@ -26,7 +26,7 @@ mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
 }
 function gobuster {
         echo "UserAgent: Mozilla - command without useragent gobusterA"
-        C:\tools\prog\gobuster\gobuster.exe --useragent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" $args
+        C:\tools\prog\gobuster\gobuster.exe $args --useragent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
 }
 function gobusterA {
         C:\tools\prog\gobuster\gobuster.exe $args
