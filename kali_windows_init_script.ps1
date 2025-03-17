@@ -25,15 +25,15 @@ mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
         python C:\tools\prog\sqlmap\sqlmap\sqlmap.py $args
 }
 function gobuster {
-        echo 'UserAgent: Mozilla - command without useragent gobusterA'
-        C:\tools\prog\gobuster\gobuster.exe --useragent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' $args
+        echo "UserAgent: Mozilla - command without useragent gobusterA"
+        C:\tools\prog\gobuster\gobuster.exe --useragent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" $args
 }
 function gobusterA {
         C:\tools\prog\gobuster\gobuster.exe $args
 }
 function feroxbuster {
-        echo 'UserAgent: Mozilla - command without useragent feroxbusterA'
-        C:\tools\prog\feroxbuster\feroxbuster.exe --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' $args
+        echo "UserAgent: Mozilla - command without useragent feroxbusterA"
+        C:\tools\prog\feroxbuster\feroxbuster.exe --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" $args
 }
 function feroxbusterA {
         C:\tools\prog\feroxbuster\feroxbuster.exe $args
