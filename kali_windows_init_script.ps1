@@ -25,10 +25,10 @@ mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
         python C:\tools\prog\sqlmap\sqlmap\sqlmap.py $args
 }
 function gobuster {
-        C:\tools\prog\gobuster\gobuster.exe $args
+        C:\tools\prog\gobuster\gobuster.exe --useragent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' $args
 }
 function feroxbuster {
-        C:\tools\prog\feroxbuster\feroxbuster.exe $args
+        C:\tools\prog\feroxbuster\feroxbuster.exe --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' $args
 }
 function ffuf {
         C:\tools\prog\ffuf\ffuf.exe $args
