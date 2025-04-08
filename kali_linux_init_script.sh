@@ -127,6 +127,7 @@ alias thm="nohup openvpn /home/kali/Binio.ovpn &"
 alias pass="xclip -o > "
 export ALIEN_THEME="red"
 source /opt/software/alien/alien.zsh
+alias rs='python3 script.py'
 export ext="pdf,xls,tar,gz,rar,zip,doc,txt,yaml,yml,xls,bak,bac,back,php,htm,html,asp,aspx,jsp,json,docx,lock"
 #wmctrl -r ":ACTIVE:" -b toggle,fullscreen
 alias cb="xclip -select clipboard"
