@@ -3,7 +3,14 @@
 #########################################################################################################################
 Set-MpPreference -DisableRealtimeMonitoring $true
 #########################################################################################################################
-Read-Host "Czy wylaczyles recznie defender [ENTER] continue..."
+#########
+$url = "https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe"
+$installer = "$env:TEMP\GitInstaller.exe"
+Invoke-WebRequest -Uri $url -OutFile $installer
+Start-Process -FilePath $installer -ArgumentList "/VERYSILENT", "/NORESTART" -Wait
+Remove-Item -Path $installer
+#########
+Read-Host "Czy wylaczyles recznie defender i zainstalowales git, to powyzsze linijki w skrypcie do usuniecia i odpalenie na nowa [ENTER] continue..."
 #########################################################################################################################
 
 clear
@@ -17,15 +24,6 @@ echo "*************************** Podaj nazwe ********************************"
 echo "------------------------------------------------------------------------"
 echo ""
 $USERCONF = Read-Host "Nazwa usera do konfiguracji"
-
-#########################################################################################################################
-
-$url = "https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe"
-$installer = "$env:TEMP\GitInstaller.exe"
-Invoke-WebRequest -Uri $url -OutFile $installer
-Start-Process -FilePath $installer -ArgumentList "/VERYSILENT", "/NORESTART" -Wait
-Remove-Item -Path $installer
-
 #########################################################################################################################
 
 mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
