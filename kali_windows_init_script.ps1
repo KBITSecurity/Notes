@@ -20,6 +20,14 @@ $USERCONF = Read-Host "Nazwa usera do konfiguracji"
 
 #########################################################################################################################
 
+$url = "https://github.com/git-for-windows/git/releases/latest/download/Git-2.39.1-64-bit.exe"
+$installer = "$env:TEMP\GitInstaller.exe"
+Invoke-WebRequest -Uri $url -OutFile $installer
+Start-Process -FilePath $installer -ArgumentList "/VERYSILENT", "/NORESTART" -Wait
+Remove-Item -Path $installer
+
+#########################################################################################################################
+
 mkdir C:\Users\$USERCONF\Documents\WindowsPowerShell
 'function sqlmap {
         python C:\tools\prog\sqlmap\sqlmap\sqlmap.py $args
