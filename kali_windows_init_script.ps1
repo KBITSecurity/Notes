@@ -20,7 +20,7 @@ $USERCONF = Read-Host "Nazwa usera do konfiguracji"
 
 #########################################################################################################################
 
-$url = "https://github.com/git-for-windows/git/releases/latest/download/Git-2.39.1-64-bit.exe"
+$url = "https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe"
 $installer = "$env:TEMP\GitInstaller.exe"
 Invoke-WebRequest -Uri $url -OutFile $installer
 Start-Process -FilePath $installer -ArgumentList "/VERYSILENT", "/NORESTART" -Wait
