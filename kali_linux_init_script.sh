@@ -723,6 +723,14 @@ echo 'SSTI'
 cat /usr/share/seclists/Fuzzing/template-engines-special-vars.txt >> /opt/payloadsAllShort
 cat /usr/share/seclists/Fuzzing/template-engines-expression.txt >> /opt/payloadsAllShort
 
+echo 'ReDOS'
+python3 -c 'print("A"*100 + "!")' >> /opt/payloadsAllShort
+python3 -c 'print("A"*100 + "#")' >> /opt/payloadsAllShort
+python3 -c 'print("A"*1000 + "!")' >> /opt/payloadsAllShort
+python3 -c 'print("A"*1000 + "#")' >> /opt/payloadsAllShort
+python3 -c 'print("A"*10000 + "!")' >> /opt/payloadsAllShort
+python3 -c 'print("A"*10000 + "#")' >> /opt/payloadsAllShort
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
