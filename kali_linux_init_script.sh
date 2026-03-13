@@ -700,6 +700,29 @@ mv /tmp/listWebSort /opt/webFullListEndpointsPayloads
 rm -rf /tmp/*
 
 ##############################################################################################
+
+echo 'Generowanie szbkiej listy payloadow'
+
+echo 'commandInjection'
+cat /usr/share/seclists/Fuzzing/command-injection-commix.txt > /opt/payloadsAllShort
+
+echo 'SqlInjection'
+cat /usr/share/seclists/Fuzzing/Databases/* >> /opt/payloadsAllShort
+cat /usr/share/seclists/Fuzzing/SQLi/* >> /opt/payloadsAllShort
+
+echo 'liczbyAmount'
+cat /usr/share/seclists/Fuzzing/Amounts/all.txt >> /opt/payloadsAllShort
+
+echo 'pathTraversal'
+cat /usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt >> /opt/payloadsAllShort
+
+echo 'XXE'
+cat /usr/share/seclists/Fuzzing/XXE-Fuzzing.txt >> /opt/payloadsAllShort
+
+echo 'SSTI'
+cat /usr/share/seclists/Fuzzing/template-engines-special-vars.txt >> /opt/payloadsAllShort
+cat /usr/share/seclists/Fuzzing/template-engines-expression.txt >> /opt/payloadsAllShort
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
