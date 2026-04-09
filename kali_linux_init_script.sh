@@ -737,6 +737,9 @@ echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' >> /
 echo 'URI-hex-characters'
 cat /usr/share/seclists/Fuzzing/URI-hex.txt >> /opt/payloadsAllShort
 
+echo 'Liczby wykladnicze'
+python3 -c 'for x in range(1,101): print("1e1"+"0"*x);' >> /opt/payloadsAllShort
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
