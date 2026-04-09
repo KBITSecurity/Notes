@@ -731,6 +731,12 @@ python3 -c 'print("A"*1000 + "#")' >> /opt/payloadsAllShort
 python3 -c 'print("A"*10000 + "!")' >> /opt/payloadsAllShort
 python3 -c 'print("A"*10000 + "#")' >> /opt/payloadsAllShort
 
+echo 'EICAR-uploadfile'
+echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' >> /opt/payloadsAllShort
+
+echo 'URI-hex-characters'
+cat /usr/share/seclists/Fuzzing/URI-hex.txt >> /opt/payloadsAllShort
+
 ##############################################################################################
 ##############################################################################################
 ##############################################################################################
