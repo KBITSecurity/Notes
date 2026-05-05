@@ -492,17 +492,6 @@ sudo mv headi /usr/local/bin
 ##############################################################################################
 
 cd /opt/software
-git clone https://github.com/mr-medi/HostPanic.git
-cd HostPanic
-echo '#!/bin/bash
-
-cd /opt/software/HostPanic
-python3 main.py $1 $2 $3 $4 $5 $6 $7 $8 $9' > /bin/hostpanic
-chmod 777 /bin/hostpanic
-
-##############################################################################################
-
-cd /opt/software
 mkdir postman
 cd postman
 wget https://github.com/KBITSecurity/Notes/raw/main/PostM/xaa
